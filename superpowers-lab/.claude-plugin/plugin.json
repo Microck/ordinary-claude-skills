@@ -1,0 +1,13 @@
+{
+  "name": "superpowers-lab",
+  "description": "Experimental skills for Claude Code Superpowers - new techniques and tools under development",
+  "version": "0.1.0",
+  "author": {
+    "name": "Jesse Vincent",
+    "email": "jesse@fsck.com"
+  },
+  "homepage": "https://github.com/obra/superpowers-lab",
+  "repository": "https://github.com/obra/superpowers-lab",
+  "license": "MIT",
+  "keywords": ["skills", "experimental", "interactive-commands", "tmux", "terminal-automation"]
+}

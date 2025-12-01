@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/NotMyself/claude-win11-speckit-safe-update-skill/specs/015-plugin-distribution/contracts/plugin-manifest.schema.json",
+  "title": "Claude Code Plugin Manifest",
+  "description": "Schema for .claude-plugin/plugin.json manifest file used by Claude Code plugin system",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "description",
+    "author",
+    "homepage",
+    "repository",
+    "license",
+    "skills",
+    "keywords",
+    "requirements",
+    "changelog"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Plugin identifier used in install commands",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["speckit-updater", "my-plugin"]
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version (MAJOR.MINOR.PATCH)",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "examples": ["0.8.0", "1.2.3"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief plugin description (1-2 sentences)",
+      "minLength": 10,
+      "maxLength": 200,
+      "examples": ["Safe updates for GitHub SpecKit installations, preserving your customizations"]
+    },
+    "author": {
+      "type": "object",
+      "description": "Author information",
+      "required": ["name", "email"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Author full name",
+          "minLength": 1,
+          "examples": ["Bobby Johnson"]
+        },
+        "email": {
+          "type": "string",
+          "description": "Author contact email",
+          "format": "email",
+          "examples": ["bobby@notmyself.io"]
+        },
+        "url": {
+          "type": "string",
+          "description": "Author website or GitHub profile URL",
+          "format": "uri",
+          "pattern": "^https://",
+          "examples": ["https://github.com/NotMyself"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "homepage": {
+      "type": "string",
+      "description": "Plugin homepage URL (typically GitHub repository)",
+      "format": "uri",
+      "pattern": "^https://",
+      "examples": ["https://github.com/NotMyself/claude-win11-speckit-safe-update-skill"]
+    },
+    "repository": {
+      "type": "object",
+      "description": "Git repository details",
+      "required": ["type", "url"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Repository type (always 'git' for Claude Code plugins)",
+          "enum": ["git"]
+        },
+        "url": {
+          "type": "string",
+          "description": "Full Git repository URL with .git extension",
+          "format": "uri",
+          "pattern": "\\.git$",
+          "examples": ["https://github.com/NotMyself/claude-win11-speckit-safe-update-skill.git"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier",
+      "examples": ["MIT", "Apache-2.0", "GPL-3.0", "BSD-3-Clause"]
+    },
+    "skills": {
+      "type": "string",
+      "description": "Path to skills directory (relative to repository root)",
+      "pattern": "^\\./",
+      "examples": ["./skills/", "./skills/speckit-updater/"]
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Searchable tags for plugin discoverability",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "examples": [
+        ["speckit", "automation", "templates", "powershell", "updates"]
+      ]
+    },
+    "requirements": {
+      "type": "object",
+      "description": "Prerequisites for plugin (tool: version constraint)",
+      "patternProperties": {
+        "^[a-z]+$": {
+          "type": "string",
+          "description": "Version constraint in npm semver format",
+          "examples": [">=7.0", "^2.0.0", ">=1.0.0 <2.0.0"]
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "powershell": ">=7.0",
+          "git": ">=2.0"
+        }
+      ]
+    },
+    "changelog": {
+      "type": "string",
+      "description": "Changelog URL (typically GitHub CHANGELOG.md)",
+      "format": "uri",
+      "pattern": "^https://",
+      "examples": ["https://github.com/NotMyself/claude-win11-speckit-safe-update-skill/blob/main/CHANGELOG.md"]
+    },
+    "bugs": {
+      "type": "string",
+      "description": "Issue tracker URL (optional)",
+      "format": "uri",
+      "pattern": "^https://",
+      "examples": ["https://github.com/NotMyself/claude-win11-speckit-safe-update-skill/issues"]
+    },
+    "funding": {
+      "type": "array",
+      "description": "Sponsorship/funding links (optional)",
+      "items": {
+        "type": "object",
+        "required": ["type", "url"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Funding platform type",
+            "enum": ["github", "patreon", "opencollective", "custom"]
+          },
+          "url": {
+            "type": "string",
+            "description": "Funding platform URL",
+            "format": "uri",
+            "pattern": "^https://"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

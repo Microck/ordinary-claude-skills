@@ -1,0 +1,96 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide details below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: |
+        Example: Users get cryptic error message when SpecKit is not installed
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed solution in detail
+      placeholder: |
+        Example: Automatically offer to install SpecKit when .specify/ directory is missing
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-experience
+    attributes:
+      label: User Experience
+      description: Describe how users would interact with this feature
+      placeholder: |
+        **Interactive Mode (Terminal):**
+        ```
+        SpecKit is not installed in this project.
+        Would you like to install SpecKit now? (Y/n)
+        ```
+
+        **Non-Interactive Mode (Claude Code):**
+        ```
+        [PROMPT_FOR_INSTALL]
+        The updater can install the latest SpecKit templates for you.
+        To proceed with installation, re-run with: -Proceed
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation-details
+    attributes:
+      label: Implementation Details (Optional)
+      description: Technical details about how this could be implemented
+      placeholder: |
+        Files to modify:
+        - scripts/helpers/Invoke-PreUpdateValidation.ps1
+        - scripts/update-orchestrator.ps1
+
+        Key changes:
+        - Add installation offer workflow
+        - Create .specify/ directory structure
+        - Download and apply templates
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this feature is complete?
+      placeholder: |
+        - [ ] Running /speckit-updater in non-SpecKit project offers installation
+        - [ ] Interactive mode prompts with Y/n
+        - [ ] Non-interactive mode shows [PROMPT_FOR_INSTALL] marker
+        - [ ] Installation creates .specify/ directory structure
+        - [ ] Welcome message shown after first install
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered (Optional)
+      description: What other approaches did you consider?
+      placeholder: |
+        - Just show error message (current behavior)
+        - Automatically install without asking
+        - Redirect to SpecKit documentation
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, mockups, or examples
+      placeholder: Links, screenshots, examples from other projects, etc.

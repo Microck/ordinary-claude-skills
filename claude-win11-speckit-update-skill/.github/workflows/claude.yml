@@ -1,0 +1,175 @@
+name: Claude Code (Access Controlled)
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  # Step 1: Check if @claude was mentioned AND user is authorized
+  authorize:
+    name: Check Authorization
+    runs-on: ubuntu-latest
+    # Only run if @claude was mentioned
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+    outputs:
+      authorized: ${{ steps.check.outputs.authorized }}
+      actor: ${{ github.actor }}
+      association: ${{ steps.check.outputs.association }}
+      reason: ${{ steps.check.outputs.reason }}
+    steps:
+      - name: Checkout repository (for config file)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Check user authorization
+        id: check
+        shell: bash
+        env:
+          ACTOR: ${{ github.actor }}
+          AUTHOR_ASSOCIATION: ${{ github.event.comment.author_association || github.event.issue.author_association || github.event.pull_request.author_association }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          echo "🔐 Checking authorization for @$ACTOR..."
+          echo "Author Association: $AUTHOR_ASSOCIATION"
+
+          # Load config file
+          CONFIG_FILE=".github/claude-authorized-users.yml"
+
+          if [ ! -f "$CONFIG_FILE" ]; then
+            echo "❌ Config file not found: $CONFIG_FILE"
+            echo "authorized=false" >> $GITHUB_OUTPUT
+            echo "reason=Configuration file missing" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check emergency circuit breaker
+          EMERGENCY_DISABLE=$(grep -A 2 "^emergency:" "$CONFIG_FILE" | grep "disable_all:" | awk '{print $2}')
+          if [ "$EMERGENCY_DISABLE" == "true" ]; then
+            echo "🚨 Emergency circuit breaker enabled - all @claude triggers disabled"
+            echo "authorized=false" >> $GITHUB_OUTPUT
+            echo "reason=Emergency circuit breaker enabled" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check if user is repository owner
+          if [ "$ACTOR" == "$REPO_OWNER" ]; then
+            echo "✅ User is repository owner - AUTHORIZED"
+            echo "authorized=true" >> $GITHUB_OUTPUT
+            echo "association=OWNER" >> $GITHUB_OUTPUT
+            echo "reason=Repository owner" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check author association (COLLABORATOR, MEMBER, OWNER)
+          case "$AUTHOR_ASSOCIATION" in
+            OWNER)
+              echo "✅ User is repository owner - AUTHORIZED"
+              echo "authorized=true" >> $GITHUB_OUTPUT
+              echo "association=OWNER" >> $GITHUB_OUTPUT
+              echo "reason=Repository owner" >> $GITHUB_OUTPUT
+              exit 0
+              ;;
+            COLLABORATOR)
+              # Check if collaborators are allowed in config
+              ALLOW_COLLABORATORS=$(grep -A 5 "^settings:" "$CONFIG_FILE" | grep "allow_collaborators:" | awk '{print $2}')
+              if [ "$ALLOW_COLLABORATORS" == "true" ]; then
+                echo "✅ User is collaborator and collaborators are allowed - AUTHORIZED"
+                echo "authorized=true" >> $GITHUB_OUTPUT
+                echo "association=COLLABORATOR" >> $GITHUB_OUTPUT
+                echo "reason=Collaborator with write access" >> $GITHUB_OUTPUT
+                exit 0
+              fi
+              ;;
+            MEMBER)
+              # Check if org members are allowed in config
+              ALLOW_ORG_MEMBERS=$(grep -A 5 "^settings:" "$CONFIG_FILE" | grep "allow_org_members:" | awk '{print $2}')
+              if [ "$ALLOW_ORG_MEMBERS" == "true" ]; then
+                echo "✅ User is org member and org members are allowed - AUTHORIZED"
+                echo "authorized=true" >> $GITHUB_OUTPUT
+                echo "association=MEMBER" >> $GITHUB_OUTPUT
+                echo "reason=Organization member" >> $GITHUB_OUTPUT
+                exit 0
+              fi
+              ;;
+          esac
+
+          # Check authorized_users list in config file
+          if grep -A 100 "^authorized_users:" "$CONFIG_FILE" | grep -E "^\s+-\s+$ACTOR\s*$" > /dev/null; then
+            echo "✅ User found in authorized_users list - AUTHORIZED"
+            echo "authorized=true" >> $GITHUB_OUTPUT
+            echo "association=ALLOWLIST" >> $GITHUB_OUTPUT
+            echo "reason=Explicitly authorized in config" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # User is NOT authorized
+          echo "🚫 User @$ACTOR is NOT authorized to trigger @claude"
+          echo "   Association: $AUTHOR_ASSOCIATION"
+          echo "   Reason: Not in authorized users list and not a collaborator/owner"
+          echo "authorized=false" >> $GITHUB_OUTPUT
+          echo "association=$AUTHOR_ASSOCIATION" >> $GITHUB_OUTPUT
+          echo "reason=Not authorized" >> $GITHUB_OUTPUT
+          exit 0  # Exit cleanly even when not authorized
+
+      - name: Log authorization result
+        if: always()
+        run: |
+          echo "📋 Authorization Summary"
+          echo "   Actor: ${{ github.actor }}"
+          echo "   Authorized: ${{ steps.check.outputs.authorized }}"
+          echo "   Association: ${{ steps.check.outputs.association }}"
+          echo "   Reason: ${{ steps.check.outputs.reason }}"
+
+  # Step 2: Run Claude Code (only if authorized)
+  claude:
+    name: Run Claude Code
+    needs: authorize
+    # Only run if user is authorized
+    if: needs.authorize.outputs.authorized == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+      actions: read # Required for Claude to read CI results on PRs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Log authorized access
+        run: |
+          echo "✅ Running Claude Code for authorized user: ${{ needs.authorize.outputs.actor }}"
+          echo "   Association: ${{ needs.authorize.outputs.association }}"
+          echo "   Reason: ${{ needs.authorize.outputs.reason }}"
+
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # This is an optional setting that allows Claude to read CI results on PRs
+          additional_permissions: |
+            actions: read
+
+          # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
+          # prompt: 'Update the pull request description to include a summary of changes.'
+
+          # Optional: Add claude_args to customize behavior and configuration
+          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
+          # or https://docs.claude.com/en/docs/claude-code/cli-reference for available options
+          # claude_args: '--allowed-tools Bash(gh pr:*)'

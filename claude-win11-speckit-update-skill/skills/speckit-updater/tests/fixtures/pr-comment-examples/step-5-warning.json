@@ -1,0 +1,40 @@
+{
+  "step": "security-scan",
+  "status": "warning",
+  "timestamp": "2025-10-25T14:32:00Z",
+  "findings": [
+    {
+      "severity": "warning",
+      "category": "secret",
+      "file": "scripts/test.ps1",
+      "line": 45,
+      "column": 12,
+      "rule": "aws-access-key",
+      "message": "AWS Access Key detected in plain text",
+      "remediation": "Store credentials in environment variables or use AWS credential chain",
+      "snippet": "$accessKey = \"AKIAIOSFODNN7EXAMPLE\""
+    },
+    {
+      "severity": "warning",
+      "category": "security-rule",
+      "file": "scripts/helpers/Execute.ps1",
+      "line": 23,
+      "column": 8,
+      "rule": "PSAvoidUsingInvokeExpression",
+      "message": "Avoid using Invoke-Expression (code injection risk)",
+      "remediation": "Use & operator or dot-sourcing instead",
+      "snippet": "Invoke-Expression $userCommand"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "errors": 0,
+    "warnings": 2,
+    "info": 0
+  },
+  "metadata": {
+    "branch": "014-pr-validation-enhancement",
+    "pr_number": 42,
+    "commit_sha": "abc123def456"
+  }
+}

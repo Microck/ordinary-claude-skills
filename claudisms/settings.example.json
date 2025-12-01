@@ -1,0 +1,29 @@
+{
+  "intelligentWrites": true,
+  "selfConfigAccess": {
+    "enabled": true,
+    "allowedFiles": [
+      "settings.json",
+      "hooks.json",
+      "preferences.json",
+      ".claudisms/config.json"
+    ],
+    "requireBackup": true,
+    "maxChangesPerSession": 10
+  },
+  "directoryJail": {
+    "enabled": false,
+    "jailRoot": null,
+    "allowedPaths": [],
+    "blockPaths": [
+      "/etc/shadow",
+      "/root",
+      "/proc"
+    ]
+  },
+  "verboseHooks": false,
+  "autoSubagents": true,
+  "conciseMode": true,
+  "blockEssays": true,
+  "backupConfigs": true
+}

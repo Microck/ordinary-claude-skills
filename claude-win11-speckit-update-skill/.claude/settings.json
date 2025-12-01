@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pwsh:*)",           // PowerShell commands (scripts, modules, Pester tests)
+      "Bash(git *)",            // All git operations (commit, push, pull, branch, status, etc.)
+      "Bash(gh *)",             // GitHub CLI (issues, PRs, releases)
+      "Bash(dotnet *)",         // .NET CLI (Pester may require, potential future tooling)
+      "Bash(code *)",           // VSCode CLI (opening files, diff, merge editors)
+      "Bash(az *)",             // Azure CLI + Azure DevOps (pipelines, boards, repos, artifacts, cloud integration)
+      "Bash(docker *)",         // Docker (for containerized testing environments)
+      "Bash(npm *)",            // npm (if SpecKit or tools need Node dependencies)
+      "Bash(wget *)",           // Download files (GitHub releases, templates)
+      "Bash(curl *)",           // HTTP requests (API testing, downloads)
+      "WebFetch(github.com/*)", // GitHub (repositories, issues, PRs, releases)
+      "WebFetch(api.github.com/*)", // GitHub API
+      "WebFetch(raw.githubusercontent.com/*)" // GitHub raw content
+    ],
+    "deny": [],
+    "ask": [
+      "Bash(git push --force*)",    // Force push - ask first (can overwrite history)
+      "Bash(git reset --hard*)",    // Hard reset - ask first (destructive)
+      "Bash(az account *)",          // Azure account switching - ask first (affects billing/resources)
+      "Bash(az * delete*)",          // Azure resource deletion - ask first
+      "Bash(az devops * delete*)",   // Azure DevOps deletion - ask first (pipelines, repos, etc.)
+      "Bash(docker system prune*)",  // Docker cleanup - ask first (removes unused containers/images)
+      "Bash(rm -rf*)",               // Recursive force delete - ask first
+      "Bash(Remove-Item * -Recurse -Force*)" // PowerShell recursive delete - ask first
+    ]
+  }
+}

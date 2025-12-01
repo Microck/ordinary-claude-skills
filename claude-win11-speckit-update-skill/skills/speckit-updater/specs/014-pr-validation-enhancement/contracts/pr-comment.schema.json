@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pr-comment.schema.json",
+  "title": "PRComment",
+  "description": "Structured PR comment content with metadata",
+  "type": "object",
+  "required": ["marker", "step_number", "step_name", "emoji", "status", "sections", "timestamp"],
+  "properties": {
+    "marker": {
+      "type": "string",
+      "description": "HTML comment marker for identification",
+      "pattern": "^<!-- pr-validation:step-[0-9]+ -->$"
+    },
+    "step_number": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 6,
+      "description": "Step number (2-6)"
+    },
+    "step_name": {
+      "type": "string",
+      "description": "Human-readable step name",
+      "minLength": 1
+    },
+    "emoji": {
+      "type": "string",
+      "description": "Status emoji for visual clarity"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pass", "warning", "failed"],
+      "description": "Overall status"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Array of comment sections",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "status", "content"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Section heading",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pass", "warning", "error", "info"],
+            "description": "Section-specific status"
+          },
+          "content": {
+            "type": "string",
+            "description": "Markdown-formatted content",
+            "minLength": 1
+          },
+          "findings_count": {
+            "type": ["integer", "null"],
+            "description": "Number of findings in this section",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last updated timestamp (ISO 8601)"
+    },
+    "footer": {
+      "type": "string",
+      "description": "Footer text"
+    }
+  }
+}

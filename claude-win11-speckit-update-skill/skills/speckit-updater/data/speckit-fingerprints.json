@@ -1,0 +1,994 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2025-10-23T14:53:39Z",
+  "generator_version": "1.0.0",
+  "last_updated": "2025-10-23T14:54:19Z",
+  "total_versions": 79,
+  "latest_version": "v0.0.79",
+  "tracked_files": [
+    ".claude/commands/speckit.specify.md",
+    ".claude/commands/speckit.plan.md",
+    ".claude/commands/speckit.tasks.md",
+    ".claude/commands/speckit.implement.md",
+    ".claude/commands/speckit.analyze.md",
+    ".claude/commands/speckit.clarify.md",
+    ".claude/commands/speckit.checklist.md",
+    ".claude/commands/speckit.constitution.md",
+    ".specify/memory/constitution.md",
+    ".specify/templates/spec-template.md",
+    ".specify/templates/plan-template.md",
+    ".specify/templates/tasks-template.md"
+  ],
+  "signature_files": [
+    ".claude/commands/speckit.specify.md",
+    ".claude/commands/speckit.plan.md",
+    ".specify/memory/constitution.md"
+  ],
+  "versions": {
+    "v0.0.79": {
+      "release_date": "2025-10-23T17:12:11Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.79",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:4F1119BB358554476F5384B02535EA5E3E626228841DA41067AEBC36207B561C",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.78": {
+      "release_date": "2025-10-22T02:28:56Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.78",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:CDA778BF76DC041BC8CCB7AF8BCCE9FF54E8169F216DB8CD765208DBF9F7FB18",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.77": {
+      "release_date": "2025-10-21T23:00:46Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.77",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.76": {
+      "release_date": "2025-10-21T22:57:28Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.76",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.75": {
+      "release_date": "2025-10-21T22:29:40Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.75",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.74": {
+      "release_date": "2025-10-21T22:06:47Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.74",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:56160637F1268F84DFEC4B66921D6A0A3DD4E0DB869A8DF6A3E545BEFDAE0965",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:31010EFC0430B623776666951BEE0F90DAF1126F895A965D3BFD1741889CE5F8",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:FA9B6C1BE77AB2FCAB0CF62570F94D944C95B1B20046557B8653EBDAFA3B7C9A",
+        ".claude/commands/speckit.checklist.md": "sha256:B06B595ABDD1BEBBEF0510C8465BFF690F5450F6CCD58B4B1FEC8190A02821E0",
+        ".claude/commands/speckit.constitution.md": "sha256:E4ABB5D0314DA0E50618A24843A34348D031AEB46CB74C5000C24BF00FE65496",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:D34545B3D65D9B83D179804BCA1729DA24007BF348F00AFEB3CA660A9000FADF",
+        ".specify/templates/tasks-template.md": "sha256:E63AB85BA885B469A12D69DEE42385A27FC97B50AC7621F126CA3335A10BA13B"
+      }
+    },
+    "v0.0.73": {
+      "release_date": "2025-10-21T17:17:18Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.73",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:6BDB3C3198509179229E3B7B3384170CE5CB0A4E6174F70CD38E1CD775000864",
+        ".claude/commands/speckit.analyze.md": "sha256:E1F7958C4A6B7B1B9EEF2C7588AE1500CC23A1B0710089FEE93EDB47D2E90C64",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:5A420667C8E4005893E8D6DF05F0EBE2F0F0FC01C5C2F7BCCF1673F2FAD948DA",
+        ".specify/templates/plan-template.md": "sha256:1BCB5F21C6193E07A0273ECEDEDA5A8ABE12AC5EFCAFB1B5C60C4ACC8AA31D10",
+        ".specify/templates/tasks-template.md": "sha256:BA1051395CCA3666C799892869A7DCDD4E6326122340836D98576A2E62F661EB"
+      }
+    },
+    "v0.0.72": {
+      "release_date": "2025-10-19T03:05:13Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.72",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:30736D0A0B4D60DA45CF8305E616192559F244E12EF5818F74615B395CE965F0",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:5A420667C8E4005893E8D6DF05F0EBE2F0F0FC01C5C2F7BCCF1673F2FAD948DA",
+        ".specify/templates/plan-template.md": "sha256:1BCB5F21C6193E07A0273ECEDEDA5A8ABE12AC5EFCAFB1B5C60C4ACC8AA31D10",
+        ".specify/templates/tasks-template.md": "sha256:BA1051395CCA3666C799892869A7DCDD4E6326122340836D98576A2E62F661EB"
+      }
+    },
+    "v0.0.71": {
+      "release_date": "2025-10-19T03:03:59Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.71",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:30736D0A0B4D60DA45CF8305E616192559F244E12EF5818F74615B395CE965F0",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:5A420667C8E4005893E8D6DF05F0EBE2F0F0FC01C5C2F7BCCF1673F2FAD948DA",
+        ".specify/templates/plan-template.md": "sha256:1BCB5F21C6193E07A0273ECEDEDA5A8ABE12AC5EFCAFB1B5C60C4ACC8AA31D10",
+        ".specify/templates/tasks-template.md": "sha256:BA1051395CCA3666C799892869A7DCDD4E6326122340836D98576A2E62F661EB"
+      }
+    },
+    "v0.0.70": {
+      "release_date": "2025-10-19T01:33:10Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.70",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:30736D0A0B4D60DA45CF8305E616192559F244E12EF5818F74615B395CE965F0",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:5A420667C8E4005893E8D6DF05F0EBE2F0F0FC01C5C2F7BCCF1673F2FAD948DA",
+        ".specify/templates/plan-template.md": "sha256:1BCB5F21C6193E07A0273ECEDEDA5A8ABE12AC5EFCAFB1B5C60C4ACC8AA31D10",
+        ".specify/templates/tasks-template.md": "sha256:BA1051395CCA3666C799892869A7DCDD4E6326122340836D98576A2E62F661EB"
+      }
+    },
+    "v0.0.69": {
+      "release_date": "2025-10-15T17:57:17Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.69",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:D10CEFE8A1D5521AA1B32C7768CD3B946E48AD920724645EB1D25A1DD095CACC",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:30736D0A0B4D60DA45CF8305E616192559F244E12EF5818F74615B395CE965F0",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+        ".specify/templates/spec-template.md": "sha256:5A420667C8E4005893E8D6DF05F0EBE2F0F0FC01C5C2F7BCCF1673F2FAD948DA",
+        ".specify/templates/plan-template.md": "sha256:1BCB5F21C6193E07A0273ECEDEDA5A8ABE12AC5EFCAFB1B5C60C4ACC8AA31D10",
+        ".specify/templates/tasks-template.md": "sha256:BA1051395CCA3666C799892869A7DCDD4E6326122340836D98576A2E62F661EB"
+      }
+    },
+    "v0.0.68": {
+      "release_date": "2025-10-15T17:56:31Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.68",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:30736D0A0B4D60DA45CF8305E616192559F244E12EF5818F74615B395CE965F0",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.67": {
+      "release_date": "2025-10-15T17:56:02Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.67",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.66": {
+      "release_date": "2025-10-15T17:52:52Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.66",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.65": {
+      "release_date": "2025-10-15T17:52:05Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.65",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.64": {
+      "release_date": "2025-10-14T17:34:16Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.64",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:7600B447AE74CACDDF31D5AAAB6A228EFAF309E31A5ED2F1529D1D2AB41FB820",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.63": {
+      "release_date": "2025-10-14T14:35:37Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.63",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.62": {
+      "release_date": "2025-10-11T16:06:11Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.62",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.61": {
+      "release_date": "2025-10-10T20:19:32Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.61",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:0058DA4DF0CC8BA0231F7D4D02112D67D8650C5659ED822F90C047C86B9FA70A",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.60": {
+      "release_date": "2025-10-10T19:30:34Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.60",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:9EF6319CD377F177EF8FE135DCD3AF27641CCED2655D2FC2454FC5F3E123C312",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.59": {
+      "release_date": "2025-10-10T18:51:09Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.59",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:D2E8F51636FC15C2D793AEA045298F5BA2F81CFD1A52A6FBB42E117016FC6D1B",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:92D3A47C402403AAAB88140C2E090FE7D608D7490E3982F91E1E0B9C7862D735",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:9EF6319CD377F177EF8FE135DCD3AF27641CCED2655D2FC2454FC5F3E123C312",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.58": {
+      "release_date": "2025-10-08T16:39:55Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.58",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:E443F84A52E5B6767C4DDCEB2F910B50C6F7ACDBFD7A1A0A8BA5A53284CC36D5",
+        ".claude/commands/speckit.plan.md": "sha256:1F8FAFCBFB861BFF546E190BB24294F3E9CE36B99F8A3C7F82DCF2684E6C1A02",
+        ".claude/commands/speckit.tasks.md": "sha256:CFAB118BB4A81ED52B9B10C94C0A5E98FC3DCA539E1CC7E8BBD5929447C28AEF",
+        ".claude/commands/speckit.implement.md": "sha256:3E85DDCEE7FB8F34AC7CADDD8E6F831CE93280CE595E78FA27EA2E753FA4AFAE",
+        ".claude/commands/speckit.analyze.md": "sha256:38B956F06C090053BD0C06DB0CF871ADD846FACE778B5DE3C089E7FD555463C4",
+        ".claude/commands/speckit.clarify.md": "sha256:9EF6319CD377F177EF8FE135DCD3AF27641CCED2655D2FC2454FC5F3E123C312",
+        ".claude/commands/speckit.checklist.md": "sha256:6C89E455AA049EEC378C2709DA20CFA2C4C1979AF7B8576A602427536829310D",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.57": {
+      "release_date": "2025-10-07T05:18:52Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.57",
+      "files_tracked": 12,
+      "fingerprints": {
+        ".claude/commands/speckit.specify.md": "sha256:AB4CE303EF916C6A92D0966F1CA111507C8E3AFB818D81CA7AF2637428E4EDC7",
+        ".claude/commands/speckit.plan.md": "sha256:C8226DA7E9971CFE3CCAC237585B7E4ED3D26285FE2FF638F82C09A02C12857F",
+        ".claude/commands/speckit.tasks.md": "sha256:4D3CB61D20E6B7E8C7E2630CCAD24E1613D66A807B49D1DF23DE9C0CBCD1C349",
+        ".claude/commands/speckit.implement.md": "sha256:FFED94CDE69B313AAF65C324FDE3B64DFBFA1F7FC7F99348E22B0F31DE5E29F0",
+        ".claude/commands/speckit.analyze.md": "sha256:9538C9E357376847B3176219F0C9F2E7E5BE69B44D5ECB1D11CD04E0DE740154",
+        ".claude/commands/speckit.clarify.md": "sha256:DF95E41EA22CDC7B3D78336E9FE212E3A26AA31543515FD474701C05A30C388A",
+        ".claude/commands/speckit.checklist.md": "sha256:1B4CE1654253419717D5CE30402F113449A38E07F2C16A70BAAD84FFA0D99723",
+        ".claude/commands/speckit.constitution.md": "sha256:EE6D3782AFA06E89C7A9922367954C57FB186818A72CC7EFBF722F004383C73E",
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:AD98189BCAE9BFD323F47898F08ECD0290E5D805C04D038B4947E1C6ABD40B09",
+        ".specify/templates/plan-template.md": "sha256:1EA5CADD6CE13A4DCC5621FAF334197960D7D6484330A36EB5112B6D3C016E04",
+        ".specify/templates/tasks-template.md": "sha256:AD28266237F95CE2A57E465E7037F4EEACAEDFCAEE676CE947EB59016D8F5BE6"
+      }
+    },
+    "v0.0.56": {
+      "release_date": "2025-10-03T03:41:23Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.56",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:32ECD6827FCC8355B465FE0374CF57E62521AEA6A64AA6152D6E628BE5E45785",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.55": {
+      "release_date": "2025-10-01T00:05:39Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.55",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:8C476095423C232DAAD17EC4B378D81DD07C5DE1477F46EBDC3DB6CF9208BDFB",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.54": {
+      "release_date": "2025-09-25T19:39:28Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.54",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:8C476095423C232DAAD17EC4B378D81DD07C5DE1477F46EBDC3DB6CF9208BDFB",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.53": {
+      "release_date": "2025-09-24T19:05:26Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.53",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.52": {
+      "release_date": "2025-09-23T04:16:11Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.52",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.51": {
+      "release_date": "2025-09-22T02:56:45Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.51",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.50": {
+      "release_date": "2025-09-21T20:16:38Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.50",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.49": {
+      "release_date": "2025-09-21T19:56:26Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.49",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.48": {
+      "release_date": "2025-09-21T08:48:53Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.48",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:2A2AC45A794190A3E2F545A9D471944B37417A6EF16FFE9BEDCFE72524C718DC",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.47": {
+      "release_date": "2025-09-20T18:05:25Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.47",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.46": {
+      "release_date": "2025-09-20T17:28:59Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.46",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.45": {
+      "release_date": "2025-09-20T01:02:09Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.45",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.44": {
+      "release_date": "2025-09-19T06:21:45Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.44",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.43": {
+      "release_date": "2025-09-19T06:03:22Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.43",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.42": {
+      "release_date": "2025-09-19T05:25:40Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.42",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.41": {
+      "release_date": "2025-09-19T05:17:43Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.41",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.40": {
+      "release_date": "2025-09-19T05:13:53Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.40",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.39": {
+      "release_date": "2025-09-18T18:22:48Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.39",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.38": {
+      "release_date": "2025-09-18T16:34:18Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.38",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.37": {
+      "release_date": "2025-09-18T05:17:23Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.37",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.36": {
+      "release_date": "2025-09-17T20:41:41Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.36",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:62F0BBA4CEDEBA1A00CB21FC14571286897B0DE9061F164831506B39E87E928D",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.35": {
+      "release_date": "2025-09-17T18:52:42Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.35",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:3B9F096E5CEA9BDA58F4C3E64843AFB4D0588AF825AF35B836F7E445CE63804E",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.34": {
+      "release_date": "2025-09-16T02:08:42Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.34",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:B3E1EF8A90F3E95DCA9A8C00E8193844D1F52F453DBF539283D7FB97FB1234D0",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.33": {
+      "release_date": "2025-09-16T00:44:34Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.33",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:D2BA5ED77D455FAB6DAD70EC93DA2F4EE428483B4510503E4E98978F69B35D04",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.32": {
+      "release_date": "2025-09-16T00:30:11Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.32",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:74DEFB6CA0C134D04D52EA4B70FC3D32D96C233D53555005D7108CC6D3ADAF5F",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.31": {
+      "release_date": "2025-09-16T00:16:38Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.31",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:D419D074763DCAF692B91C3365B19880607BFF1ADEC66C3F011AA24493DC860F",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.30": {
+      "release_date": "2025-09-13T01:43:35Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.30",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.29": {
+      "release_date": "2025-09-13T01:39:37Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.29",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.28": {
+      "release_date": "2025-09-12T21:43:03Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.28",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.27": {
+      "release_date": "2025-09-12T21:35:13Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.27",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.26": {
+      "release_date": "2025-09-12T21:06:48Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.26",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.25": {
+      "release_date": "2025-09-12T20:46:06Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.25",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:0D6C17334FBC5A114BB0B264008E7BB38741563ACE3AA667C274B04EC52191E5",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.24": {
+      "release_date": "2025-09-12T20:31:26Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.24",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:DA0A5258EEE78A7688CA6B2ED52156E99F7DB7384D16679C9BFBFE077BA22745",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.23": {
+      "release_date": "2025-09-12T20:17:56Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.23",
+      "files_tracked": 4,
+      "fingerprints": {
+        ".specify/memory/constitution.md": "sha256:7C6EBB5BBE37EEBC2EBC6778C852FE9941356FBDB8183DE893E003BFFB5148BA",
+        ".specify/templates/spec-template.md": "sha256:8884F321EDD1E26644C1621071CB0114BA42D0AB4CAA14963E2CC27E871BC6AA",
+        ".specify/templates/plan-template.md": "sha256:DA0A5258EEE78A7688CA6B2ED52156E99F7DB7384D16679C9BFBFE077BA22745",
+        ".specify/templates/tasks-template.md": "sha256:2A9318EF492F369DD5F55E96A46F04772F27B4321AD80C5CB8E0E6B5D88B0462"
+      }
+    },
+    "v0.0.22": {
+      "release_date": "2025-09-12T06:52:40Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.22",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.21": {
+      "release_date": "2025-09-12T06:07:07Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.21",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.20": {
+      "release_date": "2025-09-09T06:17:20Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.20",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.19": {
+      "release_date": "2025-09-09T01:37:22Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.19",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.18": {
+      "release_date": "2025-09-08T20:18:22Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.18",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.17": {
+      "release_date": "2025-09-08T16:19:12Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.17",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.16": {
+      "release_date": "2025-09-07T07:56:19Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.16",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.15": {
+      "release_date": "2025-09-07T07:46:34Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.15",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.14": {
+      "release_date": "2025-09-05T06:34:00Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.14",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.13": {
+      "release_date": "2025-09-04T19:34:33Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.13",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.12": {
+      "release_date": "2025-09-04T16:47:04Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.12",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.11": {
+      "release_date": "2025-09-04T16:46:47Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.11",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.10": {
+      "release_date": "2025-09-04T16:46:19Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.10",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.9": {
+      "release_date": "2025-09-03T16:22:46Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.9",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.8": {
+      "release_date": "2025-09-03T04:48:59Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.8",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.7": {
+      "release_date": "2025-09-03T04:04:03Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.7",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.6": {
+      "release_date": "2025-08-25T21:10:45Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.6",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.5": {
+      "release_date": "2025-08-25T21:09:33Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.5",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.4": {
+      "release_date": "2025-08-25T21:01:43Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.4",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.3": {
+      "release_date": "2025-08-22T19:20:14Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.3",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.2": {
+      "release_date": "2025-08-22T17:27:08Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.2",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    },
+    "v0.0.1": {
+      "release_date": "2025-08-22T17:24:44Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v0.0.1",
+      "error": "Response status code does not indicate success: 404 (Not Found).",
+      "files_tracked": 0,
+      "fingerprints": {}
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tag_name": "release-72",
+  "name": "Release 72",
+  "published_at": "2025-01-15T10:30:00Z",
+  "assets": [
+    {
+      "name": "claude-templates.zip",
+      "browser_download_url": "https://github.com/github/spec-kit/releases/download/release-72/claude-templates.zip",
+      "size": 12345,
+      "content_type": "application/zip"
+    }
+  ],
+  "body": "Invalid version format",
+  "draft": false,
+  "prerelease": false
+}

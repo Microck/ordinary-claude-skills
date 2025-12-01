@@ -1,0 +1,356 @@
+# Function Contract: Write-SideBySideDiff
+
+**Module**: ConflictDetector.psm1
+**Type**: Public (Exported)
+**Phase**: 1 (Design & Contracts)
+**Date**: 2025-10-21
+
+## Purpose
+
+Generates a Markdown diff file showing only changed sections in side-by-side format. Writes the diff file to `.specify/.tmp-conflicts/[filename].diff.md` and displays a message to the user with the file path.
+
+This is the output generation function that creates the user-facing diff file.
+
+## Signature
+
+```powershell
+function Write-SideBySideDiff {
+    <#
+    .SYNOPSIS
+        Generates a Markdown diff file showing only changed sections.
+
+    .DESCRIPTION
+        Takes a ComparisonResult hashtable and generates a structured Markdown diff file
+        with side-by-side comparison of changed sections. Includes file header, section
+        comparisons, and unchanged section summary. Writes to .specify/.tmp-conflicts/
+        directory and displays path to user.
+
+    .PARAMETER FilePath
+        The path to the conflicting file (relative to project root).
+
+    .PARAMETER ComparisonResult
+        ComparisonResult hashtable from Compare-FileSections with DiffSections and
+        UnchangedRanges.
+
+    .PARAMETER OriginalVersion
+        Version identifier for the current version (e.g., "v0.0.71").
+
+    .PARAMETER NewVersion
+        Version identifier for the incoming version (e.g., "v0.0.72").
+
+    .PARAMETER TmpConflictsDir
+        Optional path to temporary conflicts directory. Default: ".specify/.tmp-conflicts"
+
+    .EXAMPLE
+        Write-SideBySideDiff -FilePath ".specify/templates/tasks-template.md" `
+                             -ComparisonResult $comparisonResult `
+                             -OriginalVersion "v0.0.71" `
+                             -NewVersion "v0.0.72"
+
+        Generates diff file: .specify/.tmp-conflicts/tasks-template.diff.md
+
+    .EXAMPLE
+        Write-SideBySideDiff -FilePath "path/to/file.md" `
+                             -ComparisonResult $result `
+                             -OriginalVersion "v1" `
+                             -NewVersion "v2" `
+                             -TmpConflictsDir "custom/path"
+
+        Uses custom temporary directory instead of default.
+
+    .NOTES
+        Creates .specify/.tmp-conflicts/ directory if it doesn't exist.
+        Overwrites existing diff file if present.
+        Uses UTF-8 encoding without BOM for cross-platform compatibility.
+
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$FilePath,
+
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNull()]
+        [hashtable]$ComparisonResult,
+
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$OriginalVersion,
+
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$NewVersion,
+
+        [Parameter(Mandatory = $false)]
+        [string]$TmpConflictsDir = ".specify/.tmp-conflicts"
+    )
+
+    # Implementation goes here
+}
+```
+
+## Parameters
+
+| Parameter | Type | Required | Default | Validation | Description |
+|-----------|------|----------|---------|------------|-------------|
+| `FilePath` | `[string]` | Yes | N/A | NotNullOrEmpty | Relative path to the conflicting file |
+| `ComparisonResult` | `[hashtable]` | Yes | N/A | NotNull | ComparisonResult from Compare-FileSections |
+| `OriginalVersion` | `[string]` | Yes | N/A | NotNullOrEmpty | Version ID for current version (e.g., "v0.0.71") |
+| `NewVersion` | `[string]` | Yes | N/A | NotNullOrEmpty | Version ID for incoming version (e.g., "v0.0.72") |
+| `TmpConflictsDir` | `[string]` | No | ".specify/.tmp-conflicts" | N/A | Path to temporary conflicts directory |
+
+## Return Value
+
+**Type**: None (void)
+
+**Side Effects**:
+- Creates `TmpConflictsDir` directory if it doesn't exist
+- Writes diff file to `$TmpConflictsDir/[filename].diff.md`
+- Displays message via `Write-Host`: "Review detailed diff: [path]"
+- Logs verbose messages via `Write-Verbose` for debugging
+
+## Output File Format
+
+### File Header
+
+```markdown
+# Conflict Resolution: [filename]
+
+**Your Version**: [OriginalVersion]
+**Incoming Version**: [NewVersion]
+**File Path**: `[FilePath]`
+**File Size**: [LineCount] lines
+**Changed Sections**: [SectionCount]
+**Total Changed Lines**: [ChangedLinesCount]
+
+---
+```
+
+### Changed Section Format (Repeated for Each Section)
+
+```markdown
+## Changed Section [N] (Lines [Start]-[End])
+
+### Your Version (Lines [CurrentStart]-[CurrentEnd])
+
+```[language-hint]
+[CurrentContent with context lines]
+```
+
+### Incoming Version (Lines [IncomingStart]-[IncomingEnd])
+
+```[language-hint]
+[IncomingContent with context lines]
+```
+
+---
+```
+
+### Unchanged Sections Summary
+
+```markdown
+## Unchanged Sections
+
+The following sections are identical in both versions:
+
+- Lines [Start]-[End] ([LineCount] lines)
+- Lines [Start]-[End] ([LineCount] lines)
+- ...
+```
+
+### File Footer
+
+```markdown
+---
+
+**Note**: This diff file was automatically generated by the SpecKit Safe Update Skill.
+To resolve this conflict, review the changed sections above and manually edit the file
+to keep your preferred version or create a hybrid.
+
+After resolving, delete this diff file or it will be cleaned up automatically on the
+next successful update.
+```
+
+## Language Hint Detection
+
+Detect file extension and add appropriate language hint to code blocks:
+
+| Extension | Language Hint | Example |
+|-----------|---------------|---------|
+| `.md` | `markdown` | ` ```markdown ` |
+| `.ps1` | `powershell` | ` ```powershell ` |
+| `.json` | `json` | ` ```json ` |
+| `.yaml`, `.yml` | `yaml` | ` ```yaml ` |
+| `.txt`, other | ` ` (none) | ` ``` ` |
+
+## Dependencies
+
+- PowerShell built-in: `New-Item` for directory creation
+- PowerShell built-in: `Set-Content` or `[System.IO.StreamWriter]` for file writing
+- PowerShell built-in: `Split-Path` for filename extraction
+
+## Error Handling
+
+```
+Try:
+    Create TmpConflictsDir if not exists
+    Extract filename from FilePath
+    Build diff content
+    Write file with UTF-8 encoding
+    Display success message
+Catch [System.UnauthorizedAccessException]:
+    Throw "Permission denied writing diff file: $diffFilePath"
+Catch [System.IO.IOException]:
+    Throw "Failed to write diff file: $($_.Exception.Message)"
+Catch:
+    Throw "Diff file generation failed: $($_.Exception.Message)"
+```
+
+## Testing Requirements
+
+### Unit Tests
+
+1. **Test: Diff file created**
+   - Input: Valid ComparisonResult with 2 sections
+   - Expected: File exists at `.specify/.tmp-conflicts/[filename].diff.md`
+
+2. **Test: Diff file format**
+   - Input: Valid ComparisonResult
+   - Expected: File content matches template (header, sections, footer)
+
+3. **Test: Language hint detection**
+   - Input: FilePath = "file.ps1"
+   - Expected: Code blocks use ` ```powershell `
+
+4. **Test: Directory creation**
+   - Input: TmpConflictsDir doesn't exist
+   - Expected: Directory created automatically
+
+5. **Test: UTF-8 encoding**
+   - Input: Content with Unicode characters
+   - Expected: File written with UTF-8 encoding, no BOM
+
+6. **Test: Permission error handling**
+   - Input: Mock file write to throw UnauthorizedAccessException
+   - Expected: Exception thrown with clear message
+
+### Integration Tests
+
+1. **Test: VSCode preview rendering**
+   - Generate diff file, open in VSCode preview
+   - Expected: Proper Markdown rendering with syntax highlighting
+
+2. **Test: Large file performance**
+   - Input: 1000-line file with 10 sections
+   - Expected: File written in <1 second
+
+## Example Output File
+
+**File**: `.specify/.tmp-conflicts/tasks-template.diff.md`
+
+```markdown
+# Conflict Resolution: tasks-template.md
+
+**Your Version**: v0.0.71
+**Incoming Version**: v0.0.72
+**File Path**: `.specify/templates/tasks-template.md`
+**File Size**: 287 lines
+**Changed Sections**: 3
+**Total Changed Lines**: 45
+
+---
+
+## Changed Section 1 (Lines 11-14)
+
+### Your Version (Lines 11-14)
+
+```markdown
+**Tests**: Tests are MANDATORY following Test-Driven Development (TDD)
+methodology per Constitution Principle VIII. All tasks must follow
+the Red-Green-Refactor cycle.
+```
+
+### Incoming Version (Lines 11-14)
+
+```markdown
+**Tests**: The examples below include test tasks. Tests are OPTIONAL -
+only include them if explicitly requested in the feature specification.
+```
+
+---
+
+## Changed Section 2 (Lines 54-58)
+
+### Your Version (Lines 54-58)
+
+```markdown
+- [ ] **SETUP**: Initialize testing framework (Pester 5.x)
+- [ ] **UNIT**: Write unit tests for HashUtils module
+- [ ] **UNIT**: Write unit tests for ConflictDetector module
+- [ ] **INTEGRATION**: Write end-to-end orchestrator tests
+```
+
+### Incoming Version (Lines 48-52)
+
+```markdown
+- [ ] **IMPLEMENT**: Add smart conflict resolution to ConflictDetector
+- [ ] **IMPLEMENT**: Generate side-by-side diff files
+- [ ] **TEST**: Validate diff file format
+```
+
+---
+
+## Changed Section 3 (Lines 203-207)
+
+### Your Version (Lines 203-207)
+
+```markdown
+## Notes
+
+- All tests must follow TDD (Constitution Principle VIII)
+- Code coverage target: 80% minimum
+```
+
+### Incoming Version (Lines 197-201)
+
+```markdown
+## Notes
+
+- Tests are optional unless specified in the feature spec
+- Focus on critical path testing
+```
+
+---
+
+## Unchanged Sections
+
+The following sections are identical in both versions:
+
+- Lines 1-10 (10 lines)
+- Lines 15-53 (39 lines)
+- Lines 59-202 (144 lines)
+- Lines 208-287 (80 lines)
+
+---
+
+**Note**: This diff file was automatically generated by the SpecKit Safe Update Skill.
+To resolve this conflict, review the changed sections above and manually edit the file
+to keep your preferred version or create a hybrid.
+
+After resolving, delete this diff file or it will be cleaned up automatically on the
+next successful update.
+```
+
+## Performance Criteria
+
+- **File generation**: Complete in <500ms for files up to 1000 lines
+- **File size**: Diff file should be significantly smaller than original (typically 20-40% of original size for typical conflicts)
+
+## Notes
+
+- Diff file is temporary and cleaned up after successful update
+- Diff file is preserved on rollback for debugging
+- Markdown format ensures readability in VSCode preview, GitHub, and Claude Code chat
+- UTF-8 without BOM ensures cross-platform compatibility
+- Function is stateless (no module-level state)

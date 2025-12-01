@@ -1,0 +1,81 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the bug or unexpected behavior you encountered
+      placeholder: |
+        Example: Constitution update notifications shown even when files are identical
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide detailed steps to reproduce the issue
+      placeholder: |
+        1. Run /speckit-updater
+        2. Observe constitution notification
+        3. Check that files are identical
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: No notification should be shown when constitution files are identical
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Notification shown even though files are identical
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide information about your environment
+      value: |
+        - OS: Windows 11
+        - PowerShell Version:
+        - Claude Code Version:
+        - SpecKit Updater Version:
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution (Optional)
+      description: If you have ideas on how to fix this, please share
+      placeholder: |
+        Example: Add hash verification to compare current and backup constitution files
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or logs
+      placeholder: Error messages, verbose output, etc.

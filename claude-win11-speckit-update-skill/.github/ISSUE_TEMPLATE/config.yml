@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: SpecKit Documentation
+    url: https://github.com/github/spec-kit
+    about: Official SpecKit documentation and guides
+  - name: Ask a Question
+    url: https://github.com/NotMyself/claude-win11-speckit-update-skill/discussions
+    about: Ask questions and discuss ideas in GitHub Discussions

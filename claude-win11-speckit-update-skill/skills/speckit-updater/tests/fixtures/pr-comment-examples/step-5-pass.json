@@ -1,0 +1,17 @@
+{
+  "step": "security-scan",
+  "status": "pass",
+  "timestamp": "2025-10-25T14:32:00Z",
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "metadata": {
+    "branch": "014-pr-validation-enhancement",
+    "pr_number": 42,
+    "commit_sha": "abc123def456"
+  }
+}

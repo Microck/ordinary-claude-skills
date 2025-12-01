@@ -1,0 +1,124 @@
+{
+  "name": "aws-skills",
+  "owner": {
+    "name": "Kane Zhu",
+    "email": "me@kane.mx"
+  },
+  "metadata": {
+    "description": "AWS development skills for Claude Code including CDK, Lambda, and documentation helpers",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "aws-cdk",
+      "description": "Comprehensive AWS development skills including CDK best practices, Lambda development workflows, and AWS documentation search capabilities",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kane Zhu",
+        "email": "me@kane.mx"
+      },
+      "homepage": "https://github.com/zxkane/aws-skills",
+      "repository": "https://github.com/zxkane/aws-skills",
+      "license": "MIT",
+      "keywords": ["aws", "cdk", "lambda", "infrastructure", "cloud", "skills"],
+      "category": "development",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/aws-cdk-development"
+      ],
+      "mcpServers": {
+        "awsdocs": {
+          "type": "http",
+          "url": "https://knowledge-mcp.global.api.aws"
+        },
+        "cdk": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "awslabs.cdk-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      }
+    },
+    {
+      "name": "aws-cost-ops",
+      "description": "AWS cost optimization, monitoring, and operational excellence with integrated MCP servers for billing, cost analysis, observability, and security assessment",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kane Zhu",
+        "email": "me@kane.mx"
+      },
+      "homepage": "https://github.com/zxkane/aws-skills",
+      "repository": "https://github.com/zxkane/aws-skills",
+      "license": "MIT",
+      "keywords": ["aws", "cost", "billing", "monitoring", "cloudwatch", "operations", "observability"],
+      "category": "operations",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/aws-cost-operations"
+      ],
+      "mcpServers": {
+        "pricing": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "awslabs.aws-pricing-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "costexp": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "awslabs.cost-explorer-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "cw": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "awslabs.cloudwatch-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      }
+    },
+    {
+      "name": "serverless-eda",
+      "description": "AWS serverless and event-driven architecture best practices based on Well-Architected Framework with MCP servers for SAM, Lambda, Step Functions, and messaging",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kane Zhu",
+        "email": "me@kane.mx"
+      },
+      "homepage": "https://github.com/zxkane/aws-skills",
+      "repository": "https://github.com/zxkane/aws-skills",
+      "license": "MIT",
+      "keywords": ["aws", "serverless", "lambda", "event-driven", "eda", "step-functions", "eventbridge", "sqs", "sns"],
+      "category": "development",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/aws-serverless-eda"
+      ],
+      "mcpServers": {
+        "doc": {
+          "type": "http",
+          "url": "https://knowledge-mcp.global.api.aws"
+        }
+      }
+    }
+  ]
+}
