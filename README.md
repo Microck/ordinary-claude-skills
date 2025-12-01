@@ -195,6 +195,25 @@ load the `competitive-ads-extractor` skill.
 **claude:**
 > running extraction...
 
+### scenario 3: pdf extracting
+load the `pdf` skill.
+
+**you:**
+> a client just sent me a scanned image of a spreadsheet pasted into a word doc and then exported as a pdf. i am losing my will to live. please use the pdf skill to extract the text so i don't walk the plank.
+
+**claude:**
+> extracting text now. please drink some water while i handle this crime against data structures.
+
+### scenario 4: deploy roulette
+load the `webapp-testing` skill.
+
+**you:**
+> i am about to push to prod on a friday afternoon. run the webapp testing skill on `localhost:3000` and tell me if i am going to get fired.
+
+**claude:**
+> starting playwright tests. i suggest you keep your resume updated just in case the login modal is broken again.
+
+
 ## troubleshooting
 
 sometimes computers are hard.
