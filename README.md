@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Microck/ordinary-claude-skills">
-    <img src="https://i.imgur.com/jzG0vnq" alt="i drew this with my left hand. as you can deduce, im indeed right-handed" width="600">
+    <img src="https://i.imgur.com/high-effort-jzG0vnq" alt="i drew this with my left hand. as you can deduce, im indeed right-handed" width="600">
   </a>
 </p>
 
