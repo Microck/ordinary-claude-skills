@@ -1,6 +1,6 @@
 # ordinary claude skills
 
-![project banner placeholder](<img width="1385" height="397" alt="image" src="https://github.com/user-attachments/assets/4cecbaf6-337f-4a65-afd3-a9523d17cd8b" />)
+![banner that took a lot of effort to make](https://i.imgur.com/7RECQZj.jpeg)
 
 > **note**
 > this is a collection of reusable modules to make claude less hallucinate-y and more useful. use at your own risk.
