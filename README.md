@@ -1,117 +1,221 @@
-# Ordinary Claude Skills
+# ordinary claude skills
 
-A comprehensive local repository of Claude Skills / reusable modules that extend Claude's capabilities for specialized tasks.
+![project banner placeholder](<img width="1385" height="397" alt="image" src="https://github.com/user-attachments/assets/4cecbaf6-337f-4a65-afd3-a9523d17cd8b" />)
 
-## Overview
+> **note**
+> this is a collection of reusable modules to make claude less hallucinate-y and more useful. use at your own risk.
 
-This repository contains 40+ official and community-built Claude Skills organized by category. Skills are self-contained folders with instructions, scripts, and resources for specific tasks. I built this mostly for personal use, so that I could use the Repository URL through CC Switch.
+a massive local repository of official and community-built claude skills organized by category. i put this together mostly for my own sanity so i could use the repository url through cc switch without hunting down forty different github tabs.
 
-## What Are Skills?
+## badges
 
-Skills teach Claude to perform specialized tasks. They load only when needed and can work together for complex workflows like document creation, code testing, and data analysis.
+![license](https://img.shields.io/badge/license-MIT-green)
+![maintenance](https://img.shields.io/badge/maintenance-passive-yellow)
+![claude](https://img.shields.io/badge/AI-claude-purple)
 
-[Learn more about Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart)
+## quickstart
 
-## Quick Start
+1.  **clone the repo**
+    ```bash
+    git clone https://github.com/Microck/ordinary-claude-skills.git
+    cd ordinary-claude-skills
+    ```
 
-1. Load a skill into Claude:
-   - Go to claude.ai
-   - Add custom skills in your profile
-   - Upload the skill folder
+2.  **choose your weapon**
+    *   **for claude.ai:** go to your profile, hit `custom skills`, and upload the specific folder for the skill you want.
+    *   **for api/devs:** point your mcp client or system prompt config to the relevant skill directory.
 
-2. Use it in conversation:
-   - Claude will load skills as needed
-   - Reference specific tasks covered by each skill
+3.  **verify**
+    ask claude `can you use the [skill name] skill now?` if it says yes, you are gucci.
 
-## Skills by Category
+## table of contents
 
-### Document Creation
+*   [overview](#overview)
+*   [features](#features)
+*   [skill catalog](#skill-catalog)
+    *   [document creation](#document-creation)
+    *   [creative & design](#creative--design)
+    *   [development & testing](#development--testing)
+    *   [productivity & collaboration](#productivity--collaboration)
+    *   [specialized domains](#specialized-domains)
+*   [configuration](#configuration)
+*   [how-to examples](#how-to-examples)
+*   [troubleshooting](#troubleshooting)
+*   [dependencies](#dependencies)
+*   [license & credits](#license--credits)
 
-| Skill | Purpose | Source |
-|-------|---------|--------|
-| **docx** | Create, edit, and analyze Word documents | [anthropics/skills](https://github.com/anthropics/skills/tree/main/document-skills/docx) |
-| **pptx** | Create, edit, and analyze PowerPoint presentations | [anthropics/skills](https://github.com/anthropics/skills/tree/main/document-skills/pptx) |
-| **xlsx** | Create, edit, and analyze Excel spreadsheets | [anthropics/skills](https://github.com/anthropics/skills/tree/main/document-skills/xlsx) |
-| **pdf** | Extract text, create PDFs, and handle forms | [anthropics/skills](https://github.com/anthropics/skills/tree/main/document-skills/pdf) |
+## overview
 
-### Creative & Design
+skills are basically fancy prompt packages and scripts that teach claude how to do specific things without you having to explain the context every single time. they load lazily (only when needed), which saves context window space and keeps claude from getting confused by instructions it doesn't need yet.
 
-| Skill | Purpose | Source |
-|-------|---------|--------|
-| **algorithmic-art** | Generate art using p5.js with seeded randomness | [anthropics/skills](https://github.com/anthropics/skills/tree/main/algorithmic-art) |
-| **canvas-design** | Design visual art in PNG and PDF formats | [anthropics/skills](https://github.com/anthropics/skills/tree/main/canvas-design) |
-| **slack-gif-creator** | Create animated GIFs optimized for Slack | [anthropics/skills](https://github.com/anthropics/skills/tree/main/slack-gif-creator) |
-| **theme-factory** | Apply professional themes or generate custom ones | [anthropics/skills](https://github.com/anthropics/skills/tree/main/theme-factory) |
+this repo aggregates about 40+ skills from anthropic, obra, composiohq, and some random smart people on the internet.
 
-### Development & Testing
+## features
 
-| Skill | Purpose | Source |
-|-------|---------|--------|
-| **artifacts-builder** | Build complex HTML artifacts with React and Tailwind | [anthropics/skills](https://github.com/anthropics/skills/tree/main/artifacts-builder) |
-| **mcp-builder** | Create MCP servers to integrate external APIs | [anthropics/skills](https://github.com/anthropics/skills/tree/main/mcp-builder) |
-| **webapp-testing** | Test local web applications using Playwright | [anthropics/skills](https://github.com/anthropics/skills/tree/main/webapp-testing) |
-| **aws-skills** | AWS development with infrastructure automation | [zxkane/aws-skills](https://github.com/zxkane/aws-skills) |
-| **ios-simulator-skill** | Control iOS Simulator | [conorluddy/ios-simulator-skill](https://github.com/conorluddy/ios-simulator-skill) |
-| **ffuf-claude-skill** | Web fuzzing with ffuf | [jthack/ffuf_claude_skill](https://github.com/jthack/ffuf_claude_skill) |
-| **playwright-skill** | Browser automation with Playwright | [lackeyjb/playwright-skill](https://github.com/lackeyjb/playwright-skill) |
-| **changelog-generator** | Transform git commits into release notes | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/changelog-generator) |
-| **systematic-debugging** | Methodical problem-solving in code | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md) |
-| **root-cause-tracing** | Investigate and identify fundamental problems | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/root-cause-tracing/SKILL.md) |
-| **test-driven-development** | Write tests before implementing code | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md) |
+*   **non-curated selection:** if it doesnt work i probably havent noticed, just let me know and i may or may not fix it.
+*   **categorized:** everything is sorted so you don't have to doomscroll to find the python tools.
+*   **standardized:** i tried to keep the folder structures somewhat consistent.
+*   **local first:** designed to be cloned locally so you aren't dependent on a third party url staying up forever.
 
-### Productivity & Collaboration
+## skill catalog
 
-| Skill | Purpose | Source |
-|-------|---------|--------|
-| **notebooklm-skill** | Interact with NotebookLM for document conversations | [PleasePrompto/notebooklm-skill](https://github.com/PleasePrompto/notebooklm-skill) |
-| **superpowers-lab** | Lab environment for Claude superpowers | [obra/superpowers-lab](https://github.com/obra/superpowers-lab) |
-| **content-research-writer** | Enhance writing with research | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer) |
-| **meeting-insights-analyzer** | Analyze meeting communication patterns | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer) |
-| **competitive-ads-extractor** | Analyze competitor advertising | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/competitive-ads-extractor) |
-| **image-enhancer** | Improve image quality | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/image-enhancer) |
-| **brainstorming** | Generate and explore ideas | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) |
-| **writing-plans** | Create strategic documentation | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md) |
-| **executing-plans** | Implement and run strategic plans | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/executing-plans/SKILL.md) |
-| **dispatching-parallel-agents** | Coordinate multiple simultaneous agents | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/dispatching-parallel-agents/SKILL.md) |
+here is the list of tools included. i have broken them down by what they actually do.
 
-### Specialized Domains
+### document creation
 
-| Skill | Purpose | Source |
-|-------|---------|--------|
-| **claude-scientific-skills** | Scientific research and analysis | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) |
-| **claude-win11-speckit-update-skill** | Windows 11 system management | [NotMyself/claude-win11-speckit-update-skill](https://github.com/NotMyself/claude-win11-speckit-update-skill) |
-| **claudisms** | SMS messaging integration | [jeffersonwarrior/claudisms](https://github.com/jeffersonwarrior/claudisms) |
-| **defense-in-depth** | Multi-layered security approaches | [obra/superpowers](https://github.com/obra/superpowers/blob/main/skills/defense-in-depth/SKILL.md) |
+handling office files programmatically because manual formatting is for chumps.
 
-## Using Skills with Claude
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **docx** | create and edit word docs without opening word | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/docx) |
+| **pptx** | generate powerpoints because nobody likes making slides | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/pptx) |
+| **xlsx** | crunch numbers in excel files | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/xlsx) |
+| **pdf** | rip text out of pdfs or make new ones | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/pdf) |
 
-### In Claude.ai
+### creative & design
 
-1. Go to Settings → Skills (or Custom Skills)
-2. Click "Add Skill"
-3. Upload the skill folder
-4. Describe when to use it
+stuff for when you need to feel artistic or make things look pretty.
 
-### With Claude API
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **algorithmic-art** | make p5.js art with seeded randomness | [anthropics](https://github.com/anthropics/skills/tree/main/algorithmic-art) |
+| **canvas-design** | design visuals in png/pdf formats | [anthropics](https://github.com/anthropics/skills/tree/main/canvas-design) |
+| **slack-gif-creator** | make gifs specifically for slack reactions | [anthropics](https://github.com/anthropics/skills/tree/main/slack-gif-creator) |
+| **theme-factory** | generate color themes that don't clash | [anthropics](https://github.com/anthropics/skills/tree/main/theme-factory) |
 
-Include skills in your system prompt or use Claude's [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart) feature.
+### development & testing
 
+this is the heavy hitter section. use these to write better code or test the garbage code you already wrote.
 
-## Resources
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **artifacts-builder** | build react/tailwind html artifacts | [anthropics](https://github.com/anthropics/skills/tree/main/artifacts-builder) |
+| **mcp-builder** | create mcp servers for external apis | [anthropics](https://github.com/anthropics/skills/tree/main/mcp-builder) |
+| **webapp-testing** | test local apps with playwright | [anthropics](https://github.com/anthropics/skills/tree/main/webapp-testing) |
+| **aws-skills** | infrastructure automation for aws | [zxkane](https://github.com/zxkane/aws-skills) |
+| **ios-simulator** | control the ios sim directly | [conorluddy](https://github.com/conorluddy/ios-simulator-skill) |
+| **ffuf-skill** | web fuzzing integration | [jthack](https://github.com/jthack/ffuf_claude_skill) |
+| **playwright** | browser automation | [lackeyjb](https://github.com/lackeyjb/playwright-skill) |
+| **changelog-gen** | turn git commits into readable notes | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **debugging** | methodical problem solving steps | [obra](https://github.com/obra/superpowers) |
+| **tdd** | test driven development enforcement | [obra](https://github.com/obra/superpowers) |
 
-- [Claude Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart)
-- [Skills Best Practices](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices)
-- [Original Awesome List](https://github.com/VoltAgent/awesome-claude-skills)
-- [Skills Cookbook](https://github.com/anthropics/claude-cookbooks/blob/main/skills/README.md)
+### productivity & collaboration
 
-## Credits
+tools to make you look like you are working harder than you actually are.
 
-Skills sourced from:
-- [Anthropic Official Skills](https://github.com/anthropics/skills)
-- [Obra's Superpowers](https://github.com/obra/superpowers)
-- [ComposioHQ](https://github.com/ComposioHQ/awesome-claude-skills)
-- Community contributors
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **notebooklm** | talk to notebooklm docs | [pleaseprompto](https://github.com/PleasePrompto/notebooklm-skill) |
+| **superpowers-lab** | general purpose claude enhancement | [obra](https://github.com/obra/superpowers-lab) |
+| **research-writer** | adds research capabilities to writing | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **meeting-insights** | analyzes who talked too much in the meeting | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **brainstorming** | structured idea generation | [obra](https://github.com/obra/superpowers) |
+| **writing-plans** | creates strategic docs | [obra](https://github.com/obra/superpowers) |
 
-## License
+### specialized domains
 
-Skills are maintained by their respective owners. See individual skill folders for license information.
+stuff that you might never use but looks cool on the readme.
+
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **scientific** | research and data analysis | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **win11-update** | windows 11 system management | [notmyself](https://github.com/NotMyself/claude-win11-speckit-update-skill) |
+| **claudisms** | sms integration | [jeffersonwarrior](https://github.com/jeffersonwarrior/claudisms) |
+| **defense-in-depth** | security layering strategies | [obra](https://github.com/obra/superpowers) |
+
+## configuration
+
+getting this to work depends on your environment. here is the recommended way to set things up if you are using mcp or a local client.
+
+### file structure
+
+keep your directory clean or you will regret it later.
+
+```text
+ordinary-claude-skills/
+├── development/
+│   ├── artifacts-builder/
+│   └── webapp-testing/
+├── documents/
+│   └── pdf/
+└── README.md
+```
+
+### config.json example
+
+if you are using a tool that requires a config file to point to skills, it usually looks something like this.
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/ordinary-claude-skills"
+      ]
+    }
+  }
+}
+```
+
+> **warning**
+> do not upload the entire repository to a single chat session context unless you want claude to burn through your token limit in about four seconds. pick and choose what you need.
+
+## how-to examples
+
+here is how you actually talk to claude once the skills are loaded.
+
+### scenario 1: debugging a react app
+
+load the `systematic-debugging` and `artifacts-builder` skills.
+
+**you:**
+> i have a react component that is not rendering the list items correctly. please use the systematic debugging skill to analyze the code i paste next, and then use the artifacts builder to propose a fix.
+
+**claude:**
+> acknowledged. i will apply the systematic debugging protocol. please paste the code.
+
+### scenario 2: analyzing a competitor
+
+load the `competitive-ads-extractor` skill.
+
+**you:**
+> here is a url to a landing page. run the ads extractor and tell me what their primary value proposition is.
+
+**claude:**
+> running extraction...
+
+## troubleshooting
+
+sometimes computers are hard.
+
+*   **claude refuses to use the skill:**
+    make sure you explicitly told claude the skill exists in the system prompt or that the file was successfully attached to the project context. usually it just doesn't know it's there.
+
+*   **"file too large" error:**
+    some of these skills have massive dependency folders. ignore the `node_modules` inside skill folders. you only need the source scripts and the instructions.
+
+*   **skills contradicting each other:**
+    don't load `creative-writing` and `technical-documentation` at the same time. claude will get confused about whether it should be shakespeare or a robot.
+
+## dependencies
+
+technically none for the repo itself, but individual skills have requirements.
+
+*   **mandatory:** an active internet connection and a claude account (or api key).
+*   **optional:**
+    *   `python 3.x` (for data analysis skills)
+    *   `node.js` (for mcp builder and testing skills)
+    *   `playwright` (if you want to do browser automation)
+
+## license & credits
+
+i did not write most of these. i just collected them.
+
+*   **anthropic skills:** mit license (mostly)
+*   **community skills:** check the `LICENSE` file in each specific folder.
+
+credits go to [anthropic](https://github.com/anthropics), [obra](https://github.com/obra), [composiohq](https://github.com/ComposioHQ), and the other legends listed in the source tables. if you own one of these and want me to take it down, just open an issue and i will nuke it.
