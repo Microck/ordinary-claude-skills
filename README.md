@@ -1,10 +1,10 @@
 # Ordinary Claude Skills
 
-A comprehensive local repository of Claude Skills—reusable modules that extend Claude's capabilities for specialized tasks.
+A comprehensive local repository of Claude Skills / reusable modules that extend Claude's capabilities for specialized tasks.
 
 ## Overview
 
-This repository contains 40+ official and community-built Claude Skills organized by category. Skills are self-contained folders with instructions, scripts, and resources for specific tasks.
+This repository contains 40+ official and community-built Claude Skills organized by category. Skills are self-contained folders with instructions, scripts, and resources for specific tasks. I built this mostly for personal use, so that I could use the Repository URL through CC Switch.
 
 ## What Are Skills?
 
