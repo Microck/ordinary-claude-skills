@@ -1,17 +1,24 @@
-# ordinary claude skills
+<p align="center">
+  <a href="https://github.com/Microck/ordinary-claude-skills">
+    <img src="https://i.imgur.com/7RECQZj.jpeg" alt="high effort logo" width="600">
+  </a>
+</p>
 
-![banner that took a lot of effort to make](https://i.imgur.com/7RECQZj.jpeg)
+<p align="center">a massive local repository of official and community-built claude skills, organized by category.</p>
 
-> **note**
-> this is a collection of reusable modules to make claude less hallucinate-y and more useful. use at your own risk.
+<p align="center">
+  <a href="https://github.com/Microck/ordinary-claude-skills/blob/main/LICENSE">
+    <img alt="license" src="https://img.shields.io/badge/license-MIT-greene" />
+  </a>
+  <a href="https://github.com/Microck/ordinary-claude-skills">
+    <img alt="maintenance" src="https://img.shields.io/badge/maintenance-passive-yellow" />
+  </a>
+  <a href="https://github.com/Microck/ordinary-claude-skills">
+    <img alt="claude" src="https://img.shields.io/badge/AI-claude-purple" />
+  </a>
+</p>
 
-a massive local repository of official and community-built claude skills organized by category. i put this together mostly for my own sanity so i could use the repository url through cc switch without hunting down forty different github tabs.
-
-## badges
-
-![license](https://img.shields.io/badge/license-MIT-green)
-![maintenance](https://img.shields.io/badge/maintenance-passive-yellow)
-![claude](https://img.shields.io/badge/AI-claude-purple)
+---
 
 ## quickstart
 
