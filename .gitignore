@@ -54,3 +54,33 @@ MANIFEST
 .venv/
 data/
 *.log
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Python ---
+*.py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# --- IDE Settings (VS Code, JetBrains, etc) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+
+# --- Optional: Obsolete generated files ---
+Uncomment these if you want to stop tracking the old attempts
+SKILLS_README.md
+skills.md

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordinary Skills Inventory</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+  <style>
+    :root {
+      /* --- GLOBAL VARIABLES --- */
+      --theme-color: #D57853; /* Orange */
+      
+      /* Main Content Background */
+      --base-background-color: #2C2C2C;
+      --base-color: #FFFFFF;
+      
+      /* --- SIDEBAR COLORS --- */
+      --sidebar-background: #151515;
+      --sidebar-background-color: #151515;
+      --sidebar-border-color: #151515;
+      --sidebar-width: 18rem;
+      
+      /* --- SEARCH BOX COLORS --- */
+      --search-input-background-color: #1C1C1C;
+      --search-input-border-color: #1C1C1C;
+      --search-input-color: #FFFFFF;
+
+      /* --- TABLE VARIABLES --- */
+      --table-row-odd-background: #151515;
+      --table-row-even-background: #1b1b1b;
+
+      /* --- FONTS --- */
+      --base-font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+      --heading-h1-font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+      --heading-h2-font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    }
+
+    /* --- SPECIFIC OVERRIDES --- */
+
+    .markdown-section h1 { color: #D57853 !important; }
+
+    .sidebar { background-color: #151515 !important; }
+    .sidebar-nav a { color: #FFFFFF !important; font-weight: normal; text-decoration: none; }
+    .sidebar-nav a:hover { color: #D57853 !important; }
+    .sidebar-nav li.active > a {
+      border-right: 3px solid #D57853 !important;
+      color: #D57853 !important;
+      background: transparent !important;
+      font-weight: bold;
+    }
+
+    /* Remove Arrows */
+    .sidebar-nav li > a:before, .sidebar-nav li.folder > a:before,
+    .sidebar-nav ul li::before, .app-sub-sidebar li::before {
+        content: none !important; display: none !important; background-image: none !important;
+    }
+
+    /* Table Colors */
+    .markdown-section table tbody tr:nth-child(odd) { background-color: #151515 !important; }
+    .markdown-section table tbody tr:nth-child(even) { background-color: #1b1b1b !important; }
+    
+    .markdown-section table td {
+      color: #FFFFFF; text-align: left !important; border: 1px solid #333 !important;
+    }
+    
+    .markdown-section table td strong, .markdown-section table td span {
+      color: #FFFFFF !important; font-weight: bold;
+    }
+    .markdown-section table td a { color: #D57853 !important; }
+
+    /* Cleanup */
+    .sidebar-nav li > strong { display: none !important; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #151515; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D57853; }
+
+    /* Layout */
+    .app-name img { width: 150px; margin-bottom: 20px; }
+    .font-switcher { position: absolute; top: 25px; right: 90px; z-index: 999; }
+    .font-switcher select {
+      background: #151515; color: #D57853; border: 1px solid #D57853;
+      padding: 5px; border-radius: 4px; font-family: inherit; cursor: pointer; outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  
+  <script>
+    window.$docsify = {
+      name: 'Ordinary Skills',
+      logo: 'logo.png',
+      repo: 'https://github.com/Microck/ordinary-claude-skills', 
+      
+      homepage: 'README.md',
+      loadSidebar: 'SUMMARY.md',
+      
+      auto2top: true,
+      themeColor: '#D57853',
+      
+      subMaxLevel: 0,
+      sidebarDisplayLevel: 1,
+
+      search: {
+        placeholder: 'search skills...',
+        noData: 'no results!',
+        depth: 6
+      },
+      
+      copyCode: {
+        buttonText : 'copy',
+        errorText  : 'error',
+        successText: 'copied'
+      },
+      
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'#D57853',
+        language:'english'
+      },
+      
+      pagination: {
+        previousText: 'prev',
+        nextText: 'next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      plugins: [
+        function(hook, vm) {
+          hook.ready(function() {
+            var div = document.createElement('div');
+            div.className = 'font-switcher';
+            div.innerHTML = `
+              <select id="fontSelect" onchange="changeFont(this.value)">
+                <option value="comic">comic sans</option>
+                <option value="modern">modern sans</option>
+                <option value="serif">serif</option>
+              </select>
+            `;
+            document.body.appendChild(div);
+          });
+        }
+      ]
+    }
+
+    function changeFont(font) {
+      const root = document.documentElement;
+      if (font === 'comic') {
+        root.style.setProperty('--base-font-family', '"Comic Sans MS", "Comic Sans", cursive, sans-serif');
+      } else if (font === 'modern') {
+        root.style.setProperty('--base-font-family', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif');
+      } else if (font === 'serif') {
+        root.style.setProperty('--base-font-family', 'Georgia, "Times New Roman", Times, serif');
+      }
+    }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count/dist/countable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-material-icons/dist/docsify-material-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination-keyboard-helper/dist/docsify-pagination-keyboard-helper.min.js"></script>
+
+</body>
+</html>
