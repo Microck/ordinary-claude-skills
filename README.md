@@ -34,11 +34,13 @@
 *   [overview](#overview)
 *   [features](#features)
 *   [skill catalog](#skill-catalog)
-    *   [document creation](#document-creation)
-    *   [creative & design](#creative--design)
-    *   [development & testing](#development--testing)
-    *   [productivity & collaboration](#productivity--collaboration)
-    *   [specialized domains](#specialized-domains)
+    *   [science & academia](#science--academia)
+    *   [software engineering](#software-engineering)
+    *   [infrastructure & security](#infrastructure--security)
+    *   [data & ai](#data--ai)
+    *   [business & operations](#business--operations)
+    *   [creative & humanities](#creative--humanities)
+    *   [web3 & blockchain](#web3--blockchain)
 *   [configuration](#configuration)
 *   [how-to examples](#how-to-examples)
 *   [troubleshooting](#troubleshooting)
@@ -49,81 +51,169 @@
 
 skills are basically fancy prompt packages and scripts that teach claude how to do specific things without you having to explain the context every single time. they load lazily (only when needed), which saves context window space and keeps claude from getting confused by instructions it doesn't need yet.
 
-this repo aggregates about 40+ skills from anthropic, obra, composiohq, and some random smart people on the internet.
+this repo aggregates hundreds of skills from anthropic, composiohq, k-dense-ai, and random internet geniuses.
 
 ## features
 
-*   **non-curated selection:** if it doesnt work i probably havent noticed, just let me know and i may or may not fix it.
+*   **non-curated selection:** i dumped everything in here. if it doesnt work i probably havent noticed. just let me know and i may or may not fix it.
 *   **categorized:** everything is sorted so you don't have to doomscroll to find the python tools.
 *   **standardized:** i tried to keep the folder structures somewhat consistent.
 *   **local first:** designed to be cloned locally so you aren't dependent on a third party url staying up forever.
 
 ## skill catalog
 
-here is the list of tools included. i have broken them down by what they actually do.
+here is the massive list of tools included. i have filtered out duplicates where possible because some of these skills apply to nineteen different categories.
 
-### document creation
+### science & academia
 
-handling office files programmatically because manual formatting is for chumps.
-
-| skill | purpose | source |
-| :--- | :--- | :--- |
-| **docx** | create and edit word docs without opening word | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/docx) |
-| **pptx** | generate powerpoints because nobody likes making slides | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/pptx) |
-| **xlsx** | crunch numbers in excel files | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/xlsx) |
-| **pdf** | rip text out of pdfs or make new ones | [anthropics](https://github.com/anthropics/skills/tree/main/document-skills/pdf) |
-
-### creative & design
-
-stuff for when you need to feel artistic or make things look pretty.
+tools for the researchers, biologists, and people who understand what protein folding is.
 
 | skill | purpose | source |
 | :--- | :--- | :--- |
-| **algorithmic-art** | make p5.js art with seeded randomness | [anthropics](https://github.com/anthropics/skills/tree/main/algorithmic-art) |
-| **canvas-design** | design visuals in png/pdf formats | [anthropics](https://github.com/anthropics/skills/tree/main/canvas-design) |
-| **slack-gif-creator** | make gifs specifically for slack reactions | [anthropics](https://github.com/anthropics/skills/tree/main/slack-gif-creator) |
-| **theme-factory** | generate color themes that don't clash | [anthropics](https://github.com/anthropics/skills/tree/main/theme-factory) |
+| **alphafold-database** | access 200m+ ai-predicted protein structures | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **arxiv-search** | search arxiv repository for physics and cs papers | [langchain-ai](https://github.com/langchain-ai/deepagents) |
+| **benchling-integration** | r&d platform integration for dna and proteins | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **biomni** | autonomous biomedical ai agent for complex research | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **biopython** | primary python toolkit for molecular biology | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **chembl-database** | query bioactive molecules and drug discovery data | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **clinicaltrials-database** | query clinicaltrials.gov api for patient matching | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **cosmic-database** | access cancer mutation database and signatures | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **datamol** | simplified molecular manipulation wrapper for rdkit | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **drugbank-database** | comprehensive drug properties and interactions | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **exploratory-data-analysis** | analyze scientific data files across 200+ formats | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **geo-database** | access ncbi geo for gene expression data | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **histolab** | digital pathology image processing for wsi | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **hypogenic** | automated hypothesis generation and testing | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **neurokit2** | biosignal processing for ecg, eeg, and eda | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **openalex-database** | query and analyze 240m+ scholarly works | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **pylabrobot** | automation toolkit for liquid handling robots | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **rdkit** | cheminformatics for fine-grained molecular control | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
 
-### development & testing
+### software engineering
 
-this is the heavy hitter section. use these to write better code or test the garbage code you already wrote.
-
-| skill | purpose | source |
-| :--- | :--- | :--- |
-| **artifacts-builder** | build react/tailwind html artifacts | [anthropics](https://github.com/anthropics/skills/tree/main/artifacts-builder) |
-| **mcp-builder** | create mcp servers for external apis | [anthropics](https://github.com/anthropics/skills/tree/main/mcp-builder) |
-| **webapp-testing** | test local apps with playwright | [anthropics](https://github.com/anthropics/skills/tree/main/webapp-testing) |
-| **aws-skills** | infrastructure automation for aws | [zxkane](https://github.com/zxkane/aws-skills) |
-| **ios-simulator** | control the ios sim directly | [conorluddy](https://github.com/conorluddy/ios-simulator-skill) |
-| **ffuf-skill** | web fuzzing integration | [jthack](https://github.com/jthack/ffuf_claude_skill) |
-| **playwright** | browser automation | [lackeyjb](https://github.com/lackeyjb/playwright-skill) |
-| **changelog-gen** | turn git commits into readable notes | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
-| **debugging** | methodical problem solving steps | [obra](https://github.com/obra/superpowers) |
-| **tdd** | test driven development enforcement | [obra](https://github.com/obra/superpowers) |
-
-### productivity & collaboration
-
-tools to make you look like you are working harder than you actually are.
+utilities to help you write code that sucks less.
 
 | skill | purpose | source |
 | :--- | :--- | :--- |
-| **notebooklm** | talk to notebooklm docs | [pleaseprompto](https://github.com/PleasePrompto/notebooklm-skill) |
-| **superpowers-lab** | general purpose claude enhancement | [obra](https://github.com/obra/superpowers-lab) |
-| **research-writer** | adds research capabilities to writing | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
-| **meeting-insights** | analyzes who talked too much in the meeting | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
-| **brainstorming** | structured idea generation | [obra](https://github.com/obra/superpowers) |
-| **writing-plans** | creates strategic docs | [obra](https://github.com/obra/superpowers) |
+| **api-design-principles** | master rest and graphql api design patterns | [wshobson](https://github.com/wshobson/agents) |
+| **bash-defensive-patterns** | robust shell scripting for production | [wshobson](https://github.com/wshobson/agents) |
+| **code-review-excellence** | practices for constructive pr feedback | [wshobson](https://github.com/wshobson/agents) |
+| **codex** | execute codex cli for refactoring | [cexll](https://github.com/cexll/myclaude) |
+| **command-development** | guidance for creating claude code slash commands | [anthropics](https://github.com/anthropics/claude-code) |
+| **debugging-strategies** | systematic root cause analysis techniques | [wshobson](https://github.com/wshobson/agents) |
+| **fastapi-templates** | production-ready fastapi scaffolding | [wshobson](https://github.com/wshobson/agents) |
+| **frontend-design** | create distinctive, non-generic web interfaces | [anthropics](https://github.com/anthropics/claude-code) |
+| **git-advanced-workflows** | master rebasing, bisect, and worktrees | [wshobson](https://github.com/wshobson/agents) |
+| **hook-development** | create pre/post tool hooks for claude | [anthropics](https://github.com/anthropics/claude-code) |
+| **modern-javascript-patterns** | master es6+ features and async patterns | [wshobson](https://github.com/wshobson/agents) |
+| **monorepo-management** | manage turborepo and nx workspaces | [wshobson](https://github.com/wshobson/agents) |
+| **python-packaging** | create and publish distributable python packages | [wshobson](https://github.com/wshobson/agents) |
+| **react-modernization** | migrate class components to hooks | [wshobson](https://github.com/wshobson/agents) |
+| **shellcheck-configuration** | static analysis for shell script quality | [wshobson](https://github.com/wshobson/agents) |
+| **typescript-advanced-types** | master generics and conditional types | [wshobson](https://github.com/wshobson/agents) |
+| **uv-package-manager** | fast python dependency management | [wshobson](https://github.com/wshobson/agents) |
 
-### specialized domains
+### infrastructure & security
 
-stuff that you might never use but looks cool on the readme.
+plumbing for the internet. keeping the servers from catching fire.
 
 | skill | purpose | source |
 | :--- | :--- | :--- |
-| **scientific** | research and data analysis | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
-| **win11-update** | windows 11 system management | [notmyself](https://github.com/NotMyself/claude-win11-speckit-update-skill) |
-| **claudisms** | sms integration | [jeffersonwarrior](https://github.com/jeffersonwarrior/claudisms) |
-| **defense-in-depth** | security layering strategies | [obra](https://github.com/obra/superpowers) |
+| **auth-implementation** | implement jwt, oauth2, and rbac patterns | [wshobson](https://github.com/wshobson/agents) |
+| **better-auth** | typescript auth framework implementation | [mrgoonie](https://github.com/mrgoonie/claudekit-skills) |
+| **ci-cd-patterns** | pipelines for gitlab and github actions | [wshobson](https://github.com/wshobson/agents) |
+| **cloudbase-database** | use document database web sdk | [tencentcloudbase](https://github.com/TencentCloudBase/awesome-cloudbase-examples) |
+| **cloudflare-manager** | manage workers, kv, and dns records | [qdhenry](https://github.com/qdhenry/Claude-Command-Suite) |
+| **cost-optimization** | optimize cloud spend and resources | [wshobson](https://github.com/wshobson/agents) |
+| **database-migration** | zero-downtime schema changes | [wshobson](https://github.com/wshobson/agents) |
+| **defense-in-depth** | validate data at every system layer | [obra](https://github.com/obra/superpowers) |
+| **docker-kubernetes** | k8s manifests and security policies | [wshobson](https://github.com/wshobson/agents) |
+| **error-tracking** | add sentry v8 monitoring to projects | [diet103](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| **gitops-workflow** | implement argocd and flux deployments | [wshobson](https://github.com/wshobson/agents) |
+| **grafana-dashboards** | create visualization for system metrics | [wshobson](https://github.com/wshobson/agents) |
+| **microservices-patterns** | distributed architecture design | [wshobson](https://github.com/wshobson/agents) |
+| **postgres-migrations** | guide for safe postgres schema changes | [pr-pm](https://github.com/pr-pm/prpm) |
+| **sast-configuration** | static application security testing | [wshobson](https://github.com/wshobson/agents) |
+| **secrets-management** | secure vault and pipeline secrets | [wshobson](https://github.com/wshobson/agents) |
+| **sql-optimization** | master indexing and query performance | [wshobson](https://github.com/wshobson/agents) |
+| **terraform-modules** | build reusable iac components | [wshobson](https://github.com/wshobson/agents) |
+
+### data & ai
+
+crunching numbers and hallucinating answers.
+
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **agentdb-vector-search** | semantic search with agentdb | [ruvnet](https://github.com/ruvnet/claude-flow) |
+| **analyzing-agentscope** | retrieve info from agentscope library | [agentscope-ai](https://github.com/agentscope-ai/agentscope) |
+| **chroma** | open-source embedding database | [zechenzhangagi](https://github.com/zechenzhangAGI/AI-research-SKILLs) |
+| **claude-opus-migration** | migrate prompts from sonnet to opus | [anthropics](https://github.com/anthropics/claude-code) |
+| **flow-nexus-neural** | train neural networks in e2b sandboxes | [ruvnet](https://github.com/ruvnet/claude-flow) |
+| **langchain-architecture** | design agents and tool integration | [wshobson](https://github.com/wshobson/agents) |
+| **llm-evaluation** | metrics and benchmarking for ai apps | [wshobson](https://github.com/wshobson/agents) |
+| **mcp-builder** | create model context protocol servers | [davila7](https://github.com/davila7/claude-code-templates) |
+| **ml-pipeline-workflow** | end-to-end mlops from training to deploy | [wshobson](https://github.com/wshobson/agents) |
+| **pinecone** | managed vector database for production | [zechenzhangagi](https://github.com/zechenzhangAGI/AI-research-SKILLs) |
+| **prompt-engineering** | maximize llm performance and reliability | [wshobson](https://github.com/wshobson/agents) |
+| **rag-implementation** | build retrieval-augmented generation | [wshobson](https://github.com/wshobson/agents) |
+| **zapier-workflows** | trigger automations and mcp orchestration | [davila7](https://github.com/davila7/claude-code-templates) |
+
+### business & operations
+
+boring but necessary stuff for capitalism.
+
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **agile-product-owner** | backlog management and user stories | [alirezarezvani](https://github.com/alirezarezvani/claude-skills) |
+| **alex-hormozi-pitch** | create offers using $100m methodology | [danielmiessler](https://github.com/danielmiessler/Personal_AI_Infrastructure) |
+| **billing-automation** | subscription lifecycle and invoicing | [wshobson](https://github.com/wshobson/agents) |
+| **competitive-analysis** | extract and analyze competitor ads | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **create-plan** | generate detailed implementation strategies | [antinomyhq](https://github.com/antinomyhq/forge) |
+| **financial-models** | dcf analysis and monte carlo simulations | [anthropics](https://github.com/anthropics/claude-cookbooks) |
+| **ga4-compliance** | privacy, gdpr, and consent mode setup | [henkisdabro](https://github.com/henkisdabro/wookstar-claude-code-plugins) |
+| **lead-researcher** | identify high-quality sales leads | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **linear-todo-sync** | fetch and organize tasks from linear | [qdhenry](https://github.com/qdhenry/Claude-Command-Suite) |
+| **paypal-integration** | implement checkout and subscriptions | [wshobson](https://github.com/wshobson/agents) |
+| **product-strategist** | okrs and market analysis for heads of product | [alirezarezvani](https://github.com/alirezarezvani/claude-skills) |
+| **shopify-dev** | build apps, themes, and extensions | [mrgoonie](https://github.com/mrgoonie/claudekit-skills) |
+| **stripe-integration** | robust payment processing flows | [wshobson](https://github.com/wshobson/agents) |
+
+### creative & humanities
+
+making things look pretty, writing novels, and ancient wisdom.
+
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **all-traditions-speaking** | universal wisdom from all traditions | [nikhilvallishayee](https://github.com/nikhilvallishayee/universal-pattern-space) |
+| **blog-post-writer** | transform brain dumps into polished posts | [nicknisi](https://github.com/nicknisi/dotfiles) |
+| **card-news-generator** | create instagram-style news series | [bear2u](https://github.com/bear2u/my-skills) |
+| **content-researcher** | research, cite, and outline content | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **dnd5e-srd** | rag skill for d&d rules and spells | [datapizza-labs](https://github.com/datapizza-labs/rag-dataset-builder) |
+| **fantasy-building** | genre conventions for magic and worlds | [wordflowlab](https://github.com/wordflowlab/novel-writer-skills) |
+| **gemini-imagegen** | generate images using gemini api | [everyinc](https://github.com/EveryInc/compounding-engineering-plugin) |
+| **markitdown** | convert any file format to markdown | [k-dense-ai](https://github.com/K-Dense-AI/claude-scientific-skills) |
+| **meeting-insights** | analyze transcripts for behavioral patterns | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+| **mystery-conventions** | writing guide for crime and suspense | [wordflowlab](https://github.com/wordflowlab/novel-writer-skills) |
+| **novelweave-workflow** | complete novel creation methodology | [wordflowlab](https://github.com/wordflowlab/novelweave) |
+| **siberian-shamanism** | navigate original shamanic technology | [nikhilvallishayee](https://github.com/nikhilvallishayee/universal-pattern-space) |
+| **slack-gif-creator** | create optimized gifs for slack | [davila7](https://github.com/davila7/claude-code-templates) |
+| **story-explanation** | create compelling narrative summaries | [danielmiessler](https://github.com/danielmiessler/Personal_AI_Infrastructure) |
+| **video-downloader** | download videos for offline archival | [composiohq](https://github.com/ComposioHQ/awesome-claude-skills) |
+
+### web3 & blockchain
+
+magic internet money tools.
+
+| skill | purpose | source |
+| :--- | :--- | :--- |
+| **blockchain-developer** | smart contract and dapp architecture | [zenobi-us](https://github.com/zenobi-us/dotfiles) |
+| **btc-connect** | bitcoin wallet integration for react/vue | [icehugh](https://github.com/IceHugh/btc-connect) |
+| **crypto-research** | market analysis and price trends | [stevengonsalvez](https://github.com/stevengonsalvez/claudecode-bootstrap) |
+| **defi-templates** | protocols for staking and amms | [wshobson](https://github.com/wshobson/agents) |
+| **nft-standards** | erc-721 and erc-1155 implementation | [wshobson](https://github.com/wshobson/agents) |
+| **smart-contract-gen** | generate secure solidity contracts | [dexploarer](https://github.com/Dexploarer/claudius-skills) |
+| **solidity-security** | prevent vulnerabilities in contracts | [wshobson](https://github.com/wshobson/agents) |
+| **web3-testing** | hardhat and foundry test suites | [wshobson](https://github.com/wshobson/agents) |
 
 ## configuration
 
@@ -171,10 +261,10 @@ here is how you actually talk to claude once the skills are loaded.
 
 ### scenario 1: debugging a react app
 
-load the `systematic-debugging` and `artifacts-builder` skills.
+load the `debugging-strategies` and `frontend-design` skills.
 
 **you:**
-> i have a react component that is not rendering the list items correctly. please use the systematic debugging skill to analyze the code i paste next, and then use the artifacts builder to propose a fix.
+> i have a react component that is not rendering the list items correctly. please use the systematic debugging skill to analyze the code i paste next, and then use the frontend design skill to propose a fix.
 
 **claude:**
 > acknowledged. i will apply the systematic debugging protocol. please paste the code.
@@ -238,4 +328,4 @@ i did not write most of these. i just collected them.
 *   **anthropic skills:** mit license (mostly)
 *   **community skills:** check the `LICENSE` file in each specific folder.
 
-credits go to [anthropic](https://github.com/anthropics), [obra](https://github.com/obra), [composiohq](https://github.com/ComposioHQ), and the other legends listed in the source tables. if you own one of these and want me to take it down, just open an issue and i will nuke it.
+credits go to [anthropic](https://github.com/anthropics), [composiohq](https://github.com/ComposioHQ), [k-dense-ai](https://github.com/K-Dense-AI), and the other legends listed in the source tables. if you own one of these and want me to take it down, just open an issue and i will nuke it.
