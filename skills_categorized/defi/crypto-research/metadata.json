@@ -1,0 +1,14 @@
+{
+  "id": "stevengonsalvez-claudecode-bootstrap-claude-code-skills-crypto-research-skill-md",
+  "name": "crypto-research",
+  "author": "stevengonsalvez",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/9320602?v=4",
+  "description": "Comprehensive cryptocurrency market research and analysis using specialized AI agents. Analyzes market data, price trends, news sentiment, technical indicators, macro correlations, and investment opportunities. Use when researching cryptocurrencies, analyzing crypto markets, evaluating digital assets, or investigating blockchain projects like Bitcoin, Ethereum, Solana, etc.",
+  "githubUrl": "https://github.com/stevengonsalvez/claudecode-bootstrap/tree/main/claude-code/skills/crypto-research",
+  "stars": 6,
+  "forks": 3,
+  "updatedAt": 1764086122,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

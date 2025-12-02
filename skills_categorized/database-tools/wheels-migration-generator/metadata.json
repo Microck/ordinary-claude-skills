@@ -1,0 +1,14 @@
+{
+  "id": "wheels-dev-wheels-claude-skills-wheels-migration-generator-skill-md",
+  "name": "wheels-migration-generator",
+  "author": "wheels-dev",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/159224?v=4",
+  "description": "Generate database-agnostic Wheels migrations for creating tables, altering schemas, and managing database changes. Use when creating or modifying database schema, adding tables, columns, indexes, or foreign keys. Prevents database-specific SQL and ensures cross-database compatibility.",
+  "githubUrl": "https://github.com/wheels-dev/wheels/tree/develop/.claude/skills/wheels-migration-generator",
+  "stars": 202,
+  "forks": 107,
+  "updatedAt": 1764338800,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-meeting-insights-analyzer-skill-md",
+  "name": "meeting-insights-analyzer",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

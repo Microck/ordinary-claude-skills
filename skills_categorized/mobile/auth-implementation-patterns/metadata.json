@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-developer-essentials-skills-auth-implementation-patterns-skill-md",
+  "name": "auth-implementation-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master authentication and authorization patterns including JWT, OAuth2, session management, and RBAC to build secure, scalable access control systems. Use when implementing auth systems, securing APIs, or debugging security issues.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/developer-essentials/skills/auth-implementation-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

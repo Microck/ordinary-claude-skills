@@ -1,0 +1,14 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-scientific-skills-get-available-resources-skill-md",
+  "name": "get-available-resources",
+  "author": "K-Dense-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/238572432?v=4",
+  "description": "This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter.",
+  "githubUrl": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/get-available-resources",
+  "stars": 1609,
+  "forks": 193,
+  "updatedAt": 1764513414,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

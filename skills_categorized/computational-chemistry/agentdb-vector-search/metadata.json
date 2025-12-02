@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-agentdb-vector-search-skill-md",
+  "name": "agentdb-vector-search",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "\"Implement semantic vector search with AgentDB for intelligent document retrieval, similarity matching, and context-aware querying. Use when building RAG systems, semantic search engines, or intelligent knowledge bases.\"",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/agentdb-vector-search",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

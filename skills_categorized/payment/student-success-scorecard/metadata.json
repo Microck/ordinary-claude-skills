@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-edtech-growth-skills-student-success-scorecard-skill-md",
+  "name": "student-success-scorecard",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Metrics framework for monitoring engagement, progression, and completion.",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/edtech-growth/skills/student-success-scorecard",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

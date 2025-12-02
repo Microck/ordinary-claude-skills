@@ -1,0 +1,14 @@
+{
+  "id": "everyinc-compounding-engineering-plugin-plugins-compounding-engineering-skills-compound-docs-skill-md",
+  "name": "compound-docs",
+  "author": "EveryInc",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
+  "description": "Capture solved problems as categorized documentation with YAML frontmatter for fast lookup",
+  "githubUrl": "https://github.com/EveryInc/compounding-engineering-plugin/tree/main/plugins/compounding-engineering/skills/compound-docs",
+  "stars": 2062,
+  "forks": 173,
+  "updatedAt": 1764450412,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

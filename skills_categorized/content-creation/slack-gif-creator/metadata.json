@@ -1,0 +1,14 @@
+{
+  "id": "davila7-claude-code-templates-cli-tool-components-skills-creative-design-slack-gif-creator-skill-md",
+  "name": "slack-gif-creator",
+  "author": "davila7",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6216945?v=4",
+  "description": "Toolkit for creating animated GIFs optimized for Slack, with validators for size constraints and composable animation primitives. This skill applies when users request animated GIFs or emoji animations for Slack from descriptions like \"make me a GIF for Slack of X doing Y\".",
+  "githubUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/slack-gif-creator",
+  "stars": 12018,
+  "forks": 1045,
+  "updatedAt": 1764559926,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

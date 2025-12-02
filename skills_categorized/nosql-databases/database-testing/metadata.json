@@ -1,0 +1,14 @@
+{
+  "id": "proffesor-for-testing-agentic-qe-claude-skills-database-testing-skill-md",
+  "name": "database-testing",
+  "author": "proffesor-for-testing",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/214853444?v=4",
+  "description": "Database schema validation, data integrity testing, migration testing, transaction isolation, and query performance. Use when testing data persistence, ensuring referential integrity, or validating database migrations.",
+  "githubUrl": "https://github.com/proffesor-for-testing/agentic-qe/tree/main/.claude/skills/database-testing",
+  "stars": 82,
+  "forks": 18,
+  "updatedAt": 1764578770,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

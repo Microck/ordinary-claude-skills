@@ -1,0 +1,14 @@
+{
+  "id": "davila7-claude-code-templates-cli-tool-components-skills-development-skill-creator-skill-md",
+  "name": "skill-creator",
+  "author": "davila7",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6216945?v=4",
+  "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+  "githubUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/development/skill-creator",
+  "stars": 12018,
+  "forks": 1045,
+  "updatedAt": 1764559926,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

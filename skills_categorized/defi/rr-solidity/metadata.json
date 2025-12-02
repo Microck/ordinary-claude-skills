@@ -1,0 +1,14 @@
+{
+  "id": "roderik-ai-rules-claude-skills-rr-solidity-skill-md",
+  "name": "rr-solidity",
+  "author": "roderik",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/16780?v=4",
+  "description": "Comprehensive Solidity smart contract development skill using Foundry framework. Use for writing, testing, deploying, and auditing Solidity contracts with security-first practices. Also triggers when working with .sol files, Foundry project files (foundry.toml), test files (.t.sol), or smart contract deployment scripts. Example triggers: \"Write smart contract\", \"Create Solidity test\", \"Deploy contract\", \"Audit smart contract\", \"Fix security vulnerability\", \"Write Foundry test\", \"Set up Foundry project\"",
+  "githubUrl": "https://github.com/roderik/ai-rules/tree/main/.claude/skills/rr-solidity",
+  "stars": 43,
+  "forks": 7,
+  "updatedAt": 1764329859,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

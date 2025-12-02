@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-framework-migration-skills-database-migration-skill-md",
+  "name": "database-migration",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Execute database migrations across ORMs and platforms with zero-downtime strategies, data transformation, and rollback procedures. Use when migrating databases, changing schemas, performing data transformations, or implementing zero-downtime deployment strategies.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/framework-migration/skills/database-migration",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

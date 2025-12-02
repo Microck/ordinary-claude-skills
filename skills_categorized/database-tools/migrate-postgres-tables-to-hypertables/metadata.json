@@ -1,0 +1,14 @@
+{
+  "id": "timescale-pg-aiguide-skills-migrate-postgres-tables-to-hypertables-skill-md",
+  "name": "migrate-postgres-tables-to-hypertables",
+  "author": "timescale",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/8986001?v=4",
+  "description": "Comprehensive guide for migrating PostgreSQL tables to TimescaleDB hypertables with optimal configuration and performance validation",
+  "githubUrl": "https://github.com/timescale/pg-aiguide/tree/main/skills/migrate-postgres-tables-to-hypertables",
+  "stars": 89,
+  "forks": 5,
+  "updatedAt": 1764098695,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

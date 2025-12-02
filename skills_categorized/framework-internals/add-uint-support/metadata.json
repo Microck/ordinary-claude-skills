@@ -1,0 +1,14 @@
+{
+  "id": "pytorch-pytorch-claude-skills-add-uint-support-skill-md",
+  "name": "add-uint-support",
+  "author": "pytorch",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/21003710?v=4",
+  "description": "Add unsigned integer (uint) type support to PyTorch operators by updating AT_DISPATCH macros. Use when adding support for uint16, uint32, uint64 types to operators, kernels, or when user mentions enabling unsigned types, barebones unsigned types, or uint support.",
+  "githubUrl": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/add-uint-support",
+  "stars": 95362,
+  "forks": 26012,
+  "updatedAt": 1764119070,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

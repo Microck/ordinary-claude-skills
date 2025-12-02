@@ -1,0 +1,14 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-scientific-skills-ena-database-skill-md",
+  "name": "ena-database",
+  "author": "K-Dense-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/238572432?v=4",
+  "description": "\"Access European Nucleotide Archive via API/FTP. Retrieve DNA/RNA sequences, raw reads (FASTQ), genome assemblies by accession, for genomics and bioinformatics pipelines. Supports multiple formats.\"",
+  "githubUrl": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/ena-database",
+  "stars": 1609,
+  "forks": 193,
+  "updatedAt": 1764513414,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

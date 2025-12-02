@@ -1,0 +1,14 @@
+{
+  "id": "datadog-dd-trace-py-claude-skills-run-tests-skill-md",
+  "name": "run-tests",
+  "author": "DataDog",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/365230?v=4",
+  "description": ">",
+  "githubUrl": "https://github.com/DataDog/dd-trace-py/tree/main/.claude/skills/run-tests",
+  "stars": 607,
+  "forks": 469,
+  "updatedAt": 1764117434,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

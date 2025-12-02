@@ -1,0 +1,14 @@
+{
+  "id": "mrgoonie-claudekit-skills-claude-skills-shopify-skill-md",
+  "name": "shopify",
+  "author": "mrgoonie",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6857382?v=4",
+  "description": "Build Shopify applications, extensions, and themes using GraphQL/REST APIs, Shopify CLI, Polaris UI components, and Liquid templating. Capabilities include app development with OAuth authentication, checkout UI extensions for customizing checkout flow, admin UI extensions for dashboard integration, POS extensions for retail, theme development with Liquid, webhook management, billing API integration, product/order/customer management. Use when building Shopify apps, implementing checkout customizations, creating admin interfaces, developing themes, integrating payment processing, managing store data via APIs, or extending Shopify functionality.",
+  "githubUrl": "https://github.com/mrgoonie/claudekit-skills/tree/main/.claude/skills/shopify",
+  "stars": 713,
+  "forks": 113,
+  "updatedAt": 1763221520,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

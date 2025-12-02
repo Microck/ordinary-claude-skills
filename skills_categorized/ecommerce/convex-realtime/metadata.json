@@ -1,0 +1,14 @@
+{
+  "id": "korallis-droidz-droidz-installer-payloads-droid-cli-default-skills-convex-realtime-skill-md",
+  "name": "convex-realtime",
+  "author": "korallis",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/7937632?v=4",
+  "description": "Implement real-time features using Convex reactive queries that automatically update when data changes, enabling live collaboration, instant updates, and reactive UIs without manual polling. Use when building live dashboards, implementing collaborative editing, creating chat applications, showing real-time notifications, building activity feeds, implementing presence indicators, creating reactive search, or any feature requiring instant data synchronization across clients.",
+  "githubUrl": "https://github.com/korallis/Droidz/tree/main/droidz_installer/payloads/droid_cli/default/skills/convex-realtime",
+  "stars": 49,
+  "forks": 6,
+  "updatedAt": 1764198555,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

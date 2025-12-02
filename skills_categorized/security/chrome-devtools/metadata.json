@@ -1,0 +1,14 @@
+{
+  "id": "mrgoonie-claudekit-skills-claude-skills-chrome-devtools-skill-md",
+  "name": "chrome-devtools",
+  "author": "mrgoonie",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6857382?v=4",
+  "description": "Browser automation, debugging, and performance analysis using Puppeteer CLI scripts. Use for automating browsers, taking screenshots, analyzing performance, monitoring network traffic, web scraping, form automation, and JavaScript debugging.",
+  "githubUrl": "https://github.com/mrgoonie/claudekit-skills/tree/main/.claude/skills/chrome-devtools",
+  "stars": 713,
+  "forks": 113,
+  "updatedAt": 1763221520,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "glittercowboy-taches-cc-resources-skills-create-plans-skill-md",
+  "name": "create-plans",
+  "author": "glittercowboy",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/186001655?v=4",
+  "description": "Create hierarchical project plans optimized for solo agentic development. Use when planning projects, phases, or tasks that Claude will execute. Produces Claude-executable plans with verification criteria, not enterprise documentation. Handles briefs, roadmaps, phase plans, and context handoffs.",
+  "githubUrl": "https://github.com/glittercowboy/taches-cc-resources/tree/main/skills/create-plans",
+  "stars": 401,
+  "forks": 121,
+  "updatedAt": 1764006762,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

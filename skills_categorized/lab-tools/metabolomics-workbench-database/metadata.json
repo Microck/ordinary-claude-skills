@@ -1,0 +1,14 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-scientific-skills-metabolomics-workbench-database-skill-md",
+  "name": "metabolomics-workbench-database",
+  "author": "K-Dense-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/238572432?v=4",
+  "description": "\"Access NIH Metabolomics Workbench via REST API (4,200+ studies). Query metabolites, RefMet nomenclature, MS/NMR data, m/z searches, study metadata, for metabolomics and biomarker discovery.\"",
+  "githubUrl": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/metabolomics-workbench-database",
+  "stars": 1609,
+  "forks": 193,
+  "updatedAt": 1764513414,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

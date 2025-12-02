@@ -1,0 +1,14 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-scientific-skills-scientific-brainstorming-skill-md",
+  "name": "scientific-brainstorming",
+  "author": "K-Dense-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/238572432?v=4",
+  "description": "\"Research ideation partner. Generate hypotheses, explore interdisciplinary connections, challenge assumptions, develop methodologies, identify research gaps, for creative scientific problem-solving.\"",
+  "githubUrl": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/scientific-brainstorming",
+  "stars": 1609,
+  "forks": 193,
+  "updatedAt": 1764513414,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

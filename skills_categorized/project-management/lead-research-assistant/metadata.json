@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-lead-research-assistant-skill-md",
+  "name": "lead-research-assistant",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/lead-research-assistant",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

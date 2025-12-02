@@ -1,0 +1,14 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-15-rag-pinecone-skill-md",
+  "name": "pinecone",
+  "author": "zechenzhangAGI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128254220?v=4",
+  "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure.",
+  "githubUrl": "https://github.com/zechenzhangAGI/AI-research-SKILLs/tree/main/15-rag/pinecone",
+  "stars": 140,
+  "forks": 15,
+  "updatedAt": 1764113462,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

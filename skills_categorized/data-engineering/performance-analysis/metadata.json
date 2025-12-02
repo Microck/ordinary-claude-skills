@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-performance-analysis-skill-md",
+  "name": "performance-analysis",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Comprehensive performance analysis, bottleneck detection, and optimization recommendations for Claude Flow swarms",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/performance-analysis",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

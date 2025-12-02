@@ -1,0 +1,14 @@
+{
+  "id": "mrgoonie-claudekit-skills-claude-skills-ai-multimodal-skill-md",
+  "name": "ai-multimodal",
+  "author": "mrgoonie",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6857382?v=4",
+  "description": "Process and generate multimedia content using Google Gemini API. Capabilities include analyze audio files (transcription with timestamps, summarization, speech understanding, music/sound analysis up to 9.5 hours), understand images (captioning, object detection, OCR, visual Q&A, segmentation), process videos (scene detection, Q&A, temporal analysis, YouTube URLs, up to 6 hours), extract from documents (PDF tables, forms, charts, diagrams, multi-page), generate images (text-to-image, editing, composition, refinement). Use when working with audio/video files, analyzing images or screenshots, processing PDF documents, extracting structured data from media, creating images from text prompts, or implementing multimodal AI features. Supports multiple models (Gemini 2.5/2.0) with context windows up to 2M tokens.",
+  "githubUrl": "https://github.com/mrgoonie/claudekit-skills/tree/main/.claude/skills/ai-multimodal",
+  "stars": 713,
+  "forks": 113,
+  "updatedAt": 1763221520,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

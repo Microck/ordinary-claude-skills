@@ -1,0 +1,14 @@
+{
+  "id": "payloadcms-payload-tools-claude-plugin-skills-payload-skill-md",
+  "name": "payload",
+  "author": "payloadcms",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/62968818?v=4",
+  "description": "Use when working with Payload CMS projects (payload.config.ts, collections, fields, hooks, access control, Payload API). Use when debugging validation errors, security issues, relationship queries, transactions, or hook behavior.",
+  "githubUrl": "https://github.com/payloadcms/payload/tree/main/tools/claude-plugin/skills/payload",
+  "stars": 38999,
+  "forks": 3133,
+  "updatedAt": 1764098989,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

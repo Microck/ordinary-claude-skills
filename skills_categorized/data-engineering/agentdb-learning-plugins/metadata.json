@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-agentdb-learning-skill-md",
+  "name": "agentdb-learning-plugins",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "\"Create and train AI learning plugins with AgentDB's 9 reinforcement learning algorithms. Includes Decision Transformer, Q-Learning, SARSA, Actor-Critic, and more. Use when building self-learning agents, implementing RL, or optimizing agent behavior through experience.\"",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/agentdb-learning",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wirasm-prps-agentic-eng-claude-skills-prp-core-runner-skill-md",
+  "name": "prp-core-runner",
+  "author": "Wirasm",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/152263317?v=4",
+  "description": "Orchestrate complete PRP workflow from feature request to pull request. Run create branch, create PRP, execute implementation, commit changes, and create PR in sequence. Use when implementing features using PRP methodology or when user requests full PRP workflow.",
+  "githubUrl": "https://github.com/Wirasm/PRPs-agentic-eng/tree/development/.claude/skills/prp-core-runner",
+  "stars": 1737,
+  "forks": 536,
+  "updatedAt": 1761310468,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

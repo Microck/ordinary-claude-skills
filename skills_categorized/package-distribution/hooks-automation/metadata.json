@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-hooks-automation-skill-md",
+  "name": "hooks-automation",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Automated coordination, formatting, and learning from Claude Code operations using intelligent hooks with MCP integration. Includes pre/post task hooks, session management, Git integration, memory coordination, and neural pattern training for enhanced development workflows.",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/hooks-automation",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

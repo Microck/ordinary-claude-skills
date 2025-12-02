@@ -1,0 +1,14 @@
+{
+  "id": "modu-ai-moai-adk-src-moai-adk-templates-claude-skills-moai-domain-database-skill-md",
+  "name": "moai-domain-database",
+  "author": "modu-ai",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/176569285?v=4",
+  "description": "\"Enterprise database architecture specialist with PostgreSQL 17, MySQL\\",
+  "githubUrl": "https://github.com/modu-ai/moai-adk/tree/main/src/moai_adk/templates/.claude/skills/moai-domain-database",
+  "stars": 310,
+  "forks": 64,
+  "updatedAt": 1764083397,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

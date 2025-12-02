@@ -1,0 +1,14 @@
+{
+  "id": "insforge-insforge-claude-plugin-skills-insforge-schema-patterns-skill-md",
+  "name": "insforge-schema-patterns",
+  "author": "InsForge",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/198419463?v=4",
+  "description": "Database schema patterns for InsForge including social graphs, e-commerce, content publishing, and multi-tenancy with RLS policies. Use when designing data models with relationships, foreign keys, or Row Level Security.",
+  "githubUrl": "https://github.com/InsForge/InsForge/tree/main/claude-plugin/skills/insforge-schema-patterns",
+  "stars": 907,
+  "forks": 125,
+  "updatedAt": 1764665225,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

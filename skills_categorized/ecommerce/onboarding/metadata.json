@@ -1,0 +1,14 @@
+{
+  "id": "huytieu-cog-second-brain-claude-skills-onboarding-skill-md",
+  "name": "onboarding",
+  "author": "huytieu",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/10217502?v=4",
+  "description": "Personalize COG for your workflow - creates profile, interests, and watchlist files with guided setup (run this first!)",
+  "githubUrl": "https://github.com/huytieu/COG-second-brain/tree/main/.claude/skills/onboarding",
+  "stars": 55,
+  "forks": 6,
+  "updatedAt": 1762319112,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

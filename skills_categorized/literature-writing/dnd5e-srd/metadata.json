@@ -1,0 +1,14 @@
+{
+  "id": "datapizza-labs-rag-dataset-builder-src-dataset-builder-medium-answers-claude-skill-dnd5e-srd-skill-md",
+  "name": "dnd5e-srd",
+  "author": "datapizza-labs",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/229088968?v=4",
+  "description": "Retrieval-augmented generation (RAG) skill for the D&D 5e System Reference Document (SRD). Use when answering questions about D&D 5e core rules, spells, combat, equipment, conditions, monsters, and other SRD content. This skill provides agentic search-based access to the SRD split into page-range markdown files.",
+  "githubUrl": "https://github.com/datapizza-labs/rag-dataset-builder/tree/main/src/dataset_builder/medium_answers_claude_skill/dnd5e-srd",
+  "stars": 29,
+  "forks": 1,
+  "updatedAt": 1762962416,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

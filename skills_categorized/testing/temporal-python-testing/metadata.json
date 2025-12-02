@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-backend-development-skills-temporal-python-testing-skill-md",
+  "name": "temporal-python-testing",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Test Temporal workflows with pytest, time-skipping, and mocking strategies. Covers unit testing, integration testing, replay testing, and local development setup. Use when implementing Temporal workflow tests or debugging test failures.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/backend-development/skills/temporal-python-testing",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

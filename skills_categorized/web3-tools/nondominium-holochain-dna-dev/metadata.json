@@ -1,0 +1,14 @@
+{
+  "id": "sensorica-nondominium-claude-skills-dna-dev-skill-md",
+  "name": "nondominium-holochain-dna-dev",
+  "author": "Sensorica",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/12267431?v=4",
+  "description": "Specialized skill for nondominium Holochain DNA development, focusing on zome creation, entry patterns, integrity/coordinator architecture, ValueFlows compliance, and WASM optimization. Use when creating new zomes, implementing entry types, or modifying Holochain DNA code.",
+  "githubUrl": "https://github.com/Sensorica/nondominium/tree/main/.claude/skills/dna-dev",
+  "stars": 5,
+  "forks": 0,
+  "updatedAt": 1764362156,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "lablup-backend-ai-webui-claude-skills-backend-ai-guide-skill-md",
+  "name": "backend-ai-guide",
+  "author": "lablup",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/11258248?v=4",
+  "description": "|",
+  "githubUrl": "https://github.com/lablup/backend.ai-webui/tree/main/.claude/skills/backend-ai-guide",
+  "stars": 123,
+  "forks": 78,
+  "updatedAt": 1764588137,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

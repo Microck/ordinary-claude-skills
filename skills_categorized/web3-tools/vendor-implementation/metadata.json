@@ -1,0 +1,14 @@
+{
+  "id": "no-trade-no-life-yuan-claude-skills-vendor-implementation-skill-md",
+  "name": "vendor-implementation",
+  "author": "No-Trade-No-Life",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/87363864?v=4",
+  "description": "\u57fa\u4e8eHyperliquid\u6210\u529f\u5b9e\u73b0\u7ecf\u9a8c\uff0c\u4e3a\u65b0\u4ea4\u6613\u6240\u4f9b\u5e94\u5546\u63d0\u4f9bYuan\u6846\u67b6\u96c6\u6210\u6307\u5357\u3002\u4f7f\u7528\u6b64\u6280\u80fd\u5f53\u9700\u8981\u4e3a\u65b0\u7684\u4ea4\u6613\u6240\u521b\u5efa\u4f9b\u5e94\u5546\u5b9e\u73b0\uff0c\u5305\u62ec\u9879\u76ee\u7ed3\u6784\u8bbe\u8ba1\u3001API\u96c6\u6210\u3001\u6838\u5fc3\u670d\u52a1\u5b9e\u73b0\u548c\u6700\u4f73\u5b9e\u8df5\u3002\u9002\u7528\u4e8e\u4ea4\u6613\u6240API\u96c6\u6210\u3001\u91d1\u878d\u7cfb\u7edf\u5f00\u53d1\u3001\u5fae\u670d\u52a1\u67b6\u6784\u8bbe\u8ba1\u3002",
+  "githubUrl": "https://github.com/No-Trade-No-Life/Yuan/tree/main/.claude/skills/vendor-implementation",
+  "stars": 343,
+  "forks": 49,
+  "updatedAt": 1764585085,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

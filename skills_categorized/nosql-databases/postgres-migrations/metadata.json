@@ -1,0 +1,14 @@
+{
+  "id": "pr-pm-prpm-claude-skills-postgres-migrations-skill-md",
+  "name": "postgres-migrations",
+  "author": "pr-pm",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239213145?v=4",
+  "description": "Comprehensive guide to PostgreSQL migrations - common errors, generated columns, full-text search, indexes, idempotent migrations, and best practices for database schema changes",
+  "githubUrl": "https://github.com/pr-pm/prpm/tree/main/.claude/skills/postgres-migrations",
+  "stars": 49,
+  "forks": 7,
+  "updatedAt": 1764590961,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

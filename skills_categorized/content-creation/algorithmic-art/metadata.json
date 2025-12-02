@@ -1,0 +1,14 @@
+{
+  "id": "modelscope-ms-agent-projects-agent-skills-skills-algorithmic-art-skill-md",
+  "name": "algorithmic-art",
+  "author": "modelscope",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/109945100?v=4",
+  "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+  "githubUrl": "https://github.com/modelscope/ms-agent/tree/main/projects/agent_skills/skills/algorithmic-art",
+  "stars": 3635,
+  "forks": 412,
+  "updatedAt": 1764065911,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

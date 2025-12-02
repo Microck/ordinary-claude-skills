@@ -1,0 +1,14 @@
+{
+  "id": "steveyegge-beads-examples-claude-code-skill-skill-md",
+  "name": "bd-issue-tracking",
+  "author": "steveyegge",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/613744?v=4",
+  "description": "Track complex, multi-session work with dependency graphs using bd (beads) issue tracker. Use when work spans multiple sessions, has complex dependencies, or requires persistent context across compaction cycles. For simple single-session linear tasks, TodoWrite remains appropriate.",
+  "githubUrl": "https://github.com/steveyegge/beads/tree/main/examples/claude-code-skill",
+  "stars": 3690,
+  "forks": 231,
+  "updatedAt": 1764569502,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

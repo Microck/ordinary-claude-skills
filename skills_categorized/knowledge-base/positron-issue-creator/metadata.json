@@ -1,0 +1,14 @@
+{
+  "id": "posit-dev-positron-claude-skills-positron-issue-creator-skill-md",
+  "name": "positron-issue-creator",
+  "author": "posit-dev",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/107264312?v=4",
+  "description": "This skill should be used when drafting GitHub issues for the Positron repository. It provides workflows for searching duplicates, selecting appropriate labels, gathering complete context through questioning, and writing terse, fluff-free issues that precisely describe what is needed or wrong. The skill prepares issues for manual submission by the user. Use this skill when the user asks to draft or prepare an issue for Positron.",
+  "githubUrl": "https://github.com/posit-dev/positron/tree/main/.claude/skills/positron-issue-creator",
+  "stars": 3764,
+  "forks": 128,
+  "updatedAt": 1764115622,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

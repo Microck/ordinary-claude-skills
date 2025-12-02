@@ -1,0 +1,14 @@
+{
+  "id": "bear2u-my-skills-claude-skills-card-news-generator-v2-skill-md",
+  "name": "card-news-generator-v2",
+  "author": "bear2u",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/9362317?v=4",
+  "description": "Create 600x600 Instagram-style card news series automatically with optional background images. User provides topic, colors, and optional images - Claude generates content and creates multiple cards with proper text wrapping.",
+  "githubUrl": "https://github.com/bear2u/my-skills/tree/master/.claude/skills/card-news-generator-v2",
+  "stars": 499,
+  "forks": 143,
+  "updatedAt": 1763695492,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

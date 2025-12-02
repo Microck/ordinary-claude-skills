@@ -1,0 +1,14 @@
+{
+  "id": "lackeyjb-playwright-skill-skills-playwright-skill-skill-md",
+  "name": "playwright-browser-automation",
+  "author": "lackeyjb",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/9823496?v=4",
+  "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flows, check links, automate any browser task. Use when user wants to test websites, automate browser interactions, validate web functionality, or perform any browser-based testing.",
+  "githubUrl": "https://github.com/lackeyjb/playwright-skill/tree/main/skills/playwright-skill",
+  "stars": 725,
+  "forks": 32,
+  "updatedAt": 1762864177,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-payment-processing-skills-pci-compliance-skill-md",
+  "name": "pci-compliance",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI compliance, or implementing payment card security measures.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/payment-processing/skills/pci-compliance",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

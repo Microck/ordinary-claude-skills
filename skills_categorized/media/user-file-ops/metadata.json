@@ -1,0 +1,14 @@
+{
+  "id": "trpc-group-trpc-agent-go-examples-skillrun-skills-user-file-ops-skill-md",
+  "name": "user-file-ops",
+  "author": "trpc-group",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/140800716?v=4",
+  "description": "Simple operations on user-provided text files including summarization.",
+  "githubUrl": "https://github.com/trpc-group/trpc-agent-go/tree/main/examples/skillrun/skills/user_file_ops",
+  "stars": 728,
+  "forks": 57,
+  "updatedAt": 1764561317,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

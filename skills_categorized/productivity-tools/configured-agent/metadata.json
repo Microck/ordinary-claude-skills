@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-code-plugins-plugin-dev-skills-plugin-settings-skill-md",
+  "name": "configured-agent",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
+  "githubUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/plugin-settings",
+  "stars": 44143,
+  "forks": 3048,
+  "updatedAt": 1764537680,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

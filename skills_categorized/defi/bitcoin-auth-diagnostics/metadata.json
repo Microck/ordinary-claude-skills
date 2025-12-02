@@ -1,0 +1,14 @@
+{
+  "id": "b-open-io-prompts-user-claude-skills-bitcoin-auth-diagnostics-skill-md",
+  "name": "bitcoin-auth-diagnostics",
+  "author": "b-open-io",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/163210089?v=4",
+  "description": "Diagnose and troubleshoot bitcoin-auth token generation and verification issues. This skill should be used when users encounter authentication failures, signature verification errors, or integration problems with the bitcoin-auth library.",
+  "githubUrl": "https://github.com/b-open-io/prompts/tree/master/user/.claude/skills/bitcoin-auth-diagnostics",
+  "stars": 5,
+  "forks": 1,
+  "updatedAt": 1763492172,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

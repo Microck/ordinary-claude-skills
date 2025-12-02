@@ -1,0 +1,14 @@
+{
+  "id": "davila7-claude-code-templates-cli-tool-components-skills-enterprise-communication-excel-analysis-skill-md",
+  "name": "excel-analysis",
+  "author": "davila7",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6216945?v=4",
+  "description": "Analyze Excel spreadsheets, create pivot tables, generate charts, and perform data analysis. Use when analyzing Excel files, spreadsheets, tabular data, or .xlsx files.",
+  "githubUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/excel-analysis",
+  "stars": 12018,
+  "forks": 1045,
+  "updatedAt": 1764559926,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

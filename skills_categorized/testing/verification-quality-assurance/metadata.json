@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-verification-quality-skill-md",
+  "name": "verification-quality-assurance",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "\"Comprehensive truth scoring, code quality verification, and automatic rollback system with 0.95 accuracy threshold for ensuring high-quality agent outputs and codebase reliability.\"",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/verification-quality",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

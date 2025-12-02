@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-github-code-review-skill-md",
+  "name": "github-code-review",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Comprehensive GitHub code review with AI-powered swarm coordination",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/github-code-review",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

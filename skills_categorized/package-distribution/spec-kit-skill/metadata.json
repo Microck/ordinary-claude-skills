@@ -1,0 +1,14 @@
+{
+  "id": "feiskyer-claude-code-settings-plugins-spec-kit-skill-skills-spec-kit-skill-skill-md",
+  "name": "spec-kit-skill",
+  "author": "feiskyer",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/676637?v=4",
+  "description": "GitHub Spec-Kit integration for constitution-based spec-driven development. 7-phase workflow (constitution, specify, clarify, plan, tasks, analyze, implement). Use when working with spec-kit CLI, .specify/ directories, or creating specifications with constitution-driven development. Triggered by \"spec-kit\", \"speckit\", \"constitution\", \"specify\", references to .specify/ directory, or spec-kit commands.",
+  "githubUrl": "https://github.com/feiskyer/claude-code-settings/tree/main/plugins/spec-kit-skill/skills/spec-kit-skill",
+  "stars": 697,
+  "forks": 122,
+  "updatedAt": 1764583940,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

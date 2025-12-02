@@ -1,0 +1,14 @@
+{
+  "id": "korallis-droidz-droidz-installer-payloads-droid-cli-default-skills-data-migration-skill-md",
+  "name": "data-migration",
+  "author": "korallis",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/7937632?v=4",
+  "description": "Plan and execute database migrations, data transformations, and system migrations safely with rollback strategies and data integrity validation. Use when migrating databases, transforming data schemas, moving between database systems, implementing versioned migrations, handling data transformations, ensuring data integrity, or planning zero-downtime migrations.",
+  "githubUrl": "https://github.com/korallis/Droidz/tree/main/droidz_installer/payloads/droid_cli/default/skills/data-migration",
+  "stars": 49,
+  "forks": 6,
+  "updatedAt": 1764198555,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

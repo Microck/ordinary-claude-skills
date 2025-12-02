@@ -1,0 +1,14 @@
+{
+  "id": "outlinedriven-odin-claude-plugin-skills-design-by-contract-skill-md",
+  "name": "design-by-contract",
+  "author": "OutlineDriven",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/244415305?v=4",
+  "description": "Automated contract verification, detection, and remediation across multiple languages using formal preconditions, postconditions, and invariants. This skill provides both reference documentation AND execution capabilities for the full PLAN -> CREATE -> VERIFY -> REMEDIATE workflow.",
+  "githubUrl": "https://github.com/OutlineDriven/odin-claude-plugin/tree/main/skills/design-by-contract",
+  "stars": 2,
+  "forks": 0,
+  "updatedAt": 1764377455,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

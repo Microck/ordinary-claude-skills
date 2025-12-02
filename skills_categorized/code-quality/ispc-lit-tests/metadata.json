@@ -1,0 +1,14 @@
+{
+  "id": "ispc-ispc-claude-skills-ispc-lit-tests-skill-md",
+  "name": "ispc-lit-tests",
+  "author": "ispc",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/858308?v=4",
+  "description": "Best practices for creating ISPC lit tests. Use when writing regression tests, verifying code generation, or checking compiler diagnostics.",
+  "githubUrl": "https://github.com/ispc/ispc/tree/main/.claude/skills/ispc-lit-tests",
+  "stars": 2788,
+  "forks": 341,
+  "updatedAt": 1764116373,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

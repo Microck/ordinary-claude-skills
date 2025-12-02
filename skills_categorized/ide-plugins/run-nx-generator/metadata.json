@@ -1,0 +1,14 @@
+{
+  "id": "nrwl-nx-claude-skills-run-nx-generator-skill-md",
+  "name": "run-nx-generator",
+  "author": "nrwl",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/23692104?v=4",
+  "description": "Run Nx generators with prioritization for workspace-plugin generators. Use this when generating code, scaffolding new features, or automating repetitive tasks in the monorepo.",
+  "githubUrl": "https://github.com/nrwl/nx/tree/master/.claude/skills/run-nx-generator",
+  "stars": 27580,
+  "forks": 2630,
+  "updatedAt": 1764114462,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fcakyon-claude-codex-settings-plugins-ultralytics-dev-skills-mongodb-usage-skill-md",
+  "name": "mongodb-usage",
+  "author": "fcakyon",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/34196005?v=4",
+  "description": "This skill should be used when user asks to \"query MongoDB\", \"show database collections\", \"get collection schema\", \"list MongoDB databases\", \"search records in MongoDB\", or \"check database indexes\".",
+  "githubUrl": "https://github.com/fcakyon/claude-codex-settings/tree/main/plugins/ultralytics-dev/skills/mongodb-usage",
+  "stars": 182,
+  "forks": 16,
+  "updatedAt": 1764438032,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

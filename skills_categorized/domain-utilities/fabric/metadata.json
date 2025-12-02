@@ -1,0 +1,14 @@
+{
+  "id": "danielmiessler-personal-ai-infrastructure-claude-skills-fabric-skill-md",
+  "name": "fabric",
+  "author": "danielmiessler",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/50654?v=4",
+  "description": "Intelligent pattern selection for Fabric CLI. Automatically selects the right pattern from 242+ specialized prompts based on your intent - threat modeling, analysis, summarization, content creation, extraction, and more. USE WHEN processing content, analyzing data, creating summaries, threat modeling, or transforming text.",
+  "githubUrl": "https://github.com/danielmiessler/Personal_AI_Infrastructure/tree/main/.claude/skills/fabric",
+  "stars": 1085,
+  "forks": 237,
+  "updatedAt": 1764213577,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

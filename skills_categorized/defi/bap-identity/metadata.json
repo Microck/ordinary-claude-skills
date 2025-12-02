@@ -1,0 +1,14 @@
+{
+  "id": "b-open-io-prompts-user-claude-skills-bap-identity-skill-md",
+  "name": "bap-identity",
+  "author": "b-open-io",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/163210089?v=4",
+  "description": "Manage BAP (Bitcoin Attestation Protocol) identity files using bap-cli. This skill should be used when users need to create, decrypt, list, or extract BAP identity backups, work with .bep encrypted files, or generate test fixtures for Playwright tests involving BAP identities.",
+  "githubUrl": "https://github.com/b-open-io/prompts/tree/master/user/.claude/skills/bap-identity",
+  "stars": 5,
+  "forks": 1,
+  "updatedAt": 1763492172,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

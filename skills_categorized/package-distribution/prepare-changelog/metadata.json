@@ -1,0 +1,14 @@
+{
+  "id": "nextest-rs-nextest-claude-skills-prepare-changelog-skill-md",
+  "name": "prepare-changelog",
+  "author": "nextest-rs",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/99227291?v=4",
+  "description": "Guidelines for preparing changelog entries for nextest releases following Keep a Changelog format",
+  "githubUrl": "https://github.com/nextest-rs/nextest/tree/main/.claude/skills/prepare-changelog",
+  "stars": 2704,
+  "forks": 131,
+  "updatedAt": 1764577689,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

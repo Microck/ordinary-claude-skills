@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-github-release-management-skill-md",
+  "name": "github-release-management",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/github-release-management",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

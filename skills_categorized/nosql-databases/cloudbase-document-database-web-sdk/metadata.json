@@ -1,0 +1,14 @@
+{
+  "id": "tencentcloudbase-awesome-cloudbase-examples-universal-cloudbase-uniapp-template-claude-skills-no-sql-web-sdk-skill-md",
+  "name": "cloudbase-document-database-web-sdk",
+  "author": "TencentCloudBase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/40630849?v=4",
+  "description": "Use CloudBase document database Web SDK to query, create, update, and delete data. Supports complex queries, pagination, aggregation, and geolocation queries.",
+  "githubUrl": "https://github.com/TencentCloudBase/awesome-cloudbase-examples/tree/master/universal/cloudbase-uniapp-template/.claude/skills/no-sql-web-sdk",
+  "stars": 308,
+  "forks": 245,
+  "updatedAt": 1764063841,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

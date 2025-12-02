@@ -1,0 +1,14 @@
+{
+  "id": "anton-abyzov-specweave-plugins-specweave-skills-compliance-architecture-skill-md",
+  "name": "compliance-architecture",
+  "author": "anton-abyzov",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/979819?v=4",
+  "description": "Enterprise-grade compliance architecture for SOC 2, HIPAA, GDPR, PCI-DSS. Provides compliance checklists, security controls, audit guidance, and regulatory requirements for serverless and cloud architectures. Activates for compliance, HIPAA, SOC2, SOC 2, GDPR, PCI-DSS, PCI DSS, regulatory, healthcare data, payment card, data protection, audit, security standards, regulated industry, BAA, business associate agreement, DPIA, data protection impact assessment.",
+  "githubUrl": "https://github.com/anton-abyzov/specweave/tree/develop/plugins/specweave/skills/compliance-architecture",
+  "stars": 6,
+  "forks": 1,
+  "updatedAt": 1764570884,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

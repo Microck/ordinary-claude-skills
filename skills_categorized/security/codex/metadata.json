@@ -1,0 +1,14 @@
+{
+  "id": "cexll-myclaude-skills-codex-skill-md",
+  "name": "codex",
+  "author": "cexll",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/26520956?v=4",
+  "description": "Execute Codex CLI for code analysis, refactoring, and automated code changes. Use when you need to delegate complex code tasks to Codex AI with file references (@syntax) and structured output.",
+  "githubUrl": "https://github.com/cexll/myclaude/tree/master/skills/codex",
+  "stars": 1028,
+  "forks": 162,
+  "updatedAt": 1764581278,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

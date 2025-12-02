@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-cicd-automation-skills-github-actions-templates-skill-md",
+  "name": "github-actions-templates",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Create production-ready GitHub Actions workflows for automated testing, building, and deploying applications. Use when setting up CI/CD with GitHub Actions, automating development workflows, or creating reusable workflow templates.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/cicd-automation/skills/github-actions-templates",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-flow-nexus-neural-skill-md",
+  "name": "flow-nexus-neural",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Train and deploy neural networks in distributed E2B sandboxes with Flow Nexus",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/flow-nexus-neural",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "incomestreamsurfer-claude-code-skills-stripe-claude-skills-nextjs-stripe-integration-skill-md",
+  "name": "nextjs-stripe-integration",
+  "author": "IncomeStreamSurfer",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/104167496?v=4",
+  "description": "Add Stripe payment processing to Next.js projects. Implement checkout sessions, payment handling, subscriptions, webhooks, and customer management. Use when adding Stripe to a Next.js project, building payment flows, implementing subscriptions, or integrating payment processing.",
+  "githubUrl": "https://github.com/IncomeStreamSurfer/claude-code-skills-stripe/tree/main/.claude/skills/nextjs-stripe-integration",
+  "stars": 6,
+  "forks": 6,
+  "updatedAt": 1763047254,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

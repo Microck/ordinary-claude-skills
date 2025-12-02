@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-flow-nexus-swarm-skill-md",
+  "name": "flow-nexus-swarm",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Cloud-based AI swarm deployment and event-driven workflow automation with Flow Nexus platform",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/flow-nexus-swarm",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-changelog-generator-skill-md",
+  "name": "changelog-generator",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/changelog-generator",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

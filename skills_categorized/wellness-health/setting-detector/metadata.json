@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novel-writer-skills-templates-skills-quality-assurance-setting-detector-skill-md",
+  "name": "setting-detector",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\"Automatically detects story settings (genres, time periods, themes) based on keywords and activates corresponding knowledge bases - works silently in the background to provide relevant writing guidance without user intervention\"",
+  "githubUrl": "https://github.com/wordflowlab/novel-writer-skills/tree/main/templates/skills/quality-assurance/setting-detector",
+  "stars": 11,
+  "forks": 6,
+  "updatedAt": 1760965452,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

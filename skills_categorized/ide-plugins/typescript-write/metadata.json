@@ -1,0 +1,14 @@
+{
+  "id": "metabase-metabase-claude-skills-typescript-write-skill-md",
+  "name": "typescript-write",
+  "author": "metabase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/10520629?v=4",
+  "description": "Write TypeScript and JavaScript code following Metabase coding standards and best practices. Use when developing or refactoring TypeScript/JavaScript code.",
+  "githubUrl": "https://github.com/metabase/metabase/tree/master/.claude/skills/typescript-write",
+  "stars": 44733,
+  "forks": 6042,
+  "updatedAt": 1764106091,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

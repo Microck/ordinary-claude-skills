@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-developer-growth-analysis-skill-md",
+  "name": "developer-growth-analysis",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/developer-growth-analysis",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

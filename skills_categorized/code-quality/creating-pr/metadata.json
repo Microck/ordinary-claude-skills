@@ -1,0 +1,14 @@
+{
+  "id": "udecode-dotai-claude-plugin-plugins-git-skills-creating-pr-skill-md",
+  "name": "creating-pr",
+  "author": "udecode",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/66228141?v=4",
+  "description": "Use when creating or updating pull requests with comprehensive descriptions and meaningful commits - streamlines PR workflow with branch management and commit best practices",
+  "githubUrl": "https://github.com/udecode/dotai/tree/main/.claude-plugin/plugins/git/skills/creating-pr",
+  "stars": 1097,
+  "forks": 82,
+  "updatedAt": 1764246629,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

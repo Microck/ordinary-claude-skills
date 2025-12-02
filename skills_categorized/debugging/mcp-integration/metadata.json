@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-code-plugins-plugin-dev-skills-mcp-integration-skill-md",
+  "name": "mcp-integration",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
+  "githubUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/mcp-integration",
+  "stars": 44143,
+  "forks": 3048,
+  "updatedAt": 1764537680,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

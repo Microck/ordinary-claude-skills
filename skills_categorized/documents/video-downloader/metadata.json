@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-video-downloader-skill-md",
+  "name": "video-downloader",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Downloads videos from YouTube and other platforms for offline viewing, editing, or archival. Handles various formats and quality options.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/video-downloader",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

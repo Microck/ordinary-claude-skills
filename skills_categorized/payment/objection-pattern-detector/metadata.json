@@ -1,0 +1,14 @@
+{
+  "id": "onewave-ai-claude-skills-objection-pattern-detector-skill-md",
+  "name": "objection-pattern-detector",
+  "author": "OneWave-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239639365?v=4",
+  "description": "Mine lost deal notes to identify recurring objection patterns. Create objection response playbooks from won deals.",
+  "githubUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/objection-pattern-detector",
+  "stars": 10,
+  "forks": 4,
+  "updatedAt": 1761158983,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

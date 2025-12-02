@@ -1,0 +1,14 @@
+{
+  "id": "bellabe-lean-os-claude-skills-engineering-proof-composer-skill-md",
+  "name": "proof-composer",
+  "author": "BellaBe",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/21955869?v=4",
+  "description": "Validates entire engineering proof chain. Verifies architecture, backend maps, backend code, standardization, frontend types, infrastructure topology all compose correctly. This is the final DEPLOYMENT GATE - deployment blocked if proof chain invalid. Use when engineering thread completes all actions.",
+  "githubUrl": "https://github.com/BellaBe/lean-os/tree/main/.claude/skills/engineering-proof-composer",
+  "stars": 4,
+  "forks": 1,
+  "updatedAt": 1764583429,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

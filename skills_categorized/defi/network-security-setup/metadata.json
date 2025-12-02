@@ -1,0 +1,14 @@
+{
+  "id": "dnyoussef-context-cascade-skills-security-network-security-setup-skill-md",
+  "name": "network-security-setup",
+  "author": "DNYoussef",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/130602884?v=4",
+  "description": "Configure Claude Code sandbox network isolation with trusted domains,",
+  "githubUrl": "https://github.com/DNYoussef/context-cascade/tree/main/skills/security/network-security-setup",
+  "stars": 2,
+  "forks": 0,
+  "updatedAt": 1764531543,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-developer-essentials-skills-code-review-excellence-skill-md",
+  "name": "code-review-excellence",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master effective code review practices to provide constructive feedback, catch bugs early, and foster knowledge sharing while maintaining team morale. Use when reviewing pull requests, establishing review standards, or mentoring developers.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/developer-essentials/skills/code-review-excellence",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sgcarstrends-sgcarstrends-claude-skills-workflow-management-skill-md",
+  "name": "workflow-management",
+  "author": "sgcarstrends",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/169606012?v=4",
+  "description": "Create, debug, or modify QStash workflows for data updates and social media posting in the API service. Use when adding new automated jobs, fixing workflow errors, or updating scheduling logic.",
+  "githubUrl": "https://github.com/sgcarstrends/sgcarstrends/tree/main/.claude/skills/workflow-management",
+  "stars": 10,
+  "forks": 1,
+  "updatedAt": 1764587949,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

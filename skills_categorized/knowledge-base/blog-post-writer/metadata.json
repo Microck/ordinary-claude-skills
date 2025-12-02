@@ -1,0 +1,14 @@
+{
+  "id": "nicknisi-dotfiles-home-claude-skills-blog-post-writer-skill-md",
+  "name": "blog-post-writer",
+  "author": "nicknisi",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/293805?v=4",
+  "description": "Transform brain dumps into polished blog posts in Nick Nisi's voice. Use when the user wants to write a blog post with scattered ideas, talking points, and conclusions that need organization into a cohesive narrative with Nick's conversational, authentic, and thoughtful tone.",
+  "githubUrl": "https://github.com/nicknisi/dotfiles/tree/main/home/.claude/skills/blog-post-writer",
+  "stars": 2897,
+  "forks": 373,
+  "updatedAt": 1764082790,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

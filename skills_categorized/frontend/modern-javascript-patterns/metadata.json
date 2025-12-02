@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-javascript-typescript-skills-modern-javascript-patterns-skill-md",
+  "name": "modern-javascript-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master ES6+ features including async/await, destructuring, spread operators, arrow functions, promises, modules, iterators, generators, and functional programming patterns for writing clean, efficient JavaScript code. Use when refactoring legacy code, implementing modern patterns, or optimizing JavaScript applications.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/javascript-typescript/skills/modern-javascript-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

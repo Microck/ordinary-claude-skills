@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novel-writer-skills-templates-skills-quality-assurance-workflow-guide-skill-md",
+  "name": "novel-writer-workflow-guide",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\"Use when user starts a novel project or asks how to organize their writing - guides through novel-writer's seven-step methodology and ensures proper workflow\"",
+  "githubUrl": "https://github.com/wordflowlab/novel-writer-skills/tree/main/templates/skills/quality-assurance/workflow-guide",
+  "stars": 11,
+  "forks": 6,
+  "updatedAt": 1760965452,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

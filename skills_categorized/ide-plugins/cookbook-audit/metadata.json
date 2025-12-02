@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-cookbooks-claude-skills-cookbook-audit-skill-md",
+  "name": "cookbook-audit",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "Audit an Anthropic Cookbook notebook based on a rubric. Use whenever a notebook review or audit is requested.",
+  "githubUrl": "https://github.com/anthropics/claude-cookbooks/tree/main/.claude/skills/cookbook-audit",
+  "stars": 28337,
+  "forks": 2845,
+  "updatedAt": 1764104318,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "danielmiessler-personal-ai-infrastructure-claude-skills-brightdata-skill-md",
+  "name": "brightdata",
+  "author": "danielmiessler",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/50654?v=4",
+  "description": "|",
+  "githubUrl": "https://github.com/danielmiessler/Personal_AI_Infrastructure/tree/main/.claude/skills/brightdata",
+  "stars": 1085,
+  "forks": 237,
+  "updatedAt": 1764213577,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

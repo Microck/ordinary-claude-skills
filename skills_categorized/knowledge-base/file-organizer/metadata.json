@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-file-organizer-skill-md",
+  "name": "file-organizer",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/file-organizer",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

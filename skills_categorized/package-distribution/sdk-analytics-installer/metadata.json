@@ -1,0 +1,14 @@
+{
+  "id": "dotcms-core-claude-skills-sdk-analytics-skill-md",
+  "name": "sdk-analytics-installer",
+  "author": "dotCMS",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/1005263?v=4",
+  "description": "Use this skill when the user asks to install, configure, or set up @dotcms/analytics, sdk-analytics, analytics SDK, add analytics tracking, or mentions installing analytics in Next.js or React projects",
+  "githubUrl": "https://github.com/dotCMS/core/tree/main/.claude/skills/sdk-analytics",
+  "stars": 924,
+  "forks": 483,
+  "updatedAt": 1764114024,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

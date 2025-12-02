@@ -1,0 +1,14 @@
+{
+  "id": "massgen-massgen-massgen-skills-model-registry-maintainer-skill-md",
+  "name": "model-registry-maintainer",
+  "author": "massgen",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/240997187?v=4",
+  "description": "Guide for maintaining the MassGen model and backend registry. This skill should be used when adding new models, updating model information (release dates, pricing, context windows), or ensuring the registry stays current with provider releases. Covers both the capabilities registry and the pricing/token manager.",
+  "githubUrl": "https://github.com/massgen/MassGen/tree/main/massgen/skills/model-registry-maintainer",
+  "stars": 615,
+  "forks": 91,
+  "updatedAt": 1764041174,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

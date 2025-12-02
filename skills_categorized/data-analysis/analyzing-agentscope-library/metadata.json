@@ -1,0 +1,14 @@
+{
+  "id": "agentscope-ai-agentscope-examples-functionality-agent-skill-skill-analyzing-agentscope-library-skill-md",
+  "name": "analyzing-agentscope-library",
+  "author": "agentscope-ai",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/211762292?v=4",
+  "description": "This skill provides a way to retrieve information from the AgentScope library for analysis and decision-making.",
+  "githubUrl": "https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/agent_skill/skill/analyzing-agentscope-library",
+  "stars": 14170,
+  "forks": 1169,
+  "updatedAt": 1764660888,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

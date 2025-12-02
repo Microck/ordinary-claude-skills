@@ -1,0 +1,14 @@
+{
+  "id": "maxritter-claude-codepro-claude-skills-backend-models-standards-skill-md",
+  "name": "backend-models-standards",
+  "author": "maxritter",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/12452009?v=4",
+  "description": "Define database models with clear naming, appropriate data types, constraints, relationships, and validation at multiple layers. Use this skill when creating or modifying database model files, ORM classes, schema definitions, or data model relationships. Apply when working with model files (e.g., models.py, models/, ActiveRecord classes, Prisma schema, Sequelize models), defining table structures, setting up foreign keys and relationships, configuring cascade behaviors, implementing model validations, adding timestamps, or working with database constraints (NOT NULL, UNIQUE, foreign keys). Use for any task involving data integrity enforcement, relationship definitions, or model-level data validation.",
+  "githubUrl": "https://github.com/maxritter/claude-codepro/tree/main/.claude/skills/backend-models-standards",
+  "stars": 107,
+  "forks": 7,
+  "updatedAt": 1764660722,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

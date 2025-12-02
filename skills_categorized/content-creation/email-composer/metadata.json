@@ -1,0 +1,14 @@
+{
+  "id": "davila7-claude-code-templates-cli-tool-components-skills-enterprise-communication-email-composer-skill-md",
+  "name": "email-composer",
+  "author": "davila7",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6216945?v=4",
+  "description": "Draft professional emails for various contexts including business, technical, and customer communication. Use when the user needs help writing emails or composing professional messages.",
+  "githubUrl": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/email-composer",
+  "stars": 12018,
+  "forks": 1045,
+  "updatedAt": 1764559926,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

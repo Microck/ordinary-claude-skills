@@ -1,0 +1,14 @@
+{
+  "id": "pgschema-pgschema-claude-skills-validate-db-skill-md",
+  "name": "validate-with-database",
+  "author": "pgschema",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/215282422?v=4",
+  "description": "Connect to live PostgreSQL database to validate schema assumptions, compare pg_dump vs pgschema output, and query system catalogs interactively",
+  "githubUrl": "https://github.com/pgschema/pgschema/tree/main/.claude/skills/validate_db",
+  "stars": 481,
+  "forks": 19,
+  "updatedAt": 1764659925,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

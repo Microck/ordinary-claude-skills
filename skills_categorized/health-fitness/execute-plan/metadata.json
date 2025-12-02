@@ -1,0 +1,14 @@
+{
+  "id": "antinomyhq-forge-crates-forge-repo-src-skills-execute-plan-skill-md",
+  "name": "execute-plan",
+  "author": "antinomyhq",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/197551910?v=4",
+  "description": "Execute structured task plans with status tracking. Use when the user provides a plan file path in the format `plans/{current-date}-{task-name}-{version}.md` or explicitly asks you to execute a plan file.",
+  "githubUrl": "https://github.com/antinomyhq/forge/tree/main/crates/forge_repo/src/skills/execute-plan",
+  "stars": 4574,
+  "forks": 1184,
+  "updatedAt": 1764669524,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

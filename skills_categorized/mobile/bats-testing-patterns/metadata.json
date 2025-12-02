@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-shell-scripting-skills-bats-testing-patterns-skill-md",
+  "name": "bats-testing-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master Bash Automated Testing System (Bats) for comprehensive shell script testing. Use when writing tests for shell scripts, CI/CD pipelines, or requiring test-driven development of shell utilities.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/shell-scripting/skills/bats-testing-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

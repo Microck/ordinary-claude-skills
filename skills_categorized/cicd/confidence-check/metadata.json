@@ -1,0 +1,14 @@
+{
+  "id": "superclaude-org-superclaude-framework-claude-skills-confidence-check-skill-md",
+  "name": "confidence-check",
+  "author": "SuperClaude-Org",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/221338871?v=4",
+  "description": "Pre-implementation confidence assessment (\u226590% required). Use before starting any implementation to verify readiness with duplicate check, architecture compliance, official docs verification, OSS references, and root cause identification.",
+  "githubUrl": "https://github.com/SuperClaude-Org/SuperClaude_Framework/tree/master/.claude/skills/confidence-check",
+  "stars": 18011,
+  "forks": 1584,
+  "updatedAt": 1763128029,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

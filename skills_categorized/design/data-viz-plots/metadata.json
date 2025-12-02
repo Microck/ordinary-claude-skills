@@ -1,0 +1,14 @@
+{
+  "id": "starlitnightly-omicverse-claude-skills-data-viz-plots-skill-md",
+  "name": "data-viz-plots",
+  "author": "Starlitnightly",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/46667721?v=4",
+  "description": "Create publication-quality plots and visualizations using matplotlib and seaborn. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).",
+  "githubUrl": "https://github.com/Starlitnightly/omicverse/tree/master/.claude/skills/data-viz-plots",
+  "stars": 783,
+  "forks": 95,
+  "updatedAt": 1763633062,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

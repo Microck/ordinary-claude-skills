@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-image-enhancer-skill-md",
+  "name": "image-enhancer",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/image-enhancer",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

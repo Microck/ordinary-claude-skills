@@ -1,0 +1,14 @@
+{
+  "id": "woocommerce-woocommerce-ai-skills-woocommerce-code-review-skill-md",
+  "name": "woocommerce-code-review",
+  "author": "woocommerce",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/473596?v=4",
+  "description": "Review WooCommerce code changes for coding standards compliance. Use when reviewing code locally, performing automated PR reviews, or checking code quality.",
+  "githubUrl": "https://github.com/woocommerce/woocommerce/tree/trunk/.ai/skills/woocommerce-code-review",
+  "stars": 10071,
+  "forks": 10739,
+  "updatedAt": 1764100907,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

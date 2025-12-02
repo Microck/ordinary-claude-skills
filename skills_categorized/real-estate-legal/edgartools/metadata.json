@@ -1,0 +1,14 @@
+{
+  "id": "dgunning-edgartools-edgar-ai-skills-core-skill-md",
+  "name": "edgartools",
+  "author": "dgunning",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/1523271?v=4",
+  "description": "Query and analyze SEC filings and financial statements using EdgarTools. Get company data, filings, XBRL financials, and perform multi-company analysis.",
+  "githubUrl": "https://github.com/dgunning/edgartools/tree/main/edgar/ai/skills/core",
+  "stars": 1417,
+  "forks": 252,
+  "updatedAt": 1764096129,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

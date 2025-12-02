@@ -1,0 +1,14 @@
+{
+  "id": "stacklok-toolhive-claude-skills-doc-review-skill-md",
+  "name": "documentation-review",
+  "author": "stacklok",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/110237746?v=4",
+  "description": "Reviews documentation for factual accuracy",
+  "githubUrl": "https://github.com/stacklok/toolhive/tree/main/.claude/skills/doc-review",
+  "stars": 1404,
+  "forks": 149,
+  "updatedAt": 1764590436,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

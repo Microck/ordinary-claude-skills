@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-agentdb-advanced-skill-md",
+  "name": "agentdb-advanced-features",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "\"Master advanced AgentDB features including QUIC synchronization, multi-database management, custom distance metrics, hybrid search, and distributed systems integration. Use when building distributed AI systems, multi-agent coordination, or advanced vector search applications.\"",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/agentdb-advanced",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

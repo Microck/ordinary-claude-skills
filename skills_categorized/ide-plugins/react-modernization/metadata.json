@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-framework-migration-skills-react-modernization-skill-md",
+  "name": "react-modernization",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Upgrade React applications to latest versions, migrate from class components to hooks, and adopt concurrent features. Use when modernizing React codebases, migrating to React Hooks, or upgrading to latest React versions.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/framework-migration/skills/react-modernization",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

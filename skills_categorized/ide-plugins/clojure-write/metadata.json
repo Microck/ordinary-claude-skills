@@ -1,0 +1,14 @@
+{
+  "id": "metabase-metabase-claude-skills-clojure-write-skill-md",
+  "name": "clojure-write",
+  "author": "metabase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/10520629?v=4",
+  "description": "Guide Clojure and ClojureScript development using REPL-driven workflow, coding conventions, and best practices. Use when writing, developing, or refactoring Clojure/ClojureScript code.",
+  "githubUrl": "https://github.com/metabase/metabase/tree/master/.claude/skills/clojure-write",
+  "stars": 44733,
+  "forks": 6042,
+  "updatedAt": 1764106091,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

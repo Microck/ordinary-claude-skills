@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-renewal-orchestration-skills-deal-desk-skill-md",
+  "name": "deal-desk",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Use to manage pricing, packaging, and approval workflows for renewal",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/renewal-orchestration/skills/deal-desk",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

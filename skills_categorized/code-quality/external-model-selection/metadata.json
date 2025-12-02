@@ -1,0 +1,14 @@
+{
+  "id": "madappgang-dingo-claude-skills-external-model-selection-skill-md",
+  "name": "external-model-selection",
+  "author": "MadAppGang",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/5000064?v=4",
+  "description": "Choose optimal external AI models for code analysis, bug investigation, and architectural decisions. Use when consulting multiple LLMs via claudish, comparing model perspectives, or investigating complex Go/LSP/transpiler issues. Provides empirically validated model rankings (91/100 for MiniMax M2, 83/100 for Grok Code Fast) and proven consultation strategies based on real-world testing.",
+  "githubUrl": "https://github.com/MadAppGang/dingo/tree/main/.claude/skills/external-model-selection",
+  "stars": 1059,
+  "forks": 16,
+  "updatedAt": 1764584135,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

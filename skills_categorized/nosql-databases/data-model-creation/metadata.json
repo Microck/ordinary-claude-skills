@@ -1,0 +1,14 @@
+{
+  "id": "tencentcloudbase-awesome-cloudbase-examples-universal-cloudbase-uniapp-template-claude-skills-data-model-creation-skill-md",
+  "name": "data-model-creation",
+  "author": "TencentCloudBase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/40630849?v=4",
+  "description": "Professional rules for AI-driven data modeling and creation. Use this skill when users need to create and manage MySQL databases, design data models using Mermaid ER diagrams, and implement database schemas.",
+  "githubUrl": "https://github.com/TencentCloudBase/awesome-cloudbase-examples/tree/master/universal/cloudbase-uniapp-template/.claude/skills/data-model-creation",
+  "stars": 308,
+  "forks": 245,
+  "updatedAt": 1764063841,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

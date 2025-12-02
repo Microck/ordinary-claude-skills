@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-content-research-writer-skill-md",
+  "name": "content-research-writer",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

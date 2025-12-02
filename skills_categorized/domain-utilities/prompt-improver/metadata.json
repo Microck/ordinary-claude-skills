@@ -1,0 +1,14 @@
+{
+  "id": "severity1-claude-code-prompt-improver-skills-prompt-improver-skill-md",
+  "name": "prompt-improver",
+  "author": "severity1",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/1973846?v=4",
+  "description": "This skill enriches vague prompts with targeted research and clarification before execution. Should be used when a prompt is determined to be vague and requires systematic research, question generation, and execution guidance.",
+  "githubUrl": "https://github.com/severity1/claude-code-prompt-improver/tree/main/skills/prompt-improver",
+  "stars": 867,
+  "forks": 78,
+  "updatedAt": 1762922277,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

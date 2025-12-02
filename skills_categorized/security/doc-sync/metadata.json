@@ -1,0 +1,14 @@
+{
+  "id": "jetbrains-ideavim-claude-skills-doc-sync-skill-md",
+  "name": "doc-sync",
+  "author": "JetBrains",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/878437?v=4",
+  "description": "Keeps IdeaVim documentation in sync with code changes. Use this skill when you need to verify documentation accuracy after code changes, or when checking if documentation (in doc/, README.md, CONTRIBUTING.md) matches the current codebase. The skill can work bidirectionally - from docs to code verification, or from code changes to documentation updates.",
+  "githubUrl": "https://github.com/JetBrains/ideavim/tree/master/.claude/skills/doc-sync",
+  "stars": 10026,
+  "forks": 801,
+  "updatedAt": 1764061388,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

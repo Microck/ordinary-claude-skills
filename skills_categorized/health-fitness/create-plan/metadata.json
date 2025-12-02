@@ -1,0 +1,14 @@
+{
+  "id": "antinomyhq-forge-forge-skills-create-plan-skill-md",
+  "name": "create-plan",
+  "author": "antinomyhq",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/197551910?v=4",
+  "description": "Generate detailed implementation plans for complex tasks. Creates comprehensive strategic plans in Markdown format with objectives, step-by-step implementation tasks using checkbox format, verification criteria, risk assessments, and alternative approaches. All plans MUST be validated using the included validation script. Use when users need thorough analysis and structured planning before implementation, when breaking down complex features into actionable steps, or when they explicitly ask for a plan, roadmap, or strategy. Strictly planning-focused with no code modifications.",
+  "githubUrl": "https://github.com/antinomyhq/forge/tree/main/.forge/skills/create-plan",
+  "stars": 4574,
+  "forks": 1184,
+  "updatedAt": 1764669524,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

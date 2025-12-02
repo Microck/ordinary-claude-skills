@@ -1,0 +1,14 @@
+{
+  "id": "mrgoonie-claudekit-skills-claude-skills-databases-skill-md",
+  "name": "databases",
+  "author": "mrgoonie",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6857382?v=4",
+  "description": "Work with MongoDB (document database, BSON documents, aggregation pipelines, Atlas cloud) and PostgreSQL (relational database, SQL queries, psql CLI, pgAdmin). Use when designing database schemas, writing queries and aggregations, optimizing indexes for performance, performing database migrations, configuring replication and sharding, implementing backup and restore strategies, managing database users and permissions, analyzing query performance, or administering production databases.",
+  "githubUrl": "https://github.com/mrgoonie/claudekit-skills/tree/main/.claude/skills/databases",
+  "stars": 713,
+  "forks": 113,
+  "updatedAt": 1763221520,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-pricing-strategy-skills-enablement-kit-skill-md",
+  "name": "enablement-kit",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Use to plan rollout communications, trainings, and assets after pricing",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/pricing-strategy/skills/enablement-kit",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

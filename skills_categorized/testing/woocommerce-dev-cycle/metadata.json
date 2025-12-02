@@ -1,0 +1,14 @@
+{
+  "id": "woocommerce-woocommerce-ai-skills-woocommerce-dev-cycle-skill-md",
+  "name": "woocommerce-dev-cycle",
+  "author": "woocommerce",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/473596?v=4",
+  "description": "Run tests, linting, and quality checks for WooCommerce development. Use when running tests, fixing code style, or following the development workflow.",
+  "githubUrl": "https://github.com/woocommerce/woocommerce/tree/trunk/.ai/skills/woocommerce-dev-cycle",
+  "stars": 10071,
+  "forks": 10739,
+  "updatedAt": 1764100907,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

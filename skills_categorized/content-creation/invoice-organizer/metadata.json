@@ -1,0 +1,14 @@
+{
+  "id": "korallis-droidz-droidz-installer-payloads-droid-cli-default-skills-invoice-organizer-skill-md",
+  "name": "invoice-organizer",
+  "author": "korallis",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/7937632?v=4",
+  "description": "Organize, categorize, track, and manage invoices systematically with automated extraction of invoice data, payment tracking, and financial organization. Use when processing invoice uploads, extracting invoice details (date, amount, vendor), categorizing expenses, tracking payment status, organizing receipts, generating financial reports, or building accounting and bookkeeping systems.",
+  "githubUrl": "https://github.com/korallis/Droidz/tree/main/droidz_installer/payloads/droid_cli/default/skills/invoice-organizer",
+  "stars": 49,
+  "forks": 6,
+  "updatedAt": 1764198555,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

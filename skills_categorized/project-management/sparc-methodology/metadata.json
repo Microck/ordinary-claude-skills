@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-sparc-methodology-skill-md",
+  "name": "sparc-methodology",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/sparc-methodology",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

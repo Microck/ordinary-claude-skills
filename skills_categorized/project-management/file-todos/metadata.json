@@ -1,0 +1,14 @@
+{
+  "id": "everyinc-compounding-engineering-plugin-plugins-compounding-engineering-skills-file-todos-skill-md",
+  "name": "file-todos",
+  "author": "EveryInc",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
+  "description": "This skill should be used when managing the file-based todo tracking system in the todos/ directory. It provides workflows for creating todos, managing status and dependencies, conducting triage, and integrating with slash commands and code review processes.",
+  "githubUrl": "https://github.com/EveryInc/compounding-engineering-plugin/tree/main/plugins/compounding-engineering/skills/file-todos",
+  "stars": 2062,
+  "forks": 173,
+  "updatedAt": 1764450412,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

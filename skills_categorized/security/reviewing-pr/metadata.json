@@ -1,0 +1,14 @@
+{
+  "id": "udecode-dotai-claude-plugin-plugins-git-skills-reviewing-pr-skill-md",
+  "name": "reviewing-pr",
+  "author": "udecode",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/66228141?v=4",
+  "description": "Use when reviewing pull requests with comprehensive code analysis, incremental or full review options, and constructive feedback - provides thorough code reviews with severity ratings",
+  "githubUrl": "https://github.com/udecode/dotai/tree/main/.claude-plugin/plugins/git/skills/reviewing-pr",
+  "stars": 1097,
+  "forks": 82,
+  "updatedAt": 1764246629,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

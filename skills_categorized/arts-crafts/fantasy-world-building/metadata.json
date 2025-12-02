@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novel-writer-skills-templates-skills-genre-knowledge-fantasy-skill-md",
+  "name": "fantasy-world-building",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\"Use when user mentions fantasy, magic system, or world-building for fantastical settings - provides fantasy genre conventions, magic system design patterns, and world-building frameworks\"",
+  "githubUrl": "https://github.com/wordflowlab/novel-writer-skills/tree/main/templates/skills/genre-knowledge/fantasy",
+  "stars": 11,
+  "forks": 6,
+  "updatedAt": 1760965452,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

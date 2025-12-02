@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-cicd-automation-skills-secrets-management-skill-md",
+  "name": "secrets-management",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/cicd-automation/skills/secrets-management",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-code-plugins-hookify-skills-writing-rules-skill-md",
+  "name": "rule-identifier",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
+  "githubUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/hookify/skills/writing-rules",
+  "stars": 44143,
+  "forks": 3048,
+  "updatedAt": 1764537680,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

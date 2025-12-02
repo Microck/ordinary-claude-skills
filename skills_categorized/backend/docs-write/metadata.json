@@ -1,0 +1,14 @@
+{
+  "id": "metabase-metabase-claude-skills-docs-write-skill-md",
+  "name": "docs-write",
+  "author": "metabase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/10520629?v=4",
+  "description": "Write documentation following Metabase's conversational, clear, and user-focused style. Use when creating or editing documentation files (markdown, MDX, etc.).",
+  "githubUrl": "https://github.com/metabase/metabase/tree/master/.claude/skills/docs-write",
+  "stars": 44733,
+  "forks": 6042,
+  "updatedAt": 1764106091,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

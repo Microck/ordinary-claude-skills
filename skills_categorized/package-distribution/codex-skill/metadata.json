@@ -1,0 +1,14 @@
+{
+  "id": "feiskyer-claude-code-settings-plugins-codex-skill-skills-codex-skill-skill-md",
+  "name": "codex-skill",
+  "author": "feiskyer",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/676637?v=4",
+  "description": "Use when user asks to leverage codex, gpt-5, or gpt-5.1 to implement something (usually implement a plan or feature designed by Claude). Provides non-interactive automation mode for hands-off task execution without approval prompts.",
+  "githubUrl": "https://github.com/feiskyer/claude-code-settings/tree/main/plugins/codex-skill/skills/codex-skill",
+  "stars": 697,
+  "forks": 122,
+  "updatedAt": 1764583940,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

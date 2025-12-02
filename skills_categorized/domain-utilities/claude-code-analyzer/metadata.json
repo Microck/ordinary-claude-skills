@@ -1,0 +1,14 @@
+{
+  "id": "nicknisi-dotfiles-home-claude-skills-claude-code-analyzer-skill-md",
+  "name": "claude-code-analyzer",
+  "author": "nicknisi",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/293805?v=4",
+  "description": "Analyzes Claude Code usage patterns and provides comprehensive recommendations. Runs usage analysis, discovers GitHub community resources, suggests CLAUDE.md improvements, and fetches latest docs on-demand. Use when user wants to optimize their Claude Code workflow, create configurations (agents/skills/commands), or set up project documentation.",
+  "githubUrl": "https://github.com/nicknisi/dotfiles/tree/main/home/.claude/skills/claude-code-analyzer",
+  "stars": 2897,
+  "forks": 373,
+  "updatedAt": 1764082790,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

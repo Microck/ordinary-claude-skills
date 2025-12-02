@@ -1,0 +1,14 @@
+{
+  "id": "bitwarden-android-claude-skills-reviewing-changes-skill-md",
+  "name": "reviewing-changes",
+  "author": "bitwarden",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/15990069?v=4",
+  "description": "Comprehensive code reviews for Bitwarden Android. Detects change type (dependency update, bug fix, feature, UI, refactoring, infrastructure) and applies appropriate review depth. Validates MVVM patterns, Hilt DI, security requirements, and test coverage per project standards. Use when reviewing pull requests, checking commits, analyzing code changes, or evaluating architectural compliance.",
+  "githubUrl": "https://github.com/bitwarden/android/tree/main/.claude/skills/reviewing-changes",
+  "stars": 8073,
+  "forks": 908,
+  "updatedAt": 1764119111,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

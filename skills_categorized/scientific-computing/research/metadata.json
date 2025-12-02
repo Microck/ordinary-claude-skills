@@ -1,0 +1,14 @@
+{
+  "id": "kingkongshot-prompts-skills-research-skill-md",
+  "name": "research",
+  "author": "kingkongshot",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/218278801?v=4",
+  "description": "Research libraries, APIs, and patterns using searchGitHub and Exa tools. Finds real-world implementations and saves structured reports to docs/research/. Use when investigating technologies, debugging issues, or comparing options.",
+  "githubUrl": "https://github.com/kingkongshot/prompts/tree/main/skills/research",
+  "stars": 2272,
+  "forks": 238,
+  "updatedAt": 1764409971,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

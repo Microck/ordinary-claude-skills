@@ -1,0 +1,14 @@
+{
+  "id": "nicknisi-dotfiles-home-claude-skills-conference-talk-builder-skill-md",
+  "name": "conference-talk-builder",
+  "author": "nicknisi",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/293805?v=4",
+  "description": "Create conference talk outlines and iA Presenter markdown slides using the Story Circle narrative framework. Use when the user wants to structure a tech talk, create presentation slides, or needs help organizing talk ideas into a story-driven format.",
+  "githubUrl": "https://github.com/nicknisi/dotfiles/tree/main/home/.claude/skills/conference-talk-builder",
+  "stars": 2897,
+  "forks": 373,
+  "updatedAt": 1764082790,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-github-project-management-skill-md",
+  "name": "github-project-management",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/github-project-management",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

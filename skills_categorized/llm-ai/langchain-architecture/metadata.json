@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-llm-application-dev-skills-langchain-architecture-skill-md",
+  "name": "langchain-architecture",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Design LLM applications using the LangChain framework with agents, memory, and tool integration patterns. Use when building LangChain applications, implementing AI agents, or creating complex LLM workflows.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/llm-application-dev/skills/langchain-architecture",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

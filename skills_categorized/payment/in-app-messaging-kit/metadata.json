@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-product-led-growth-skills-in-app-messaging-kit-skill-md",
+  "name": "in-app-messaging-kit",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Library of in-product message patterns, triggers, and targeting rules.",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/product-led-growth/skills/in-app-messaging-kit",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

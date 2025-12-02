@@ -1,0 +1,14 @@
+{
+  "id": "kingkongshot-prompts-skills-taste-check-skill-md",
+  "name": "taste-check",
+  "author": "kingkongshot",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/218278801?v=4",
+  "description": "Review code using Linus Torvalds' \"good taste\" philosophy. Eliminates defensive code, special cases, and deep nesting. Use when reviewing code quality, refactoring, or checking for code smells.",
+  "githubUrl": "https://github.com/kingkongshot/prompts/tree/main/skills/taste-check",
+  "stars": 2272,
+  "forks": 238,
+  "updatedAt": 1764409971,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

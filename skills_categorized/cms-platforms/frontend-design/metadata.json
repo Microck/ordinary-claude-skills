@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-code-plugins-frontend-design-skills-frontend-design-skill-md",
+  "name": "frontend-design",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.",
+  "githubUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design/skills/frontend-design",
+  "stars": 44143,
+  "forks": 3048,
+  "updatedAt": 1764537680,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

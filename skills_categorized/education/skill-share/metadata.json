@@ -1,0 +1,14 @@
+{
+  "id": "composiohq-awesome-claude-skills-skill-share-skill-md",
+  "name": "skill-share",
+  "author": "ComposioHQ",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128464815?v=4",
+  "description": "A skill that creates new Claude skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery.",
+  "githubUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/skill-share",
+  "stars": 5595,
+  "forks": 698,
+  "updatedAt": 1764166315,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

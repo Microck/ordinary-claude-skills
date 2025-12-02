@@ -1,0 +1,14 @@
+{
+  "id": "everyinc-compounding-engineering-plugin-plugins-compounding-engineering-skills-andrew-kane-gem-writer-skill-md",
+  "name": "andrew-kane-gem-writer",
+  "author": "EveryInc",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
+  "description": "Write Ruby gems following Andrew Kane's proven patterns and philosophy. Use when creating new Ruby gems, refactoring existing gems, designing gem APIs, or when the user wants clean, minimal, production-ready Ruby library code. Triggers on requests like \"create a gem\", \"write a Ruby library\", \"design a gem API\", or mentions of Andrew Kane's style.",
+  "githubUrl": "https://github.com/EveryInc/compounding-engineering-plugin/tree/main/plugins/compounding-engineering/skills/andrew-kane-gem-writer",
+  "stars": 2062,
+  "forks": 173,
+  "updatedAt": 1764450412,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

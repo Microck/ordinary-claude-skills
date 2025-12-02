@@ -1,0 +1,14 @@
+{
+  "id": "nicknisi-dotfiles-home-claude-skills-gpt5-consultant-skill-md",
+  "name": "gpt5-consultant",
+  "author": "nicknisi",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/293805?v=4",
+  "description": "Use this skill when stuck in circular debugging, when solutions aren't working despite multiple attempts, or when the user expresses frustration with lack of progress. Bring in GPT-5 as a third-party consultant to provide fresh perspective on complex technical problems, architectural decisions, or multi-system debugging issues. Ideal when you've tried multiple approaches without success, when the problem involves obscure edge cases or novel challenges, or when a second expert opinion would help break through an impasse. Gather all context from the conversation so far and present it comprehensively to GPT-5.",
+  "githubUrl": "https://github.com/nicknisi/dotfiles/tree/main/home/.claude/skills/gpt5-consultant",
+  "stars": 2897,
+  "forks": 373,
+  "updatedAt": 1764082790,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

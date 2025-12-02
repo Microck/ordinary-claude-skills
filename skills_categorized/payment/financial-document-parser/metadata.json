@@ -1,0 +1,14 @@
+{
+  "id": "onewave-ai-claude-skills-financial-parser-skill-md",
+  "name": "financial-document-parser",
+  "author": "OneWave-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239639365?v=4",
+  "description": "Extract and analyze data from invoices, receipts, bank statements, and financial documents. Categorize expenses, track recurring charges, and generate expense reports. Use when user provides financial PDFs or images.",
+  "githubUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/financial-parser",
+  "stars": 10,
+  "forks": 4,
+  "updatedAt": 1761158983,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

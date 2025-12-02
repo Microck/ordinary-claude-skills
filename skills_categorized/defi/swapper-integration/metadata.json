@@ -1,0 +1,14 @@
+{
+  "id": "shapeshift-web-claude-skills-swapper-integration-skill-md",
+  "name": "swapper-integration",
+  "author": "shapeshift",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/52928763?v=4",
+  "description": "Integrate new DEX aggregators, swappers, or bridge protocols (like Bebop, Portals, Jupiter, 0x, 1inch, etc.) into ShapeShift Web. Activates when user wants to add, integrate, or implement support for a new swapper. Guides through research, implementation, and testing following established patterns.",
+  "githubUrl": "https://github.com/shapeshift/web/tree/develop/.claude/skills/swapper-integration",
+  "stars": 198,
+  "forks": 197,
+  "updatedAt": 1764110048,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

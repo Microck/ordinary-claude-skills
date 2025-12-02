@@ -1,0 +1,14 @@
+{
+  "id": "daangn-seed-design-claude-skills-docs-consistency-checker-skill-md",
+  "name": "docs-consistency-checker",
+  "author": "daangn",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/12152522?v=4",
+  "description": "Validate consistency across SEED Design component documentation layers (design guidelines in ./docs/content/docs/components, Rootage specs in ./packages/rootage/components, and React docs in ./docs/content/react/components). Use when auditing documentation completeness, before releases, or validating new component docs.",
+  "githubUrl": "https://github.com/daangn/seed-design/tree/dev/.claude/skills/docs-consistency-checker",
+  "stars": 789,
+  "forks": 35,
+  "updatedAt": 1764075808,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

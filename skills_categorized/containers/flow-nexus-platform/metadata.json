@@ -1,0 +1,14 @@
+{
+  "id": "ruvnet-claude-flow-claude-skills-flow-nexus-platform-skill-md",
+  "name": "flow-nexus-platform",
+  "author": "ruvnet",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/2934394?v=4",
+  "description": "Comprehensive Flow Nexus platform management - authentication, sandboxes, app deployment, payments, and challenges",
+  "githubUrl": "https://github.com/ruvnet/claude-flow/tree/main/.claude/skills/flow-nexus-platform",
+  "stars": 9856,
+  "forks": 1303,
+  "updatedAt": 1763131145,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

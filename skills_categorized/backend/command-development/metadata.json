@@ -1,0 +1,14 @@
+{
+  "id": "anthropics-claude-code-plugins-plugin-dev-skills-command-development-skill-md",
+  "name": "command-development",
+  "author": "anthropics",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76263028?v=4",
+  "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
+  "githubUrl": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev/skills/command-development",
+  "stars": 44143,
+  "forks": 3048,
+  "updatedAt": 1764537680,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

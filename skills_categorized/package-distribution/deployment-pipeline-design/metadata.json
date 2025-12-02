@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-cicd-automation-skills-deployment-pipeline-design-skill-md",
+  "name": "deployment-pipeline-design",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use when architecting deployment workflows, setting up continuous delivery, or implementing GitOps practices.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/cicd-automation/skills/deployment-pipeline-design",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

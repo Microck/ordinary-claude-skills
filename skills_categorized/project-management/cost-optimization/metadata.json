@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-cloud-infrastructure-skills-cost-optimization-skill-md",
+  "name": "cost-optimization",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Optimize cloud costs through resource rightsizing, tagging strategies, reserved instances, and spending analysis. Use when reducing cloud expenses, analyzing infrastructure costs, or implementing cost governance policies.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/cloud-infrastructure/skills/cost-optimization",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "storj-storj-claude-skills-gerrit-skill-md",
+  "name": "gerrit",
+  "author": "storj",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6308081?v=4",
+  "description": ">",
+  "githubUrl": "https://github.com/storj/storj/tree/main/.claude/skills/gerrit",
+  "stars": 3204,
+  "forks": 421,
+  "updatedAt": 1764088675,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

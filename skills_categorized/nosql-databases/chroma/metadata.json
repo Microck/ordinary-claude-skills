@@ -1,0 +1,14 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-15-rag-chroma-skill-md",
+  "name": "chroma",
+  "author": "zechenzhangAGI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/128254220?v=4",
+  "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.",
+  "githubUrl": "https://github.com/zechenzhangAGI/AI-research-SKILLs/tree/main/15-rag/chroma",
+  "stars": 140,
+  "forks": 15,
+  "updatedAt": 1764113462,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

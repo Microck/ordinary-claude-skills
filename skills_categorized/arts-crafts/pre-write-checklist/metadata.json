@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novel-writer-skills-templates-skills-quality-assurance-pre-write-checklist-skill-md",
+  "name": "pre-write-checklist",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\"Activates automatically before chapter writing to enforce the 9-item mandatory file reading checklist - prevents AI focus degradation in long-form fiction by ensuring all context is loaded before each writing session\"",
+  "githubUrl": "https://github.com/wordflowlab/novel-writer-skills/tree/main/templates/skills/quality-assurance/pre-write-checklist",
+  "stars": 11,
+  "forks": 6,
+  "updatedAt": 1760965452,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

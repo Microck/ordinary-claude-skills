@@ -1,0 +1,14 @@
+{
+  "id": "pytorch-pytorch-claude-skills-skill-writer-skill-md",
+  "name": "skill-writer",
+  "author": "pytorch",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/21003710?v=4",
+  "description": "Guide users through creating Agent Skills for Claude Code. Use when the user wants to create, write, author, or design a new Skill, or needs help with SKILL.md files, frontmatter, or skill structure.",
+  "githubUrl": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/skill-writer",
+  "stars": 95362,
+  "forks": 26012,
+  "updatedAt": 1764119070,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

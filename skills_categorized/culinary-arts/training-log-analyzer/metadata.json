@@ -1,0 +1,14 @@
+{
+  "id": "onewave-ai-claude-skills-training-log-analyzer-skill-md",
+  "name": "training-log-analyzer",
+  "author": "OneWave-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239639365?v=4",
+  "description": "Track workouts, stats, progress over time. Identify improvement areas, plateaus, rest/recovery needs, peak performance timing, injury risk.",
+  "githubUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/training-log-analyzer",
+  "stars": 10,
+  "forks": 4,
+  "updatedAt": 1761158983,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

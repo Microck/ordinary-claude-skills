@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-python-development-skills-async-python-patterns-skill-md",
+  "name": "async-python-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master Python asyncio, concurrent programming, and async/await patterns for high-performance applications. Use when building async APIs, concurrent systems, or I/O-bound applications requiring non-blocking operations.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/python-development/skills/async-python-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}
