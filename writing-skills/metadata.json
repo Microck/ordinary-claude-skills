@@ -1,0 +1,14 @@
+{
+  "id": "hashintel-hash-claude-skills-writing-skills-skill-md",
+  "name": "writing-skills",
+  "author": "hashintel",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/22116112?v=4",
+  "description": "Create and manage Claude Code skills in HASH repository following Anthropic best practices. Use when creating new skills, modifying skill-rules.json, understanding trigger patterns, working with hooks, debugging skill activation, or implementing progressive disclosure. Covers skill structure, YAML frontmatter, trigger types (keywords, intent patterns), UserPromptSubmit hook, and the 500-line rule. Includes validation and debugging with SKILL_DEBUG. Examples include rust-error-stack, cargo-dependencies, and rust-documentation skills.",
+  "githubUrl": "https://github.com/hashintel/hash/tree/main/.claude/skills/writing-skills",
+  "stars": 1378,
+  "forks": 107,
+  "updatedAt": 1764117191,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novel-writer-skills-templates-skills-writing-techniques-scene-structure-skill-md",
+  "name": "scene-structure-techniques",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\"Use when structuring scenes or planning chapter content - provides scene-sequel framework, tension management, and beat-by-beat structure for compelling scenes\"",
+  "githubUrl": "https://github.com/wordflowlab/novel-writer-skills/tree/main/templates/skills/writing-techniques/scene-structure",
+  "stars": 11,
+  "forks": 6,
+  "updatedAt": 1760965452,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

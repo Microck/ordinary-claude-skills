@@ -1,0 +1,14 @@
+{
+  "id": "bytebase-dbhub-claude-skills-testing-skill-md",
+  "name": "testing",
+  "author": "bytebase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/74386897?v=4",
+  "description": "Run and troubleshoot tests for DBHub, including unit tests, integration tests with Testcontainers, and database-specific tests. Use when asked to run tests, fix test failures, debug integration tests, or troubleshoot Docker/database container issues.",
+  "githubUrl": "https://github.com/bytebase/dbhub/tree/main/.claude/skills/testing",
+  "stars": 1649,
+  "forks": 144,
+  "updatedAt": 1764514662,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

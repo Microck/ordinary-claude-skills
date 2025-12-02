@@ -1,0 +1,14 @@
+{
+  "id": "anton-abyzov-specweave-plugins-specweave-mobile-skills-native-modules-skill-md",
+  "name": "native-modules",
+  "author": "anton-abyzov",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/979819?v=4",
+  "description": "Expert in React Native native modules, bridging JavaScript and native code, writing custom native modules, using Turbo Modules, Fabric, JSI, autolinking, module configuration, iOS Swift/Objective-C modules, Android Kotlin/Java modules. Activates for native module, native code, bridge, turbo module, JSI, fabric, autolinking, custom native module, ios module, android module, swift, kotlin, objective-c, java native code.",
+  "githubUrl": "https://github.com/anton-abyzov/specweave/tree/develop/plugins/specweave-mobile/skills/native-modules",
+  "stars": 6,
+  "forks": 1,
+  "updatedAt": 1764570884,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

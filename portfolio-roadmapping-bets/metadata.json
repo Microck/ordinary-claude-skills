@@ -1,0 +1,14 @@
+{
+  "id": "lyndonkl-claude-skills-portfolio-roadmapping-bets-skill-md",
+  "name": "portfolio-roadmapping-bets",
+  "author": "lyndonkl",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/34067855?v=4",
+  "description": "Use when managing multiple initiatives across time horizons (now/next/later, H1/H2/H3), balancing risk vs return across portfolio, sizing and sequencing bets with dependencies, setting exit/scale criteria for experiments, allocating resources across innovation types (core/adjacent/transformational), or when user mentions portfolio planning, roadmap horizons, betting framework, initiative prioritization, innovation portfolio, or resource allocation across horizons.",
+  "githubUrl": "https://github.com/lyndonkl/claude/tree/main/skills/portfolio-roadmapping-bets",
+  "stars": 5,
+  "forks": 0,
+  "updatedAt": 1764112186,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

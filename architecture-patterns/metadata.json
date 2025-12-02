@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-backend-development-skills-architecture-patterns-skill-md",
+  "name": "architecture-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design. Use when architecting complex backend systems or refactoring existing applications for better maintainability.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/backend-development/skills/architecture-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

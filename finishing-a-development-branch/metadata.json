@@ -1,0 +1,14 @@
+{
+  "id": "obra-superpowers-skills-finishing-a-development-branch-skill-md",
+  "name": "finishing-a-development-branch",
+  "author": "obra",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/45416?v=4",
+  "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+  "githubUrl": "https://github.com/obra/superpowers/tree/main/skills/finishing-a-development-branch",
+  "stars": 8113,
+  "forks": 673,
+  "updatedAt": 1764537776,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

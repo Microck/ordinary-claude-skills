@@ -1,0 +1,14 @@
+{
+  "id": "facebook-buck2-claude-skills-buck2-rule-basics-skill-md",
+  "name": "buck2-rule-basics",
+  "author": "facebook",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/69631?v=4",
+  "description": "Guide users through writing their first Buck2 rule to learn fundamental concepts including rules, actions, targets, configurations, analysis, and select(). Use this skill when users want to learn Buck2 basics hands-on or need help understanding rule writing.",
+  "githubUrl": "https://github.com/facebook/buck2/tree/main/.claude/skills/buck2-rule-basics",
+  "stars": 4153,
+  "forks": 306,
+  "updatedAt": 1764119409,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

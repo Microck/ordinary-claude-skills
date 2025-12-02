@@ -1,0 +1,14 @@
+{
+  "id": "jpicklyk-task-orchestrator-claude-plugins-task-orchestrator-skills-database-implementation-skill-md",
+  "name": "database-implementation",
+  "author": "jpicklyk",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/5747775?v=4",
+  "description": "Database schema design, migrations, query optimization with SQL, Exposed ORM, Flyway. Use for database, migration, schema, sql, flyway tags. Provides migration patterns, validation commands, rollback strategies.",
+  "githubUrl": "https://github.com/jpicklyk/task-orchestrator/tree/main/claude-plugins/task-orchestrator/skills/database-implementation",
+  "stars": 111,
+  "forks": 10,
+  "updatedAt": 1762371621,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

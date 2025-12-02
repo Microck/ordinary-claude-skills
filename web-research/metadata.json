@@ -1,0 +1,14 @@
+{
+  "id": "langchain-ai-deepagents-libs-deepagents-cli-examples-skills-web-research-skill-md",
+  "name": "web-research",
+  "author": "langchain-ai",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/126733545?v=4",
+  "description": "Use this skill for requests related to web research; it provides a structured approach to conducting comprehensive web research",
+  "githubUrl": "https://github.com/langchain-ai/deepagents/tree/master/libs/deepagents-cli/examples/skills/web-research",
+  "stars": 6481,
+  "forks": 988,
+  "updatedAt": 1764321724,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mlflow-mlflow-claude-skills-fetch-unresolved-comments-skill-md",
+  "name": "fetch-unresolved-comments",
+  "author": "mlflow",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/39938107?v=4",
+  "description": "Fetch unresolved PR review comments using GitHub GraphQL API, filtering out resolved and outdated feedback.",
+  "githubUrl": "https://github.com/mlflow/mlflow/tree/master/.claude/skills/fetch-unresolved-comments",
+  "stars": 23068,
+  "forks": 5021,
+  "updatedAt": 1764072473,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

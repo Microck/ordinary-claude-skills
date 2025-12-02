@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-customer-advocacy-orchestration-skills-reference-ops-skill-md",
+  "name": "reference-ops",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Use to manage workflows, compliance, and measurement for customer references.",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/customer-advocacy-orchestration/skills/reference-ops",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

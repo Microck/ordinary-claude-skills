@@ -1,0 +1,14 @@
+{
+  "id": "hashintel-hash-claude-skills-managing-cargo-dependencies-skill-md",
+  "name": "managing-cargo-dependencies",
+  "author": "hashintel",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/22116112?v=4",
+  "description": "Cargo.toml dependency management patterns for HASH workspace. Use when adding dependencies, managing workspace dependencies, organizing Cargo.toml sections, setting version pinning, configuring default features, or working with public dependencies.",
+  "githubUrl": "https://github.com/hashintel/hash/tree/main/.claude/skills/managing-cargo-dependencies",
+  "stars": 1378,
+  "forks": 107,
+  "updatedAt": 1764117191,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

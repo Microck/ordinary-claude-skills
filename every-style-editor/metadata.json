@@ -1,0 +1,14 @@
+{
+  "id": "everyinc-compounding-engineering-plugin-plugins-compounding-engineering-skills-every-style-editor-skill-md",
+  "name": "every-style-editor",
+  "author": "EveryInc",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/76073155?v=4",
+  "description": "This skill should be used when reviewing or editing copy to ensure adherence to Every's style guide. It provides a systematic line-by-line review process for grammar, punctuation, mechanics, and style guide compliance.",
+  "githubUrl": "https://github.com/EveryInc/compounding-engineering-plugin/tree/main/plugins/compounding-engineering/skills/every-style-editor",
+  "stars": 2062,
+  "forks": 173,
+  "updatedAt": 1764450412,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "onewave-ai-claude-skills-skill-navigator-skill-md",
+  "name": "skill-navigator",
+  "author": "OneWave-AI",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239639365?v=4",
+  "description": "The 100th skill! Your intelligent guide to all 99 other skills. Recommends the perfect skill for any task, creates skill combinations, and helps you discover capabilities you didn't know you had.",
+  "githubUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/skill-navigator",
+  "stars": 10,
+  "forks": 4,
+  "updatedAt": 1761158983,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

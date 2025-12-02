@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-observability-monitoring-skills-slo-implementation-skill-md",
+  "name": "slo-implementation",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or measuring service performance.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/observability-monitoring/skills/slo-implementation",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

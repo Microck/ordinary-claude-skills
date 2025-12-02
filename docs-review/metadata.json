@@ -1,0 +1,14 @@
+{
+  "id": "metabase-metabase-claude-skills-docs-review-skill-md",
+  "name": "docs-review",
+  "author": "metabase",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/10520629?v=4",
+  "description": "Review documentation changes for compliance with the Metabase writing style guide. Use when reviewing pull requests, files, or diffs containing documentation markdown files.",
+  "githubUrl": "https://github.com/metabase/metabase/tree/master/.claude/skills/docs-review",
+  "stars": 44733,
+  "forks": 6042,
+  "updatedAt": 1764106091,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sstobo-convex-skills-convex-agents-usage-tracking-skill-md",
+  "name": "convex-agents-usage-tracking",
+  "author": "Sstobo",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/32102061?v=4",
+  "description": "\"Tracks LLM token consumption and usage metrics for billing, monitoring, and optimization. Use this to log token usage, calculate costs, generate invoices, and understand which agents or users consume the most resources.\"",
+  "githubUrl": "https://github.com/Sstobo/convex-skills/tree/main/convex-agents-usage-tracking",
+  "stars": 5,
+  "forks": 0,
+  "updatedAt": 1760818257,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

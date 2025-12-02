@@ -1,0 +1,14 @@
+{
+  "id": "henkisdabro-wookstar-claude-code-plugins-shopify-developer-skills-shopify-debugging-skill-md",
+  "name": "shopify-debugging",
+  "author": "henkisdabro",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/477513?v=4",
+  "description": "Complete debugging and troubleshooting guide for Shopify including Liquid errors, theme preview debugging, API error handling, JavaScript console debugging, network request inspection, cart issues, checkout problems, and common error codes. Use when debugging Liquid syntax errors, troubleshooting theme rendering issues, fixing API errors, debugging JavaScript, investigating cart problems, or resolving webhook failures.",
+  "githubUrl": "https://github.com/henkisdabro/wookstar-claude-code-plugins/tree/main/shopify-developer/skills/shopify-debugging",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1764206806,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

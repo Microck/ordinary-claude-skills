@@ -1,0 +1,14 @@
+{
+  "id": "langfuse-langfuse-claude-skills-backend-dev-guidelines-skill-md",
+  "name": "backend-dev-guidelines",
+  "author": "langfuse",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/134601687?v=4",
+  "description": "Comprehensive backend development guide for Langfuse's Next.js 14/tRPC/Express/TypeScript monorepo. Use when creating tRPC routers, public API endpoints, BullMQ queue processors, services, or working with tRPC procedures, Next.js API routes, Prisma database access, ClickHouse analytics queries, Redis queues, OpenTelemetry instrumentation, Zod v4 validation, env.mjs configuration, tenant isolation patterns, or async patterns. Covers layered architecture (tRPC procedures \u2192 services, queue processors \u2192 services), dual database system (PostgreSQL + ClickHouse), projectId filtering for multi-tenant isolation, traceException error handling, observability patterns, and testing strategies (Jest for web, vitest for worker).",
+  "githubUrl": "https://github.com/langfuse/langfuse/tree/main/.claude/skills/backend-dev-guidelines",
+  "stars": 18830,
+  "forks": 1836,
+  "updatedAt": 1764591927,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

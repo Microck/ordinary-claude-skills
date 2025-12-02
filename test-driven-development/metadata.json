@@ -1,0 +1,14 @@
+{
+  "id": "obra-superpowers-skills-test-driven-development-skill-md",
+  "name": "test-driven-development",
+  "author": "obra",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/45416?v=4",
+  "description": "Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring failure first",
+  "githubUrl": "https://github.com/obra/superpowers/tree/main/skills/test-driven-development",
+  "stars": 8113,
+  "forks": 673,
+  "updatedAt": 1764537776,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "labring-fastgpt-claude-skills-core-app-workflow-inteactive-skill-md",
+  "name": "workflow-interactive-dev",
+  "author": "labring",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/102226726?v=4",
+  "description": "\u7528\u4e8e\u5f00\u53d1 FastGPT \u5de5\u4f5c\u6d41\u4e2d\u7684\u4ea4\u4e92\u54cd\u5e94\u3002\u8be6\u7ec6\u8bf4\u660e\u4e86\u4ea4\u4e92\u8282\u70b9\u7684\u67b6\u6784\u3001\u5f00\u53d1\u6d41\u7a0b\u548c\u9700\u8981\u4fee\u6539\u7684\u6587\u4ef6\u3002",
+  "githubUrl": "https://github.com/labring/FastGPT/tree/main/.claude/skills/core/app/workflow/inteactive",
+  "stars": 26350,
+  "forks": 6777,
+  "updatedAt": 1764076061,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-framework-migration-skills-angular-migration-skill-md",
+  "name": "angular-migration",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Migrate from AngularJS to Angular using hybrid mode, incremental component rewriting, and dependency injection updates. Use when upgrading AngularJS applications, planning framework migrations, or modernizing legacy Angular code.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/framework-migration/skills/angular-migration",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "starlitnightly-omicverse-claude-skills-data-export-pdf-skill-md",
+  "name": "data-export-pdf",
+  "author": "Starlitnightly",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/46667721?v=4",
+  "description": "Create professional PDF reports with text, tables, and embedded images using reportlab. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).",
+  "githubUrl": "https://github.com/Starlitnightly/omicverse/tree/master/.claude/skills/data-export-pdf",
+  "stars": 783,
+  "forks": 95,
+  "updatedAt": 1763633062,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

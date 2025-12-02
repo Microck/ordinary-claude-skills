@@ -1,0 +1,14 @@
+{
+  "id": "disler-claude-code-hooks-multi-agent-observability-claude-skills-video-processor-skill-md",
+  "name": "video-processor",
+  "author": "disler",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/7570811?v=4",
+  "description": "Process video files with audio extraction, format conversion (mp4, webm), and Whisper transcription. Use when user mentions video conversion, audio extraction, transcription, mp4, webm, ffmpeg, or whisper transcription.",
+  "githubUrl": "https://github.com/disler/claude-code-hooks-multi-agent-observability/tree/main/.claude/skills/video-processor",
+  "stars": 758,
+  "forks": 239,
+  "updatedAt": 1761493820,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

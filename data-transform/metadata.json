@@ -1,0 +1,14 @@
+{
+  "id": "starlitnightly-omicverse-claude-skills-data-transform-skill-md",
+  "name": "data-transform",
+  "author": "Starlitnightly",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/46667721?v=4",
+  "description": "Transform, clean, reshape, and preprocess data using pandas and numpy. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).",
+  "githubUrl": "https://github.com/Starlitnightly/omicverse/tree/master/.claude/skills/data-transform",
+  "stars": 783,
+  "forks": 95,
+  "updatedAt": 1763633062,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

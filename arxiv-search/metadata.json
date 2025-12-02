@@ -1,0 +1,14 @@
+{
+  "id": "langchain-ai-deepagents-libs-deepagents-cli-examples-skills-arxiv-search-skill-md",
+  "name": "arxiv-search",
+  "author": "langchain-ai",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/126733545?v=4",
+  "description": "Search arXiv preprint repository for papers in physics, mathematics, computer science, quantitative biology, and related fields",
+  "githubUrl": "https://github.com/langchain-ai/deepagents/tree/master/libs/deepagents-cli/examples/skills/arxiv-search",
+  "stars": 6481,
+  "forks": 988,
+  "updatedAt": 1764321724,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

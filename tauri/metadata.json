@@ -1,0 +1,14 @@
+{
+  "id": "delorenj-skills-tauri-skill-md",
+  "name": "tauri",
+  "author": "delorenj",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/242611?v=4",
+  "description": "Tauri framework for building cross-platform desktop and mobile apps. Use for desktop app development, native integrations, Rust backend, and web-based UIs.",
+  "githubUrl": "https://github.com/delorenj/skills/tree/main/tauri",
+  "stars": 1,
+  "forks": 0,
+  "updatedAt": 1762297593,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

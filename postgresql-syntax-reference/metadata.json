@@ -1,0 +1,14 @@
+{
+  "id": "pgschema-pgschema-claude-skills-postgres-syntax-skill-md",
+  "name": "postgresql-syntax-reference",
+  "author": "pgschema",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/215282422?v=4",
+  "description": "Consult PostgreSQL's parser and grammar (gram.y) to understand SQL syntax, DDL statement structure, and parsing rules when implementing pgschema features",
+  "githubUrl": "https://github.com/pgschema/pgschema/tree/main/.claude/skills/postgres_syntax",
+  "stars": 481,
+  "forks": 19,
+  "updatedAt": 1764659925,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

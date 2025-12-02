@@ -1,0 +1,14 @@
+{
+  "id": "dexploarer-claudius-skills-examples-advanced-web3-skills-smart-contract-generator-skill-md",
+  "name": "smart-contract-generator",
+  "author": "Dexploarer",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/211557447?v=4",
+  "description": "Generates Solidity smart contracts with security best practices (ERC-20, ERC-721, ERC-1155, custom). Use when user asks to \"create smart contract\", \"solidity contract\", \"erc20 token\", \"nft contract\", or \"web3 contract\".",
+  "githubUrl": "https://github.com/Dexploarer/claudius-skills/tree/main/examples/advanced/web3-skills/smart-contract-generator",
+  "stars": 1,
+  "forks": 1,
+  "updatedAt": 1763887001,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

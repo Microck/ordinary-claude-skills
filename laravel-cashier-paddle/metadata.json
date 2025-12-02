@@ -1,0 +1,14 @@
+{
+  "id": "rawveg-skillsforge-marketplace-laravel-cashier-paddle-skill-md",
+  "name": "laravel-cashier-paddle",
+  "author": "rawveg",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/308889?v=4",
+  "description": "Laravel Cashier (Paddle) - Subscription billing and payment processing",
+  "githubUrl": "https://github.com/rawveg/skillsforge-marketplace/tree/main/laravel-cashier-paddle",
+  "stars": 7,
+  "forks": 1,
+  "updatedAt": 1763490934,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

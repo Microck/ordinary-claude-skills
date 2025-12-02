@@ -1,0 +1,14 @@
+{
+  "id": "qdhenry-claude-command-suite-claude-skills-cloudflare-manager-skill-md",
+  "name": "cloudflare-manager",
+  "author": "qdhenry",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/25516121?v=4",
+  "description": "Comprehensive Cloudflare account management for deploying Workers, KV Storage, R2, Pages, DNS, and Routes. Use when deploying cloudflare services, managing worker containers, configuring KV/R2 storage, or setting up DNS/routing. Requires CLOUDFLARE_API_KEY in .env and Bun runtime with dependencies installed.",
+  "githubUrl": "https://github.com/qdhenry/Claude-Command-Suite/tree/main/.claude/skills/cloudflare-manager",
+  "stars": 834,
+  "forks": 78,
+  "updatedAt": 1764366258,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

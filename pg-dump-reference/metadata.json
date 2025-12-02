@@ -1,0 +1,14 @@
+{
+  "id": "pgschema-pgschema-claude-skills-pg-dump-skill-md",
+  "name": "pg-dump-reference",
+  "author": "pgschema",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/215282422?v=4",
+  "description": "Consult PostgreSQL's pg_dump implementation for guidance on system catalog queries and schema extraction when implementing pgschema features",
+  "githubUrl": "https://github.com/pgschema/pgschema/tree/main/.claude/skills/pg_dump",
+  "stars": 481,
+  "forks": 19,
+  "updatedAt": 1764659925,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

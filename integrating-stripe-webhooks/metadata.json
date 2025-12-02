@@ -1,0 +1,14 @@
+{
+  "id": "pr-pm-prpm-claude-skills-integrating-stripe-webhooks-skill-md",
+  "name": "integrating-stripe-webhooks",
+  "author": "pr-pm",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/239213145?v=4",
+  "description": "Use when implementing Stripe webhook endpoints and getting 'Raw body not available' or signature verification errors - provides raw body parsing solutions and subscription period field fixes across frameworks",
+  "githubUrl": "https://github.com/pr-pm/prpm/tree/main/.claude/skills/integrating-stripe-webhooks",
+  "stars": 49,
+  "forks": 7,
+  "updatedAt": 1764590961,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

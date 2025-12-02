@@ -1,6 +1,6 @@
 ---
 name: docx
-description: "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
+description: "Document toolkit (.docx). Create/edit documents, tracked changes, comments, formatting preservation, text extraction, for professional document processing."
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
@@ -8,7 +8,7 @@ license: Proprietary. LICENSE.txt has complete terms
 
 ## Overview
 
-A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.
+A .docx file is a ZIP archive containing XML files and resources. Create, edit, or analyze Word documents using text extraction, raw XML access, or redlining workflows. Apply this skill for professional document processing, tracked changes, and content manipulation.
 
 ## Workflow Decision Tree
 
@@ -31,7 +31,7 @@ Use "Creating a new Word document" workflow
 ## Reading and analyzing content
 
 ### Text extraction
-If you just need to read the text contents of a document, you should convert the document to markdown using pandoc. Pandoc provides excellent support for preserving document structure and can show tracked changes:
+To read the text contents of a document, convert the document to markdown using pandoc. Pandoc provides excellent support for preserving document structure and can show tracked changes:
 
 ```bash
 # Convert document to markdown with tracked changes
@@ -40,7 +40,7 @@ pandoc --track-changes=all path-to-file.docx -o output.md
 ```
 
 ### Raw XML access
-You need raw XML access for: comments, complex formatting, document structure, embedded media, and metadata. For any of these features, you'll need to unpack a document and read its raw XML contents.
+Raw XML access is required for: comments, complex formatting, document structure, embedded media, and metadata. For any of these features, unpack a document and read its raw XML contents.
 
 #### Unpacking a file
 `python ooxml/scripts/unpack.py <office_file> <output_directory>`
@@ -74,7 +74,7 @@ The Document library provides both high-level methods for common operations and 
 
 ## Redlining workflow for document review
 
-This workflow allows you to plan comprehensive tracked changes using markdown before implementing them in OOXML. **CRITICAL**: For complete tracked changes, you must implement ALL changes systematically.
+This workflow allows planning comprehensive tracked changes using markdown before implementing them in OOXML. **CRITICAL**: For complete tracked changes, implement ALL changes systematically.
 
 **Batching Strategy**: Group related changes into batches of 3-10 changes. This makes debugging manageable while maintaining efficiency. Test each batch before moving to the next.
 
@@ -194,4 +194,4 @@ Required dependencies (install if not available):
 - **docx**: `npm install -g docx` (for creating new documents)
 - **LibreOffice**: `sudo apt-get install libreoffice` (for PDF conversion)
 - **Poppler**: `sudo apt-get install poppler-utils` (for pdftoppm to convert PDF to images)
-- **defusedxml**: `pip install defusedxml` (for secure XML parsing)
+- **defusedxml**: `uv pip install defusedxml` (for secure XML parsing)

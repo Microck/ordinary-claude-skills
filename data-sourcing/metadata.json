@@ -1,0 +1,14 @@
+{
+  "id": "gtmagents-gtm-agents-plugins-data-enrichment-master-skills-data-sourcing-skill-md",
+  "name": "data-sourcing",
+  "author": "gtmagents",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/317076?v=4",
+  "description": "Optimize provider selection, routing, and credit usage across 150+ enrichment sources for company/contact intelligence.",
+  "githubUrl": "https://github.com/gtmagents/gtm-agents/tree/main/plugins/data-enrichment-master/skills/data-sourcing",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1763684099,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

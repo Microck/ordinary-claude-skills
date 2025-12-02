@@ -1,0 +1,14 @@
+{
+  "id": "bonny-wordpress-simple-history-claude-skills-sql-skill-md",
+  "name": "sql",
+  "author": "bonny",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/221570?v=4",
+  "description": "Run SQL queries against the WordPress development database",
+  "githubUrl": "https://github.com/bonny/WordPress-Simple-History/tree/main/.claude/skills/sql",
+  "stars": 313,
+  "forks": 73,
+  "updatedAt": 1764666726,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

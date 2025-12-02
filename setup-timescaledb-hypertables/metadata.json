@@ -1,0 +1,14 @@
+{
+  "id": "timescale-pg-aiguide-skills-setup-timescaledb-hypertables-skill-md",
+  "name": "setup-timescaledb-hypertables",
+  "author": "timescale",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/8986001?v=4",
+  "description": "'Step-by-step instructions for designing table schemas and setting up TimescaleDB with hypertables, indexes, compression, retention policies, and continuous aggregates. Instructions for selecting: partition columns, segment_by columns, order_by columns, chunk time interval, real-time aggregation.'",
+  "githubUrl": "https://github.com/timescale/pg-aiguide/tree/main/skills/setup-timescaledb-hypertables",
+  "stars": 89,
+  "forks": 5,
+  "updatedAt": 1764098695,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

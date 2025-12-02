@@ -1,0 +1,14 @@
+{
+  "id": "aj-geddes-useful-ai-prompts-skills-flutter-development-skill-md",
+  "name": "flutter-development",
+  "author": "aj-geddes",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/211219442?v=4",
+  "description": "Build beautiful cross-platform mobile apps with Flutter and Dart. Covers widgets, state management with Provider/BLoC, navigation, API integration, and material design.",
+  "githubUrl": "https://github.com/aj-geddes/useful-ai-prompts/tree/main/skills/flutter-development",
+  "stars": 12,
+  "forks": 0,
+  "updatedAt": 1764499235,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "alirezarezvani-claude-skills-product-team-agile-product-owner-skill-md",
+  "name": "agile-product-owner",
+  "author": "alirezarezvani",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/5697919?v=4",
+  "description": "Agile product ownership toolkit for Senior Product Owner including INVEST-compliant user story generation, sprint planning, backlog management, and velocity tracking. Use for story writing, sprint planning, stakeholder communication, and agile ceremonies.",
+  "githubUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/agile-product-owner",
+  "stars": 148,
+  "forks": 30,
+  "updatedAt": 1762447626,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

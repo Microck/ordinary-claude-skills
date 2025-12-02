@@ -1,0 +1,14 @@
+{
+  "id": "meirm-askgpt-examples-skills-security-audit-example-skill-md",
+  "name": "security-audit-example",
+  "author": "meirm",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/551713?v=4",
+  "description": "Example security audit skill demonstrating how to audit code for security vulnerabilities. Use when the user asks to perform security reviews, check for vulnerabilities, or audit code security.",
+  "githubUrl": "https://github.com/meirm/askGPT/tree/main/examples/skills/security-audit-example",
+  "stars": 9,
+  "forks": 2,
+  "updatedAt": 1761985715,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

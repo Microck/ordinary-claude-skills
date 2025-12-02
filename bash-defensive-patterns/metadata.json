@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-shell-scripting-skills-bash-defensive-patterns-skill-md",
+  "name": "bash-defensive-patterns",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master defensive Bash programming techniques for production-grade scripts. Use when writing robust shell scripts, CI/CD pipelines, or system utilities requiring fault tolerance and safety.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/shell-scripting/skills/bash-defensive-patterns",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

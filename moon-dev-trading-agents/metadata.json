@@ -1,0 +1,14 @@
+{
+  "id": "moondevonyt-moon-dev-ai-agents-claude-skills-moon-dev-trading-agents-skill-md",
+  "name": "moon-dev-trading-agents",
+  "author": "moondevonyt",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/115879186?v=4",
+  "description": "Master Moon Dev's Ai Agents Github with 48+ specialized agents, multi-exchange support, LLM abstraction, and autonomous trading capabilities across crypto markets",
+  "githubUrl": "https://github.com/moondevonyt/moon-dev-ai-agents/tree/main/.claude/skills/moon-dev-trading-agents",
+  "stars": 3209,
+  "forks": 1391,
+  "updatedAt": 1764081225,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

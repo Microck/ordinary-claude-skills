@@ -1,0 +1,14 @@
+{
+  "id": "labring-fastgpt-claude-skills-create-skill-file-skill-md",
+  "name": "create-skill-file",
+  "author": "labring",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/102226726?v=4",
+  "description": "Guides Claude in creating well-structured SKILL.md files following best practices. Provides clear guidelines for naming, structure, and content organization to make skills easy to discover and execute.",
+  "githubUrl": "https://github.com/labring/FastGPT/tree/main/.claude/skills/create-skill-file",
+  "stars": 26350,
+  "forks": 6777,
+  "updatedAt": 1764076061,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

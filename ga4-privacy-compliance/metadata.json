@@ -1,0 +1,14 @@
+{
+  "id": "henkisdabro-wookstar-claude-code-plugins-ga-suite-skills-ga4-privacy-compliance-skill-md",
+  "name": "ga4-privacy-compliance",
+  "author": "henkisdabro",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/477513?v=4",
+  "description": "Expert guidance for GA4 privacy and compliance including GDPR, CCPA, Consent Mode v2, data deletion, and privacy settings. Use when implementing Consent Mode, ensuring GDPR compliance, handling data deletion requests, configuring consent banners, or implementing privacy-first tracking. Covers consent parameters (ad_user_data, ad_personalization), data retention, IP anonymization, and compliance workflows.",
+  "githubUrl": "https://github.com/henkisdabro/wookstar-claude-code-plugins/tree/main/ga-suite/skills/ga4-privacy-compliance",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1764206806,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "madappgang-claude-code-plugins-orchestration-skills-todowrite-orchestration-skill-md",
+  "name": "todowrite-orchestration",
+  "author": "MadAppGang",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/5000064?v=4",
+  "description": "Track progress in multi-phase workflows with TodoWrite. Use when orchestrating 5+ phase commands, managing iteration loops, tracking parallel tasks, or providing real-time progress visibility. Trigger keywords - \"phase tracking\", \"progress\", \"workflow\", \"multi-step\", \"multi-phase\", \"todo\", \"tracking\", \"status\".",
+  "githubUrl": "https://github.com/MadAppGang/claude-code/tree/main/plugins/orchestration/skills/todowrite-orchestration",
+  "stars": 53,
+  "forks": 7,
+  "updatedAt": 1764325726,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

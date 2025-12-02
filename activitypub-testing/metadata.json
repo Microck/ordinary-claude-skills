@@ -1,0 +1,14 @@
+{
+  "id": "automattic-wordpress-activitypub-claude-skills-activitypub-testing-skill-md",
+  "name": "activitypub-testing",
+  "author": "Automattic",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/887802?v=4",
+  "description": "Testing patterns for PHPUnit and Playwright E2E tests. Use when writing tests, debugging test failures, setting up test coverage, or implementing test patterns for ActivityPub features.",
+  "githubUrl": "https://github.com/Automattic/wordpress-activitypub/tree/trunk/.claude/skills/activitypub-testing",
+  "stars": 551,
+  "forks": 83,
+  "updatedAt": 1764669996,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

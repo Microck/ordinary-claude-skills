@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-payment-processing-skills-paypal-integration-skill-md",
+  "name": "paypal-integration",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Integrate PayPal payment processing with support for express checkout, subscriptions, and refund management. Use when implementing PayPal payments, processing online transactions, or building e-commerce checkout flows.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/payment-processing/skills/paypal-integration",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

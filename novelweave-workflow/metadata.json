@@ -1,0 +1,14 @@
+{
+  "id": "wordflowlab-novelweave-templates-skills-novelweave-workflow-skill-md",
+  "name": "novelweave-workflow",
+  "author": "wordflowlab",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/225518147?v=4",
+  "description": "\u4f7f\u7528 NovelWeave \u8fdb\u884c\u5c0f\u8bf4\u521b\u4f5c\u7684\u5b8c\u6574\u5de5\u4f5c\u6d41\u7a0b\uff0c\u5305\u62ec\u547d\u4ee4\u4f7f\u7528\u3001\u6700\u4f73\u5b9e\u8df5\u548c\u9ad8\u6548\u521b\u4f5c\u6280\u5de7\u3002\u9002\u7528\u4e8e\u89c4\u5212\u5c0f\u8bf4\u9879\u76ee\u3001\u7ec4\u7ec7\u521b\u4f5c\u8fc7\u7a0b\u6216\u5b66\u4e60 NovelWeave \u529f\u80fd\u3002",
+  "githubUrl": "https://github.com/wordflowlab/novelweave/tree/main/templates/skills/novelweave-workflow",
+  "stars": 22,
+  "forks": 6,
+  "updatedAt": 1761541805,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "icehugh-btc-connect-skill-btc-connect-skill-md",
+  "name": "btc-connect",
+  "author": "IceHugh",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/20093364?v=4",
+  "description": "\u4e13\u4e1a\u7684\u6bd4\u7279\u5e01\u94b1\u5305\u8fde\u63a5\u6280\u80fd\uff0c\u652f\u6301btc-connect core\u3001react\u3001vue\u5305\u5728React\u3001Vue\u3001Next.js\u3001Nuxt 3\u9879\u76ee\u4e2d\u7684\u5b8c\u6574\u96c6\u6210\uff0c\u5305\u542bUniSat\u548cOKX\u94b1\u5305\u9002\u914d\u3001\u7f51\u7edc\u5207\u6362\u529f\u80fd\u3001SSR\u73af\u5883\u914d\u7f6e\u3001\u7edf\u4e00Hook API\u548cv0.5.0\u6700\u65b0\u7279\u6027",
+  "githubUrl": "https://github.com/IceHugh/btc-connect/tree/main/skill/btc-connect",
+  "stars": 18,
+  "forks": 8,
+  "updatedAt": 1762227085,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

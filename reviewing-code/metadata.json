@@ -1,0 +1,14 @@
+{
+  "id": "captaincrouton89-claude-skills-archive-code-reviewing-skill-md",
+  "name": "reviewing-code",
+  "author": "CaptainCrouton89",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/49383285?v=4",
+  "description": "Systematically evaluate code changes for security, correctness, performance, and spec alignment. Use when reviewing PRs, assessing code quality, or verifying implementation against requirements.",
+  "githubUrl": "https://github.com/CaptainCrouton89/.claude/tree/main/skills.archive/code-reviewing",
+  "stars": 482,
+  "forks": 68,
+  "updatedAt": 1763973723,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "massgen-massgen-massgen-skills-serena-skill-md",
+  "name": "serena",
+  "author": "massgen",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/240997187?v=4",
+  "description": "This skill provides symbol-level code understanding and navigation using Language Server Protocol (LSP). Enables IDE-like capabilities for finding symbols, tracking references, and making precise code edits at the symbol level.",
+  "githubUrl": "https://github.com/massgen/MassGen/tree/main/massgen/skills/serena",
+  "stars": 615,
+  "forks": 91,
+  "updatedAt": 1764041174,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

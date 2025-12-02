@@ -1,0 +1,14 @@
+{
+  "id": "antinomyhq-forge-crates-forge-repo-src-skills-create-skill-skill-md",
+  "name": "create-skill",
+  "author": "antinomyhq",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/197551910?v=4",
+  "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends your capabilities with specialized knowledge, workflows, or tool integrations.",
+  "githubUrl": "https://github.com/antinomyhq/forge/tree/main/crates/forge_repo/src/skills/create-skill",
+  "stars": 4574,
+  "forks": 1184,
+  "updatedAt": 1764669524,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

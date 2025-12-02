@@ -1,0 +1,14 @@
+{
+  "id": "henkisdabro-wookstar-claude-code-plugins-shopify-developer-skills-shopify-api-skill-md",
+  "name": "shopify-api",
+  "author": "henkisdabro",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/477513?v=4",
+  "description": "Complete API integration guide for Shopify including GraphQL Admin API, REST Admin API, Storefront API, Ajax API, OAuth authentication, rate limiting, and webhooks. Use when making API calls to Shopify, authenticating apps, fetching product/order/customer data programmatically, implementing cart operations, handling webhooks, or working with API version 2025-10. Requires fetch or axios for JavaScript implementations.",
+  "githubUrl": "https://github.com/henkisdabro/wookstar-claude-code-plugins/tree/main/shopify-developer/skills/shopify-api",
+  "stars": 6,
+  "forks": 0,
+  "updatedAt": 1764206806,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

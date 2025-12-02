@@ -1,0 +1,14 @@
+{
+  "id": "captaincrouton89-claude-skills-archive-testing-protocol-skill-md",
+  "name": "testing-code",
+  "author": "CaptainCrouton89",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/49383285?v=4",
+  "description": "Write automated tests for features, validate functionality against acceptance criteria, and ensure code coverage. Use when writing test code, verifying functionality, or adding test coverage to existing code.",
+  "githubUrl": "https://github.com/CaptainCrouton89/.claude/tree/main/skills.archive/testing-protocol",
+  "stars": 482,
+  "forks": 68,
+  "updatedAt": 1763973723,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "langchain-ai-deepagents-libs-deepagents-cli-examples-skills-langgraph-docs-skill-md",
+  "name": "langgraph-docs",
+  "author": "langchain-ai",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/126733545?v=4",
+  "description": "Use this skill for requests related to LangGraph in order to fetch relevant documentation to provide accurate, up-to-date guidance.",
+  "githubUrl": "https://github.com/langchain-ai/deepagents/tree/master/libs/deepagents-cli/examples/skills/langgraph-docs",
+  "stars": 6481,
+  "forks": 988,
+  "updatedAt": 1764321724,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

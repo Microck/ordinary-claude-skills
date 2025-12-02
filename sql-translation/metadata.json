@@ -1,0 +1,14 @@
+{
+  "id": "tidyverse-dbplyr-claude-skills-sql-translation-skill-md",
+  "name": "sql-translation",
+  "author": "tidyverse",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/22032646?v=4",
+  "description": "Guide for adding SQL function translations to dbplyr backends. Use when implementing new database-specific R-to-SQL translations for functions like string manipulation, date/time, aggregates, or window functions.",
+  "githubUrl": "https://github.com/tidyverse/dbplyr/tree/main/.claude/skills/sql-translation",
+  "stars": 491,
+  "forks": 185,
+  "updatedAt": 1764453937,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

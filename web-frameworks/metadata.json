@@ -1,0 +1,14 @@
+{
+  "id": "mrgoonie-claudekit-skills-claude-skills-web-frameworks-skill-md",
+  "name": "web-frameworks",
+  "author": "mrgoonie",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/6857382?v=4",
+  "description": "Build modern full-stack web applications with Next.js (App Router, Server Components, RSC, PPR, SSR, SSG, ISR), Turborepo (monorepo management, task pipelines, remote caching, parallel execution), and RemixIcon (3100+ SVG icons in outlined/filled styles). Use when creating React applications, implementing server-side rendering, setting up monorepos with multiple packages, optimizing build performance and caching strategies, adding icon libraries, managing shared dependencies, or working with TypeScript full-stack projects.",
+  "githubUrl": "https://github.com/mrgoonie/claudekit-skills/tree/main/.claude/skills/web-frameworks",
+  "stars": 713,
+  "forks": 113,
+  "updatedAt": 1763221520,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

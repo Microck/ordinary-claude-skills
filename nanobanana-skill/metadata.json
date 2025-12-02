@@ -1,0 +1,14 @@
+{
+  "id": "feiskyer-claude-code-settings-plugins-nanobanana-skill-skills-nanobanana-skill-skill-md",
+  "name": "nanobanana-skill",
+  "author": "feiskyer",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/676637?v=4",
+  "description": "Generate or edit images using Google Gemini API via nanobanana. Use when the user asks to create, generate, edit images with nanobanana, or mentions image generation/editing tasks.",
+  "githubUrl": "https://github.com/feiskyer/claude-code-settings/tree/main/plugins/nanobanana-skill/skills/nanobanana-skill",
+  "stars": 697,
+  "forks": 122,
+  "updatedAt": 1764583940,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

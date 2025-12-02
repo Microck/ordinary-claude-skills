@@ -1,0 +1,14 @@
+{
+  "id": "tidyverse-dbplyr-claude-skills-sql-research-skill-md",
+  "name": "sql-research",
+  "author": "tidyverse",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/22032646?v=4",
+  "description": "Guide for researching SQL syntax and behavior for database backends. Use when you need to research how a SQL function, command, or feature works in a specific database before implementing it in dbplyr.",
+  "githubUrl": "https://github.com/tidyverse/dbplyr/tree/main/.claude/skills/sql-research",
+  "stars": 491,
+  "forks": 185,
+  "updatedAt": 1764453937,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}

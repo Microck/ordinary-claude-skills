@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-python-development-skills-python-packaging-skill-md",
+  "name": "python-packaging",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Create distributable Python packages with proper project structure, setup.py/pyproject.toml, and publishing to PyPI. Use when packaging Python libraries, creating CLI tools, or distributing Python code.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/python-development/skills/python-packaging",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

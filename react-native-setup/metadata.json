@@ -1,0 +1,14 @@
+{
+  "id": "anton-abyzov-specweave-plugins-specweave-mobile-skills-react-native-setup-skill-md",
+  "name": "react-native-setup",
+  "author": "anton-abyzov",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/979819?v=4",
+  "description": "Expert in React Native environment setup and configuration. Helps with Node.js, Xcode, Android Studio, watchman installation, CocoaPods, simulators, emulators, and troubleshooting setup issues. Activates for environment setup, installation issues, xcode setup, android studio, simulators, emulators, react-native init, expo init, development environment, SDK configuration.",
+  "githubUrl": "https://github.com/anton-abyzov/specweave/tree/develop/plugins/specweave-mobile/skills/react-native-setup",
+  "stars": 6,
+  "forks": 1,
+  "updatedAt": 1764570884,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

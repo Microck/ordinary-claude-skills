@@ -1,0 +1,14 @@
+{
+  "id": "wshobson-agents-plugins-javascript-typescript-skills-typescript-advanced-types-skill-md",
+  "name": "typescript-advanced-types",
+  "author": "wshobson",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/553618?v=4",
+  "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/javascript-typescript/skills/typescript-advanced-types",
+  "stars": 20990,
+  "forks": 2347,
+  "updatedAt": 1763343937,
+  "hasMarketplace": true,
+  "path": "SKILL.md",
+  "branch": "main"
+}

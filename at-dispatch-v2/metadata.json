@@ -1,0 +1,14 @@
+{
+  "id": "pytorch-pytorch-claude-skills-at-dispatch-v2-skill-md",
+  "name": "at-dispatch-v2",
+  "author": "pytorch",
+  "authorAvatar": "https://avatars.githubusercontent.com/u/21003710?v=4",
+  "description": "Convert PyTorch AT_DISPATCH macros to AT_DISPATCH_V2 format in ATen C++ code. Use when porting AT_DISPATCH_ALL_TYPES_AND*, AT_DISPATCH_FLOATING_TYPES*, or other dispatch macros to the new v2 API. For ATen kernel files, CUDA kernels, and native operator implementations.",
+  "githubUrl": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/at-dispatch-v2",
+  "stars": 95362,
+  "forks": 26012,
+  "updatedAt": 1764119070,
+  "hasMarketplace": false,
+  "path": "SKILL.md",
+  "branch": "main"
+}
