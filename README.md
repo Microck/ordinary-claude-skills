@@ -7,7 +7,7 @@
 <p align="center">a massive local repository of official and community-built claude skills, organized by category.</p>
 
 <p align="center">
-  <a href="https://microck.github.io/ordinary-claude-skills/#/"><img alt="docs" src="https://img.shields.io/badge/view-documentation-D57853?style=for-the-badge" /></a>
+  <a href="https://microck.github.io/ordinary-claude-skills/#/"><img alt="docs" src="https://img.shields.io/badge/view-documentation" /></a>
   <a href="https://github.com/Microck/ordinary-claude-skills/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-greene" /></a>
   <a href="https://github.com/Microck/ordinary-claude-skills"><img alt="maintenance" src="https://img.shields.io/badge/maintenance-passive-yellow" /></a>
   <a href="https://github.com/Microck/ordinary-claude-skills"><img alt="claude" src="https://img.shields.io/badge/AI-claude-purple" /></a>
