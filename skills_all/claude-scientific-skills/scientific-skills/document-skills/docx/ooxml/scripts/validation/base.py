@@ -921,6 +921,21 @@ class BaseSchemaValidator:
         xml_copy = lxml.etree.fromstring(xml_string)
 
         def process_text_content(text, content_type):
+            """Remove template tags from a text string and record warnings.
+
+            Searches *text* for occurrences of the template pattern.  If any
+            are found, appends warning messages and returns the text with all
+            matches stripped.  Returns the original text unchanged when no
+            tags are present.
+
+            Args:
+                text: The text string to process (may be ``None``).
+                content_type: A label such as ``"text content"`` or
+                    ``"tail content"`` used in warning messages.
+
+            Returns:
+                str or None: The cleaned text, or ``None`` if *text* was falsy.
+            """
             if not text:
                 return text
             matches = list(template_pattern.finditer(text))

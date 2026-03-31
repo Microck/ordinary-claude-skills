@@ -1,3 +1,12 @@
+"""Fill a PDF by adding FreeText annotations defined in a fields JSON file.
+
+When a PDF does not have native fillable form fields, this script adds text
+annotations at the positions described in ``fields.json`` (see forms.md).
+It transforms image-space bounding-box coordinates into PDF coordinates,
+creates a ``FreeText`` annotation for each entry, and writes the result to
+a new PDF file.
+"""
+
 import json
 import sys
 

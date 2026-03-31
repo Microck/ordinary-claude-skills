@@ -1,10 +1,15 @@
+"""Validate non-overlapping bounding boxes for PDF form field annotations.
+
+Reads a ``fields.json`` file (as described in forms.md) that contains label
+and entry bounding boxes for each form field, checks every pair of boxes on
+the same page for intersections, and verifies that entry boxes are tall
+enough to accommodate their font size.  Outputs human-readable messages
+describing any violations.
+"""
+
 from dataclasses import dataclass
 import json
 import sys
-
-
-# Script to check that the `fields.json` file that Claude creates when analyzing PDFs
-# does not have overlapping bounding boxes. See forms.md.
 
 
 @dataclass
@@ -14,13 +19,38 @@ class RectAndField:
     field: dict
 
 
-# Returns a list of messages that are printed to stdout for Claude to read.
 def get_bounding_box_messages(fields_json_stream) -> list[str]:
+    """Read a fields JSON stream and return a list of validation messages.
+
+    Checks all label and entry bounding boxes for pairwise intersections on
+    each page, and ensures each entry box is tall enough for its font size.
+    Returns a list of strings starting with a count of fields read, followed
+    by ``SUCCESS`` or ``FAILURE`` lines for each check.
+
+    Args:
+        fields_json_stream: A file-like object containing the fields JSON.
+
+    Returns:
+        list[str]: Validation messages suitable for printing to stdout.
+    """
     messages = []
     fields = json.load(fields_json_stream)
     messages.append(f"Read {len(fields['form_fields'])} fields")
 
     def rects_intersect(r1, r2):
+        """Return True if axis-aligned rectangles r1 and r2 overlap.
+
+        Each rectangle is a four-element list ``[x1, y1, x2, y2]`` where
+        ``(x1, y1)`` is the lower-left corner and ``(x2, y2)`` is the
+        upper-right corner.
+
+        Args:
+            r1: First rectangle as ``[x1, y1, x2, y2]``.
+            r2: Second rectangle as ``[x1, y1, x2, y2]``.
+
+        Returns:
+            bool: ``True`` if the rectangles share any area, ``False`` otherwise.
+        """
         disjoint_horizontal = r1[0] >= r2[2] or r1[2] <= r2[0]
         disjoint_vertical = r1[1] >= r2[3] or r1[3] <= r2[1]
         return not (disjoint_horizontal or disjoint_vertical)
