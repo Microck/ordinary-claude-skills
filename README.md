@@ -49,6 +49,7 @@ clone the repo to map these skills into your own mcp servers or agents.
 *   [troubleshooting](#troubleshooting)
 *   [dependencies](#dependencies)
 *   [license & credits](#license--credits)
+*   [changelog](./CHANGELOG.md)
 
 ## overview
 
