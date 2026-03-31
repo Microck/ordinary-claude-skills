@@ -1,13 +1,29 @@
+"""Convert each page of a PDF to a PNG image.
+
+Uses ``pdf2image`` to rasterise PDF pages at 200 DPI, optionally scales
+images so that neither dimension exceeds a configurable maximum, and saves
+each page as a numbered PNG file.
+"""
+
 import os
 import sys
 
 from pdf2image import convert_from_path
 
 
-# Converts each page of a PDF to a PNG image.
-
-
 def convert(pdf_path, output_dir, max_dim=1000):
+    """Convert every page of a PDF to a scaled PNG image.
+
+    Renders pages at 200 DPI, resizes any image whose width or height
+    exceeds ``max_dim`` while preserving aspect ratio, and writes the
+    results to ``output_dir`` as ``page_1.png``, ``page_2.png``, etc.
+
+    Args:
+        pdf_path: Path to the input PDF file.
+        output_dir: Directory where PNG images will be saved.
+        max_dim: Maximum allowed width or height in pixels; images
+            exceeding this are proportionally scaled down.
+    """
     images = convert_from_path(pdf_path, dpi=200)
 
     for i, image in enumerate(images):

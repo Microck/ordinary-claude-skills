@@ -1,3 +1,11 @@
+"""Fill fillable form fields in a PDF document.
+
+Reads a JSON file describing field values (as produced by
+``extract_form_field_info.py``), validates each value against the field's
+expected type and options, and writes the filled PDF to a new file.
+See forms.md for the input JSON format.
+"""
+
 import json
 import sys
 
@@ -6,10 +14,18 @@ from pypdf import PdfReader, PdfWriter
 from extract_form_field_info import get_field_info
 
 
-# Fills fillable form fields in a PDF. See forms.md.
-
-
 def fill_pdf_fields(input_pdf_path: str, fields_json_path: str, output_pdf_path: str):
+    """Fill form fields in a PDF using values from a JSON file.
+
+    Validates that every field ID referenced in the JSON exists in the PDF
+    and that each value is appropriate for the field type.  Exits with
+    status 1 on the first validation error.
+
+    Args:
+        input_pdf_path: Path to the source PDF containing form fields.
+        fields_json_path: Path to a JSON file with field values to write.
+        output_pdf_path: Destination path for the filled PDF.
+    """
     with open(fields_json_path) as f:
         fields = json.load(f)
     # Group by page number.
@@ -57,6 +73,19 @@ def fill_pdf_fields(input_pdf_path: str, fields_json_path: str, output_pdf_path:
 
 
 def validation_error_for_field_value(field_info, field_value):
+    """Check whether a value is valid for the given field and return an error message if not.
+
+    For checkbox fields the value must match the checked or unchecked value.
+    For radio groups the value must be one of the defined option values.
+    For choice (list/combo) fields the value must appear in the available options.
+
+    Args:
+        field_info: A field descriptor dictionary (from ``get_field_info``).
+        field_value: The proposed value to validate.
+
+    Returns:
+        str or None: An error message string if the value is invalid, otherwise ``None``.
+    """
     field_type = field_info["type"]
     field_id = field_info["field_id"]
     if field_type == "checkbox":
@@ -75,25 +104,45 @@ def validation_error_for_field_value(field_info, field_value):
     return None
 
 
-# pypdf (at least version 5.7.0) has a bug when setting the value for a selection list field.
-# In _writer.py around line 966:
-#
-# if field.get(FA.FT, "/Tx") == "/Ch" and field_flags & FA.FfBits.Combo == 0:
-#     txt = "\n".join(annotation.get_inherited(FA.Opt, []))
-#
-# The problem is that for selection lists, `get_inherited` returns a list of two-element lists like
-# [["value1", "Text 1"], ["value2", "Text 2"], ...]
-# This causes `join` to throw a TypeError because it expects an iterable of strings.
-# The horrible workaround is to patch `get_inherited` to return a list of the value strings.
-# We call the original method and adjust the return value only if the argument to `get_inherited`
-# is `FA.Opt` and if the return value is a list of two-element lists.
 def monkeypatch_pydpf_method():
+    """Patch a pypdf bug in ``DictionaryObject.get_inherited`` for selection-list fields.
+
+    pypdf (at least version 5.7.0) has a bug when setting the value for a
+    selection-list field. In ``_writer.py`` around line 966:
+
+    .. code-block:: python
+
+        if field.get(FA.FT, "/Tx") == "/Ch" and field_flags & FA.FfBits.Combo == 0:
+            txt = "\\n".join(annotation.get_inherited(FA.Opt, []))
+
+    The problem is that for selection lists, ``get_inherited`` returns a list
+    of two-element lists like ``[["value1", "Text 1"], ...]`` which causes
+    ``join`` to raise a ``TypeError``.  This function monkey-patches
+    ``DictionaryObject.get_inherited`` so that, when the key is ``Opt`` and
+    the result is a list of two-element lists, it flattens to just the first
+    element of each pair.
+    """
     from pypdf.generic import DictionaryObject
     from pypdf.constants import FieldDictionaryAttributes
 
     original_get_inherited = DictionaryObject.get_inherited
 
     def patched_get_inherited(self, key: str, default = None):
+        """Replacement for ``DictionaryObject.get_inherited`` that flattens /Opt values.
+
+        Calls the original method and, when the requested key is ``Opt`` and
+        the result is a list of two-element lists (value/text pairs), returns
+        only the value strings.
+
+        Args:
+            self: The ``DictionaryObject`` instance (bound implicitly).
+            key: The dictionary key to look up.
+            default: Value to return if the key is not found.
+
+        Returns:
+            The original result, or a flattened list of value strings for
+            ``Opt`` entries.
+        """
         result = original_get_inherited(self, key, default)
         if key == FieldDictionaryAttributes.Opt:
             if isinstance(result, list) and all(isinstance(v, list) and len(v) == 2 for v in result):

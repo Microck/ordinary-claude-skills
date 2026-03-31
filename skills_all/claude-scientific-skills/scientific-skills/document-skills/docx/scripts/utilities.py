@@ -356,7 +356,29 @@ def _create_line_tracking_parser():
     """
 
     def set_content_handler(dom_handler):
+        """Replace the parser's content handler with one that tracks element positions.
+
+        Wraps the original content handler so that every time a new element
+        is opened via ``startElementNS`` the current expat line and column
+        numbers are captured and stored on the element as a
+        ``parse_position`` ``(line, column)`` tuple.
+
+        Args:
+            dom_handler: The minidom ``DOMBuilder`` content handler to wrap.
+        """
         def startElementNS(name, tagName, attrs):
+            """Handle a SAX startElementNS event while recording parse position.
+
+            Delegates to the original ``startElementNS`` callback to build
+            the DOM node, then annotates the newly created element with its
+            ``parse_position`` attribute using the expat parser's current
+            line and column numbers.
+
+            Args:
+                name: A ``(namespace, localname)`` tuple for the element.
+                tagName: The qualified tag name string.
+                attrs: The element's attributes mapping.
+            """
             orig_start_cb(name, tagName, attrs)
             cur_elem = dom_handler.elementStack[-1]
             cur_elem.parse_position = (

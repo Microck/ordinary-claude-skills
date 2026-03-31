@@ -1,15 +1,34 @@
+"""Extract metadata from fillable PDF form fields and write to JSON.
+
+Reads a PDF with fillable form fields, collects each field's identifier,
+type (text, checkbox, radio group, or choice), page location, bounding
+rectangle, and available option values, then serialises the result as JSON
+that downstream tools use to fill the fields.  See forms.md for the output
+format.
+"""
+
 import json
 import sys
 
 from pypdf import PdfReader
 
 
-# Extracts data for the fillable form fields in a PDF and outputs JSON that
-# Claude uses to fill the fields. See forms.md.
-
-
 # This matches the format used by PdfReader `get_fields` and `update_page_form_field_values` methods.
 def get_full_annotation_field_id(annotation):
+    """Walk up the annotation's /Parent chain and return the dotted field ID.
+
+    PDF form fields may be nested inside parent nodes that carry partial
+    names.  This function concatenates the names from the innermost child
+    to the outermost parent, joined by ``.``, matching the convention used
+    by ``PdfReader.get_fields``.
+
+    Args:
+        annotation: A pypdf annotation dictionary object.
+
+    Returns:
+        str or None: The fully-qualified dotted field name, or ``None`` if
+        the annotation has no ``/T`` entries in its hierarchy.
+    """
     components = []
     while annotation:
         field_name = annotation.get('/T')
@@ -20,6 +39,21 @@ def get_full_annotation_field_id(annotation):
 
 
 def make_field_dict(field, field_id):
+    """Build a metadata dictionary for a single form field.
+
+    Determines the field type (text, checkbox, choice, or unknown) from
+    the ``/FT`` entry and populates type-specific metadata such as checked
+    and unchecked values for checkboxes, or available options for choice
+    fields.
+
+    Args:
+        field: A pypdf field dictionary.
+        field_id: The fully-qualified field identifier string.
+
+    Returns:
+        dict: A dictionary with at least ``field_id`` and ``type`` keys,
+        plus additional keys depending on the field type.
+    """
     field_dict = {"field_id": field_id}
     ft = field.get('/FT')
     if ft == "/Tx":
@@ -50,16 +84,21 @@ def make_field_dict(field, field_id):
     return field_dict
 
 
-# Returns a list of fillable PDF fields:
-# [
-#   {
-#     "field_id": "name",
-#     "page": 1,
-#     "type": ("text", "checkbox", "radio_group", or "choice")
-#     // Per-type additional fields described in forms.md
-#   },
-# ]
 def get_field_info(reader: PdfReader):
+    """Extract fillable form field metadata from a PDF.
+
+    Scans the PDF for interactive form fields, resolves their types, page
+    locations, and bounding rectangles, and returns a sorted list of field
+    descriptor dictionaries.
+
+    Args:
+        reader: An initialised ``PdfReader`` instance.
+
+    Returns:
+        list[dict]: A list of field dictionaries sorted by page number,
+        then Y position (top-to-bottom in PDF coordinates), then X position.
+        Each dictionary contains at least ``field_id``, ``type``, and ``page``.
+    """
     fields = reader.get_fields()
 
     field_info_by_id = {}
@@ -124,6 +163,19 @@ def get_field_info(reader: PdfReader):
 
     # Sort by page number, then Y position (flipped in PDF coordinate system), then X.
     def sort_key(f):
+        """Return a sort key tuple ``(page, [adjusted_y, x])`` for a field dict.
+
+        Handles both plain fields (with a ``rect`` key) and radio groups
+        (with nested ``radio_options``).  The Y coordinate is negated so
+        that fields nearer the top of the page sort first in the PDF
+        coordinate system where Y increases upward.
+
+        Args:
+            f: A field descriptor dictionary.
+
+        Returns:
+            list: ``[page, [negated_y, x]]`` suitable for use as a sort key.
+        """
         if "radio_options" in f:
             rect = f["radio_options"][0]["rect"] or [0, 0, 0, 0]
         else:
@@ -138,6 +190,12 @@ def get_field_info(reader: PdfReader):
 
 
 def write_field_info(pdf_path: str, json_output_path: str):
+    """Read a PDF, extract form field metadata, and write it to a JSON file.
+
+    Args:
+        pdf_path: Path to the source PDF file.
+        json_output_path: Destination path for the JSON output.
+    """
     reader = PdfReader(pdf_path)
     field_info = get_field_info(reader)
     with open(json_output_path, "w") as f:
