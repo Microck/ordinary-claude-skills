@@ -1,0 +1,29 @@
+{
+  "name": "speckit-updater",
+  "version": "0.8.0",
+  "description": "Safe updates for GitHub SpecKit installations, preserving your customizations",
+  "author": {
+    "name": "Bobby Johnson",
+    "email": "bobby@notmyself.io",
+    "url": "https://github.com/NotMyself"
+  },
+  "homepage": "https://github.com/NotMyself/claude-win11-speckit-safe-update-skill",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NotMyself/claude-win11-speckit-safe-update-skill.git"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": [
+    "speckit",
+    "automation",
+    "templates",
+    "powershell",
+    "updates"
+  ],
+  "requirements": {
+    "powershell": ">=7.0",
+    "git": ">=2.0"
+  },
+  "changelog": "https://github.com/NotMyself/claude-win11-speckit-safe-update-skill/blob/main/CHANGELOG.md"
+}

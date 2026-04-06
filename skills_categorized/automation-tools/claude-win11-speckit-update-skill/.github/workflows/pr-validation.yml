@@ -1,0 +1,868 @@
+name: PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    branches: [ main, develop ]
+
+# Cancel in-progress runs when new commits pushed
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  # ============================================================================
+  # STEP 1: Authorization Check
+  # ============================================================================
+  authorization:
+    name: "1️⃣ Verify Authorization"
+    runs-on: ubuntu-latest
+    outputs:
+      authorized: ${{ steps.check.outputs.authorized }}
+      actor: ${{ github.actor }}
+      association: ${{ steps.check.outputs.association }}
+      reason: ${{ steps.check.outputs.reason }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Check user authorization
+        id: check
+        shell: bash
+        env:
+          ACTOR: ${{ github.actor }}
+          AUTHOR_ASSOCIATION: ${{ github.event.pull_request.author_association }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          echo "🔐 Step 1/6: Authorization Check"
+          echo "Checking authorization for @$ACTOR..."
+          echo "Author Association: $AUTHOR_ASSOCIATION"
+
+          CONFIG_FILE=".github/claude-authorized-users.yml"
+
+          if [ ! -f "$CONFIG_FILE" ]; then
+            echo "❌ Config file not found: $CONFIG_FILE"
+            echo "authorized=false" >> $GITHUB_OUTPUT
+            echo "reason=Configuration file missing" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          # Check emergency circuit breaker
+          EMERGENCY_DISABLE=$(grep -A 2 "^emergency:" "$CONFIG_FILE" | grep "disable_all:" | awk '{print $2}' || echo "false")
+          if [ "$EMERGENCY_DISABLE" == "true" ]; then
+            echo "🚨 Emergency circuit breaker enabled"
+            echo "authorized=false" >> $GITHUB_OUTPUT
+            echo "reason=Emergency circuit breaker enabled" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+          # Check authorization by role
+          case "$AUTHOR_ASSOCIATION" in
+            OWNER)
+              echo "✅ Repository owner - AUTHORIZED"
+              echo "authorized=true" >> $GITHUB_OUTPUT
+              echo "association=OWNER" >> $GITHUB_OUTPUT
+              echo "reason=Repository owner" >> $GITHUB_OUTPUT
+              exit 0
+              ;;
+            COLLABORATOR)
+              echo "✅ Collaborator - AUTHORIZED"
+              echo "authorized=true" >> $GITHUB_OUTPUT
+              echo "association=COLLABORATOR" >> $GITHUB_OUTPUT
+              echo "reason=Collaborator with write access" >> $GITHUB_OUTPUT
+              exit 0
+              ;;
+            MEMBER)
+              echo "✅ Organization member - AUTHORIZED"
+              echo "authorized=true" >> $GITHUB_OUTPUT
+              echo "association=MEMBER" >> $GITHUB_OUTPUT
+              echo "reason=Organization member" >> $GITHUB_OUTPUT
+              exit 0
+              ;;
+          esac
+
+          # Check allowlist
+          if grep -A 100 "^authorized_users:" "$CONFIG_FILE" | grep -E "^\s+-\s+$ACTOR\s*$" > /dev/null 2>&1; then
+            echo "✅ Found in allowlist - AUTHORIZED"
+            echo "authorized=true" >> $GITHUB_OUTPUT
+            echo "association=ALLOWLIST" >> $GITHUB_OUTPUT
+            echo "reason=Explicitly authorized" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Not authorized
+          echo "🚫 NOT AUTHORIZED - Association: $AUTHOR_ASSOCIATION"
+          echo "authorized=false" >> $GITHUB_OUTPUT
+          echo "association=$AUTHOR_ASSOCIATION" >> $GITHUB_OUTPUT
+          echo "reason=Not authorized" >> $GITHUB_OUTPUT
+          exit 1
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### 🔐 Step 1/6: Authorization" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Actor:** @${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** ${{ steps.check.outputs.authorized == 'true' && '✅ Authorized' || '❌ Not Authorized' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Reason:** ${{ steps.check.outputs.reason }}" >> $GITHUB_STEP_SUMMARY
+
+  # ============================================================================
+  # STEP 2: PR Guardrails
+  # ============================================================================
+  guardrails:
+    name: "2️⃣ Validate Size and Description"
+    needs: authorization
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check PR size
+        id: size
+        continue-on-error: ${{ needs.authorization.outputs.association == 'OWNER' }}  # Non-blocking for owners
+        run: |
+          echo "📏 Step 2/6: Guardrails - Checking PR size..."
+
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          ADDED=$(git diff --numstat $BASE_SHA...$HEAD_SHA | awk '{sum+=$1} END {print sum+0}')
+          REMOVED=$(git diff --numstat $BASE_SHA...$HEAD_SHA | awk '{sum+=$2} END {print sum+0}')
+          TOTAL=$((ADDED + REMOVED))
+          FILES=$(git diff --numstat $BASE_SHA...$HEAD_SHA | wc -l)
+
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+          # Size limits
+          MAX_SIZE=2000
+          IS_OWNER="${{ needs.authorization.outputs.association == 'OWNER' }}"
+
+          if [ $TOTAL -gt $MAX_SIZE ]; then
+            if [ "$IS_OWNER" == "true" ]; then
+              echo "⚠️  PR large: $TOTAL lines (max: $MAX_SIZE) - ALLOWED for repository owner"
+              echo "size_ok=warning" >> $GITHUB_OUTPUT
+              exit 0  # Don't fail for owners
+            else
+              echo "❌ PR too large: $TOTAL lines (max: $MAX_SIZE)"
+              echo "size_ok=false" >> $GITHUB_OUTPUT
+              exit 1
+            fi
+          else
+            echo "✅ PR size acceptable: $TOTAL lines"
+            echo "size_ok=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check PR description
+        continue-on-error: true  # Non-blocking - warn only
+        id: description
+        run: |
+          echo "📝 Checking PR description..."
+
+          DESCRIPTION="${{ github.event.pull_request.body }}"
+
+          if [ -z "$DESCRIPTION" ] || [ ${#DESCRIPTION} -lt 20 ]; then
+            echo "⚠️  PR description too short or missing (non-blocking)"
+            echo "description_ok=false" >> $GITHUB_OUTPUT
+            exit 0  # Don't block pipeline
+          else
+            echo "✅ PR description present"
+            echo "description_ok=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build validation result
+        id: build-result
+        if: always()
+        shell: pwsh
+        run: |
+          $findings = @()
+
+          # Check size
+          $sizeStatus = "${{ steps.size.outputs.size_ok }}"
+          $totalLines = [int]"${{ steps.size.outputs.total }}"
+
+          if ($sizeStatus -eq "false") {
+            $findings += @{
+              severity = 'error'
+              category = 'pr-size'
+              file = $null
+              line = $null
+              column = $null
+              rule = 'pr-size-limit'
+              message = "PR exceeds size limit: $totalLines lines (max: 2000)"
+              remediation = "Split this PR into smaller, focused changes"
+              snippet = $null
+            }
+          } elseif ($sizeStatus -eq "warning") {
+            $findings += @{
+              severity = 'warning'
+              category = 'pr-size'
+              file = $null
+              line = $null
+              column = $null
+              rule = 'pr-size-warning'
+              message = "PR is large: $totalLines lines (owner bypass applied)"
+              remediation = "Consider splitting into smaller PRs for easier review"
+              snippet = $null
+            }
+          }
+
+          # Check description
+          $descStatus = "${{ steps.description.outputs.description_ok }}"
+          if ($descStatus -eq "false") {
+            $findings += @{
+              severity = 'warning'
+              category = 'pr-description'
+              file = $null
+              line = $null
+              column = $null
+              rule = 'pr-description-length'
+              message = "PR description is too short or missing"
+              remediation = "Add a detailed description explaining what this PR does and why"
+              snippet = $null
+            }
+          }
+
+          # Build result
+          $result = @{
+            step = 'guardrails'
+            status = if ($findings.Count -eq 0) { 'pass' } elseif (($findings | Where-Object { $_.severity -eq 'error' }).Count -gt 0) { 'failed' } else { 'warning' }
+            timestamp = (Get-Date).ToUniversalTime().ToString('o')
+            findings = $findings
+            summary = @{
+              total = $findings.Count
+              errors = ($findings | Where-Object { $_.severity -eq 'error' }).Count
+              warnings = ($findings | Where-Object { $_.severity -eq 'warning' }).Count
+              info = 0
+            }
+          } | ConvertTo-Json -Depth 10
+
+          $result | Out-File -FilePath guardrails-result.json
+
+      - name: Format PR comment
+        if: always()
+        shell: pwsh
+        run: |
+          $json = Get-Content guardrails-result.json -Raw
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $comment = & .github/scripts/format-pr-comment.ps1 -InputJson $json -StepNumber 2 -StepName "PR Guardrails" -Emoji "RULER" -RunUrl $runUrl
+          $comment | Out-File -FilePath guardrails-comment.md
+          $comment | Out-File -FilePath $env:GITHUB_STEP_SUMMARY
+
+      - name: Post or update PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const commentBody = fs.readFileSync('guardrails-comment.md', 'utf8');
+            const marker = '<!-- pr-validation:step-2 -->';
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existingComment = comments.find(c => c.body.includes(marker));
+
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody,
+              });
+              console.log('Updated existing comment');
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody,
+              });
+              console.log('Created new comment');
+            }
+
+  # ============================================================================
+  # STEP 3: Quality Checks
+  # ============================================================================
+  quality-checks:
+    name: "3️⃣ Linting and Unit Tests"
+    needs: guardrails
+    runs-on: windows-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache PSScriptAnalyzer
+        uses: actions/cache@v4
+        with:
+          path: ~\Documents\PowerShell\Modules\PSScriptAnalyzer
+          key: ${{ runner.os }}-psscriptanalyzer-${{ hashFiles('**/*.ps1', '**/*.psm1') }}
+          restore-keys: |
+            ${{ runner.os }}-psscriptanalyzer-
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Write-Host "🔍 Step 3/6: Quality Checks - Installing PSScriptAnalyzer..." -ForegroundColor Cyan
+          if (-not (Get-Module -ListAvailable -Name PSScriptAnalyzer)) {
+            Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser -SkipPublisherCheck
+          } else {
+            Write-Host "PSScriptAnalyzer already installed (cached)"
+          }
+
+      - name: Run PSScriptAnalyzer
+        id: lint
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          Write-Host "Running PSScriptAnalyzer on production code..." -ForegroundColor Cyan
+
+          # Scan only production code, exclude tests, fixtures, backups, and specs
+          $results = Invoke-ScriptAnalyzer -Path . -Recurse -Settings PSScriptAnalyzerSettings.psd1 -ExcludeRule $null -ErrorAction SilentlyContinue |
+            Where-Object {
+              $_.ScriptPath -notmatch '[\\/](tests|specs|\.specify[\\/]backups)[\\/]' -and
+              $_.ScriptPath -notmatch '[\\/]fixtures[\\/]'
+            }
+
+          $findings = @()
+          if ($results) {
+              foreach ($result in $results) {
+                  $findings += @{
+                      severity = if ($result.Severity -eq 'Error') { 'error' } elseif ($result.Severity -eq 'Warning') { 'warning' } else { 'info' }
+                      category = 'linting'
+                      file = $result.ScriptName
+                      line = $result.Line
+                      column = $result.Column
+                      rule = $result.RuleName
+                      message = $result.Message
+                      remediation = "Fix PSScriptAnalyzer rule: $($result.RuleName)"
+                      snippet = $result.Extent.Text
+                  }
+              }
+          }
+
+          $lintResult = @{
+              step = 'linting'
+              status = if ($findings.Count -eq 0) { 'pass' } elseif (($findings | Where-Object { $_.severity -eq 'error' }).Count -gt 0) { 'failed' } else { 'warning' }
+              timestamp = (Get-Date).ToUniversalTime().ToString('o')
+              findings = $findings
+              summary = @{
+                  total = $findings.Count
+                  errors = ($findings | Where-Object { $_.severity -eq 'error' }).Count
+                  warnings = ($findings | Where-Object { $_.severity -eq 'warning' }).Count
+                  info = ($findings | Where-Object { $_.severity -eq 'info' }).Count
+              }
+          } | ConvertTo-Json -Depth 10
+
+          $lintResult | Out-File -FilePath lint-result.json
+          Write-Host "PSScriptAnalyzer complete: $($findings.Count) findings"
+
+      - name: Install Pester
+        shell: pwsh
+        run: |
+          Write-Host "Installing Pester..." -ForegroundColor Cyan
+          Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser -MinimumVersion 5.0
+
+      - name: Run unit tests
+        continue-on-error: true  # Known Pester 5.x scoping issues - non-blocking for now
+        id: tests
+        shell: pwsh
+        run: |
+          Write-Host "Running unit tests..." -ForegroundColor Cyan
+          ./tests/test-runner.ps1 -Unit
+
+      - name: Build quality check result
+        if: always()
+        shell: pwsh
+        run: |
+          $allFindings = @()
+
+          # Load lint results
+          if (Test-Path lint-result.json) {
+              $lintData = Get-Content lint-result.json -Raw | ConvertFrom-Json
+              $allFindings += $lintData.findings
+          }
+
+          # Add test status as finding
+          $testOutcome = "${{ steps.tests.outcome }}"
+          if ($testOutcome -eq 'failure') {
+              $allFindings += @{
+                  severity = 'warning'
+                  category = 'testing'
+                  file = $null
+                  line = $null
+                  column = $null
+                  rule = 'unit-tests-failed'
+                  message = "Unit tests failed (known Pester 5.x scoping issues)"
+                  remediation = "Review test failures. See CLAUDE.md for known issues."
+                  snippet = $null
+              }
+          }
+
+          # Build combined result
+          $combined = @{
+              step = 'quality-checks'
+              status = if ($allFindings.Count -eq 0) { 'pass' } elseif (($allFindings | Where-Object { $_.severity -eq 'error' }).Count -gt 0) { 'failed' } else { 'warning' }
+              timestamp = (Get-Date).ToUniversalTime().ToString('o')
+              findings = $allFindings
+              summary = @{
+                  total = $allFindings.Count
+                  errors = ($allFindings | Where-Object { $_.severity -eq 'error' }).Count
+                  warnings = ($allFindings | Where-Object { $_.severity -eq 'warning' }).Count
+                  info = ($allFindings | Where-Object { $_.severity -eq 'info' }).Count
+              }
+          } | ConvertTo-Json -Depth 10
+
+          $combined | Out-File -FilePath quality-result.json
+
+      - name: Format PR comment
+        if: always()
+        shell: pwsh
+        run: |
+          $json = Get-Content quality-result.json -Raw
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $comment = & .github/scripts/format-pr-comment.ps1 -InputJson $json -StepNumber 3 -StepName "Quality Checks" -Emoji "CHECK" -RunUrl $runUrl
+          $comment | Out-File -FilePath quality-comment.md
+          $comment | Out-File -FilePath $env:GITHUB_STEP_SUMMARY
+
+      - name: Post or update PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const commentBody = fs.readFileSync('quality-comment.md', 'utf8');
+            const marker = '<!-- pr-validation:step-3 -->';
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existingComment = comments.find(c => c.body.includes(marker));
+
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody,
+              });
+              console.log('Updated existing comment');
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody,
+              });
+              console.log('Created new comment');
+            }
+
+  # ============================================================================
+  # STEP 4: Code Review
+  # ============================================================================
+  code-review:
+    name: "4️⃣ Claude Code Review"
+    needs: quality-checks
+    runs-on: ubuntu-latest
+    continue-on-error: true  # Optional - requires CLAUDE_CODE_OAUTH_TOKEN secret
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write  # Required for Claude Code OIDC authentication
+      actions: read    # Required for Claude to read CI results
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code Review
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          additional_permissions: |
+            actions: read
+          prompt: |
+            Review this pull request for:
+            - Code quality and best practices
+            - PowerShell conventions
+            - Potential bugs or issues
+            - Documentation completeness
+
+  # ============================================================================
+  # STEP 5: Security Review
+  # ============================================================================
+  security-review:
+    name: "5️⃣ Security Check"
+    needs: code-review
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    continue-on-error: true  # Non-blocking
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run GitLeaks secret scanning
+        id: gitleaks
+        continue-on-error: true
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run PSScriptAnalyzer security rules
+        id: pssa-security
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser -SkipPublisherCheck
+
+          # Use empty settings hashtable to ignore PSScriptAnalyzerSettings.psd1, then explicitly include only security rules
+          # Exclude tests, fixtures, backups, and specs from security scanning
+          $results = Invoke-ScriptAnalyzer -Path . -Recurse -Settings @{} -IncludeRule @(
+            'PSAvoidUsingPlainTextForPassword',
+            'PSAvoidUsingConvertToSecureStringWithPlainText',
+            'PSUsePSCredentialType',
+            'PSAvoidUsingInvokeExpression'
+          ) | Where-Object {
+            $_.ScriptPath -notmatch '[\\/](tests|specs|\.specify[\\/]backups)[\\/]' -and
+            $_.ScriptPath -notmatch '[\\/]fixtures[\\/]'
+          }
+
+          $findings = @()
+          foreach ($result in $results) {
+            $findings += @{
+              severity = if ($result.Severity -eq 'Error') { 'error' } else { 'warning' }
+              category = 'security-rule'
+              file = $result.ScriptPath
+              line = $result.Line
+              column = $result.Column
+              rule = $result.RuleName
+              message = $result.Message
+              remediation = "See PSScriptAnalyzer rule: $($result.RuleName)"
+              snippet = $result.Extent.Text
+            }
+          }
+
+          $output = @{
+            step = 'pssa-security'
+            status = if ($findings.Count -eq 0) { 'pass' } else { 'warning' }
+            timestamp = (Get-Date).ToUniversalTime().ToString('o')
+            findings = $findings
+            summary = @{
+              total = $findings.Count
+              errors = ($findings | Where-Object { $_.severity -eq 'error' }).Count
+              warnings = ($findings | Where-Object { $_.severity -eq 'warning' }).Count
+              info = 0
+            }
+          } | ConvertTo-Json -Depth 10
+
+          $output | Out-File -FilePath pssa-security-result.json
+          Write-Host "PSScriptAnalyzer security scan complete: $($findings.Count) findings"
+
+      - name: Run dependency vulnerability scan
+        id: dependencies
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $result = & .github/scripts/check-dependencies.ps1 -RepoRoot $PWD
+          $result | Out-File -FilePath dependency-scan-result.json
+          Write-Host "Dependency scan complete"
+
+      - name: Run path traversal detection
+        id: path-security
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $result = & .github/scripts/check-path-security.ps1 -RepoRoot $PWD
+          $result | Out-File -FilePath path-security-result.json
+          Write-Host "Path security scan complete"
+
+      - name: Aggregate security results
+        id: aggregate
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $allFindings = @()
+
+          # Load all result files
+          $resultFiles = @(
+            'pssa-security-result.json',
+            'dependency-scan-result.json',
+            'path-security-result.json'
+          )
+
+          foreach ($file in $resultFiles) {
+            if (Test-Path $file) {
+              $content = Get-Content $file -Raw | ConvertFrom-Json
+              $allFindings += $content.findings
+            }
+          }
+
+          # Build combined result
+          $combined = @{
+            step = 'security-scan'
+            status = if ($allFindings.Count -eq 0) { 'pass' } elseif (($allFindings | Where-Object { $_.severity -eq 'error' }).Count -gt 0) { 'failed' } else { 'warning' }
+            timestamp = (Get-Date).ToUniversalTime().ToString('o')
+            findings = $allFindings
+            summary = @{
+              total = $allFindings.Count
+              errors = ($allFindings | Where-Object { $_.severity -eq 'error' }).Count
+              warnings = ($allFindings | Where-Object { $_.severity -eq 'warning' }).Count
+              info = ($allFindings | Where-Object { $_.severity -eq 'info' }).Count
+            }
+          } | ConvertTo-Json -Depth 10
+
+          $combined | Out-File -FilePath security-combined-result.json
+          Write-Host "Aggregated $($allFindings.Count) total findings"
+
+      - name: Format PR comment
+        id: format
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          # Check if aggregation failed
+          if ("${{ steps.aggregate.outcome }}" -eq "failure") {
+            Write-Host "Aggregation failed, creating error result"
+            $errorResult = @{
+              step = 'security-scan'
+              status = 'failed'
+              timestamp = (Get-Date).ToUniversalTime().ToString('o')
+              findings = @(
+                @{
+                  severity = 'error'
+                  category = 'workflow-error'
+                  file = $null
+                  line = $null
+                  column = $null
+                  rule = 'validation-step-failed'
+                  message = 'Security validation step failed to complete. This may be due to a network timeout, script error, or infrastructure issue.'
+                  remediation = 'View the full workflow logs for details. If this persists, contact repository maintainers.'
+                  snippet = $null
+                }
+              )
+              summary = @{
+                total = 1
+                errors = 1
+                warnings = 0
+                info = 0
+              }
+            } | ConvertTo-Json -Depth 10
+            $errorResult | Out-File -FilePath security-combined-result.json
+          }
+
+          $json = Get-Content security-combined-result.json -Raw
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $comment = & .github/scripts/format-pr-comment.ps1 -InputJson $json -StepNumber 5 -StepName "Security Scan" -Emoji "LOCK" -RunUrl $runUrl
+          $comment | Out-File -FilePath security-comment.md
+
+          # Save for GitHub Actions
+          $comment | Out-File -FilePath $env:GITHUB_STEP_SUMMARY
+
+      - name: Post or update PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const commentBody = fs.readFileSync('security-comment.md', 'utf8');
+            const marker = '<!-- pr-validation:step-5 -->';
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existingComment = comments.find(c => c.body.includes(marker));
+
+            if (existingComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody,
+              });
+              console.log('Updated existing comment');
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody,
+              });
+              console.log('Created new comment');
+            }
+
+  # ============================================================================
+  # STEP 6: Spec Review
+  # ============================================================================
+  spec-review:
+    name: "6️⃣ SpecKit Compliance Validation"
+    needs: security-review
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true  # Non-blocking
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run SpecKit compliance validation
+        id: spec-compliance
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $branchName = "${{ github.head_ref }}"
+          $result = & .github/scripts/check-spec-compliance.ps1 -RepoRoot $PWD -BranchName $branchName
+          $result | Out-File -FilePath spec-compliance-result.json
+          Write-Host "SpecKit compliance check complete"
+
+      - name: Format PR comment
+        id: format
+        if: always()
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          # Check if spec compliance check failed
+          if ("${{ steps.spec-compliance.outcome }}" -eq "failure") {
+            Write-Host "Spec compliance check failed, creating error result"
+            $errorResult = @{
+              step = 'spec-compliance'
+              status = 'failed'
+              timestamp = (Get-Date).ToUniversalTime().ToString('o')
+              findings = @(
+                @{
+                  severity = 'error'
+                  category = 'workflow-error'
+                  file = $null
+                  line = $null
+                  column = $null
+                  rule = 'validation-step-failed'
+                  message = 'SpecKit compliance validation failed to complete. This may be due to a script error or infrastructure issue.'
+                  remediation = 'View the full workflow logs for details. If this persists, contact repository maintainers.'
+                  snippet = $null
+                }
+              )
+              summary = @{
+                total = 1
+                errors = 1
+                warnings = 0
+                info = 0
+              }
+            } | ConvertTo-Json -Depth 10
+            $errorResult | Out-File -FilePath spec-compliance-result.json
+          }
+
+          $json = Get-Content spec-compliance-result.json -Raw
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $comment = & .github/scripts/format-pr-comment.ps1 -InputJson $json -StepNumber 6 -StepName "SpecKit Compliance" -Emoji "CHECKLIST" -RunUrl $runUrl
+          $comment | Out-File -FilePath spec-comment.md
+
+          # Save for GitHub Actions
+          $comment | Out-File -FilePath $env:GITHUB_STEP_SUMMARY
+
+      - name: Post or update PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const commentBody = fs.readFileSync('spec-comment.md', 'utf8');
+            const marker = '<!-- pr-validation:step-6 -->';
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existingComment = comments.find(c => c.body.includes(marker));
+
+            if (existingComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingComment.id,
+                body: commentBody,
+              });
+              console.log('Updated existing comment');
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody,
+              });
+              console.log('Created new comment');
+            }
+
+  # ============================================================================
+  # FINAL SUMMARY
+  # ============================================================================
+  validation-complete:
+    name: "✅ PR Validated"
+    needs: [authorization, guardrails, quality-checks, code-review, security-review, spec-review]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check overall status
+        run: |
+          echo "### 🎉 PR Validation Pipeline Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 1️⃣ Authorization | ${{ needs.authorization.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 2️⃣ Guardrails | ${{ needs.guardrails.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 3️⃣ Quality Checks | ${{ needs.quality-checks.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 4️⃣ Code Review | ${{ needs.code-review.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 5️⃣ Security Review | ${{ needs.security-review.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 6️⃣ Spec Review | ${{ needs.spec-review.result == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
+
+          if [[ "${{ needs.authorization.result }}" != "success" ]] || \
+             [[ "${{ needs.guardrails.result }}" != "success" ]] || \
+             [[ "${{ needs.quality-checks.result }}" != "success" ]] || \
+             [[ "${{ needs.code-review.result }}" != "success" ]] || \
+             [[ "${{ needs.security-review.result }}" != "success" ]] || \
+             [[ "${{ needs.spec-review.result }}" != "success" ]]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "❌ **Validation Failed** - Review failures above" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **All Validation Steps Passed**" >> $GITHUB_STEP_SUMMARY
+          fi

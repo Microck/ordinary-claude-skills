@@ -1,0 +1,17 @@
+# Claudisms Plugin Settings
+# Format: key=value (no spaces around =)
+
+# Rule Groups (on|off|exclude)
+terse_mode=on
+doc_limits=off
+destructive_guard=on
+sequential_only=on
+
+# File Exclusions (comma-separated patterns)
+excluded_files=CLAUDE.md,claude.md
+
+# Temp Directory
+tmp_location=pwd
+
+# Debug Logging
+debug_logging=off

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "speckit_version": "v0.0.45",
+  "initialized_at": "2025-01-01T10:00:00Z",
+  "last_updated": "2025-01-01T10:00:00Z",
+  "agent": "claude-code",
+  "speckit_commands": [
+    "speckit.constitution.md",
+    "speckit.specify.md",
+    "speckit.plan.md",
+    "speckit.tasks.md",
+    "speckit.implement.md"
+  ],
+  "tracked_files": [
+    {
+      "path": ".claude/commands/speckit.specify.md",
+      "original_hash": "sha256:ABC123",
+      "customized": false,
+      "is_official": true
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "original_hash": "sha256:DEF456",
+      "customized": true,
+      "is_official": true
+    }
+  ],
+  "custom_files": [],
+  "backup_history": []
+}

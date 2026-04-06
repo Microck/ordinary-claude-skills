@@ -1,0 +1,5 @@
+*.log
+.DS_Store
+.env
+tmp/
+claudisms2.2.plan.md

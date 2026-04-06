@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "validation-finding.schema.json",
+  "title": "ValidationFinding",
+  "description": "Individual issue discovered during validation",
+  "type": "object",
+  "required": ["severity", "category", "file", "rule", "message", "remediation"],
+  "properties": {
+    "severity": {
+      "type": "string",
+      "enum": ["error", "warning", "info"],
+      "description": "Issue severity level"
+    },
+    "category": {
+      "type": "string",
+      "description": "Type of finding (e.g., 'secret', 'security-rule', 'path-traversal')",
+      "minLength": 1
+    },
+    "file": {
+      "type": "string",
+      "description": "Relative file path from repository root",
+      "minLength": 1
+    },
+    "line": {
+      "type": ["integer", "null"],
+      "description": "Line number where issue found (null if file-level)",
+      "minimum": 1
+    },
+    "column": {
+      "type": ["integer", "null"],
+      "description": "Column number (null if not applicable)",
+      "minimum": 1
+    },
+    "rule": {
+      "type": "string",
+      "description": "Rule or pattern that triggered finding",
+      "minLength": 1
+    },
+    "message": {
+      "type": "string",
+      "description": "Human-readable description of the issue",
+      "minLength": 1
+    },
+    "remediation": {
+      "type": "string",
+      "description": "How to fix the issue",
+      "minLength": 1
+    },
+    "snippet": {
+      "type": ["string", "null"],
+      "description": "Code snippet showing the issue (max 200 chars)",
+      "maxLength": 200
+    }
+  }
+}

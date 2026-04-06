@@ -1,0 +1,286 @@
+#!/usr/bin/env bash
+# set-claudisms - Interactive TUI for Claudisms configuration
+# Uses whiptail (Linux) or dialog (macOS) for cross-platform compatibility
+
+set -euo pipefail
+
+# Locate plugin root (prefer installed marketplace location)
+if [[ -d ~/.claude/plugins/marketplaces/claudisms ]]; then
+  PLUGIN_ROOT=~/.claude/plugins/marketplaces/claudisms
+elif [[ -n "${CLAUDE_PLUGIN_ROOT:-}" ]]; then
+  PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT}"
+else
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  PLUGIN_ROOT="$(dirname "$SCRIPT_DIR")"
+fi
+
+SETTINGS_FILE="${PLUGIN_ROOT}/settings.json"
+BACKUP_DIR="${PLUGIN_ROOT}/.settings-backups"
+
+# Detect available TUI tool
+if command -v whiptail &> /dev/null; then
+  TUI_CMD="whiptail"
+elif command -v dialog &> /dev/null; then
+  TUI_CMD="dialog"
+else
+  echo "Error: Neither whiptail nor dialog found. Install one of these packages:"
+  echo "  Ubuntu/Debian: sudo apt-get install whiptail"
+  echo "  macOS: brew install dialog"
+  exit 1
+fi
+
+# Ensure backup directory exists
+mkdir -p "$BACKUP_DIR"
+
+# Create default settings.json if it doesn't exist
+create_default_settings() {
+  cat > "$SETTINGS_FILE" << 'EOF'
+{
+  "intelligentWrites": true,
+  "selfConfigAccess": {
+    "enabled": true,
+    "allowedFiles": [
+      "settings.json",
+      "hooks.json",
+      "preferences.json",
+      ".claudisms/config.json"
+    ],
+    "requireBackup": true,
+    "maxChangesPerSession": 10
+  },
+  "directoryJail": {
+    "enabled": false,
+    "jailRoot": null,
+    "allowedPaths": [],
+    "blockPaths": [
+      "/etc/shadow",
+      "/root",
+      "/proc"
+    ]
+  },
+  "verboseHooks": false,
+  "autoSubagents": true,
+  "conciseMode": true,
+  "blockEssays": true,
+  "backupConfigs": true
+}
+EOF
+}
+
+# Load current settings
+load_settings() {
+  if [[ ! -f "$SETTINGS_FILE" ]]; then
+    create_default_settings
+  fi
+
+  # Parse JSON settings (basic bash parsing)
+  INTELLIGENT_WRITES=$(grep -o '"intelligentWrites"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "true")
+  SELF_CONFIG=$(grep -o '"enabled"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | head -1 | grep -o 'true\|false' || echo "true")
+  DIRECTORY_JAIL=$(grep -o '"enabled"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | tail -1 | grep -o 'true\|false' || echo "false")
+  VERBOSE_HOOKS=$(grep -o '"verboseHooks"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "false")
+  AUTO_SUBAGENTS=$(grep -o '"autoSubagents"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "true")
+  CONCISE_MODE=$(grep -o '"conciseMode"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "true")
+  BLOCK_ESSAYS=$(grep -o '"blockEssays"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "true")
+  BACKUP_CONFIGS=$(grep -o '"backupConfigs"[[:space:]]*:[[:space:]]*\(true\|false\)' "$SETTINGS_FILE" | grep -o 'true\|false' || echo "true")
+}
+
+# Convert boolean to ON/OFF for checklist
+bool_to_status() {
+  if [[ "$1" == "true" ]]; then
+    echo "ON"
+  else
+    echo "OFF"
+  fi
+}
+
+# Backup current settings
+backup_settings() {
+  if [[ -f "$SETTINGS_FILE" ]]; then
+    local timestamp=$(date +%Y%m%d_%H%M%S)
+    local backup_file="${BACKUP_DIR}/settings.${timestamp}.json"
+    cp "$SETTINGS_FILE" "$backup_file"
+    echo "Backup created: $backup_file" >&2
+  fi
+}
+
+# Validate JSON
+validate_json() {
+  local file="$1"
+  if command -v jq &> /dev/null; then
+    if jq empty "$file" 2>/dev/null; then
+      return 0
+    else
+      return 1
+    fi
+  elif command -v python3 &> /dev/null; then
+    if python3 -m json.tool "$file" > /dev/null 2>&1; then
+      return 0
+    else
+      return 1
+    fi
+  else
+    # No validation tool available, assume valid
+    return 0
+  fi
+}
+
+# Update settings based on selected options
+update_settings() {
+  local selected="$1"
+
+  # Create backup if enabled
+  if [[ "$BACKUP_CONFIGS" == "true" ]]; then
+    backup_settings
+  fi
+
+  # Parse selected options
+  local intelligent_writes="false"
+  local self_config="false"
+  local directory_jail="false"
+  local verbose_hooks="false"
+  local auto_subagents="false"
+  local concise_mode="false"
+  local block_essays="false"
+  local backup_configs="false"
+
+  [[ "$selected" == *"INTELLIGENT_WRITES"* ]] && intelligent_writes="true"
+  [[ "$selected" == *"SELF_CONFIG"* ]] && self_config="true"
+  [[ "$selected" == *"DIRECTORY_JAIL"* ]] && directory_jail="true"
+  [[ "$selected" == *"VERBOSE_HOOKS"* ]] && verbose_hooks="true"
+  [[ "$selected" == *"AUTO_SUBAGENTS"* ]] && auto_subagents="true"
+  [[ "$selected" == *"CONCISE_MODE"* ]] && concise_mode="true"
+  [[ "$selected" == *"BLOCK_ESSAYS"* ]] && block_essays="true"
+  [[ "$selected" == *"BACKUP_CONFIGS"* ]] && backup_configs="true"
+
+  # Write new settings
+  cat > "$SETTINGS_FILE" << EOF
+{
+  "intelligentWrites": $intelligent_writes,
+  "selfConfigAccess": {
+    "enabled": $self_config,
+    "allowedFiles": [
+      "settings.json",
+      "hooks.json",
+      "preferences.json",
+      ".claudisms/config.json"
+    ],
+    "requireBackup": true,
+    "maxChangesPerSession": 10
+  },
+  "directoryJail": {
+    "enabled": $directory_jail,
+    "jailRoot": null,
+    "allowedPaths": [],
+    "blockPaths": [
+      "/etc/shadow",
+      "/root",
+      "/proc"
+    ]
+  },
+  "verboseHooks": $verbose_hooks,
+  "autoSubagents": $auto_subagents,
+  "conciseMode": $concise_mode,
+  "blockEssays": $block_essays,
+  "backupConfigs": $backup_configs
+}
+EOF
+
+  # Validate JSON
+  if validate_json "$SETTINGS_FILE"; then
+    if [[ "$TUI_CMD" == "whiptail" ]]; then
+      whiptail --title "Success" --msgbox "Settings updated successfully!\n\nFile: $SETTINGS_FILE\n\nRestart Claude Code to apply changes." 12 60
+    else
+      dialog --title "Success" --msgbox "Settings updated successfully!\n\nFile: $SETTINGS_FILE\n\nRestart Claude Code to apply changes." 12 60
+    fi
+  else
+    # Restore from backup on validation failure
+    local latest_backup=$(ls -t "${BACKUP_DIR}"/settings.*.json 2>/dev/null | head -1)
+    if [[ -n "$latest_backup" ]]; then
+      cp "$latest_backup" "$SETTINGS_FILE"
+      if [[ "$TUI_CMD" == "whiptail" ]]; then
+        whiptail --title "Error" --msgbox "Invalid JSON generated. Settings restored from backup.\n\nBackup: $latest_backup" 10 60
+      else
+        dialog --title "Error" --msgbox "Invalid JSON generated. Settings restored from backup.\n\nBackup: $latest_backup" 10 60
+      fi
+    else
+      if [[ "$TUI_CMD" == "whiptail" ]]; then
+        whiptail --title "Error" --msgbox "Invalid JSON generated and no backup available.\n\nPlease check: $SETTINGS_FILE" 10 60
+      else
+        dialog --title "Error" --msgbox "Invalid JSON generated and no backup available.\n\nPlease check: $SETTINGS_FILE" 10 60
+      fi
+    fi
+    exit 1
+  fi
+}
+
+# Main interactive menu
+main() {
+  load_settings
+
+  # Build checklist options
+  local options=()
+
+  if [[ "$TUI_CMD" == "whiptail" ]]; then
+    # Whiptail format: tag description status
+    options=(
+      "INTELLIGENT_WRITES" "Smart doc length limits (CLAUDE.md <50 lines)" "$(bool_to_status "$INTELLIGENT_WRITES")"
+      "SELF_CONFIG" "Edit own settings.json" "$(bool_to_status "$SELF_CONFIG")"
+      "DIRECTORY_JAIL" "Restrict filesystem access" "$(bool_to_status "$DIRECTORY_JAIL")"
+      "VERBOSE_HOOKS" "Show hook execution details" "$(bool_to_status "$VERBOSE_HOOKS")"
+      "AUTO_SUBAGENTS" "Use subagents for search tasks" "$(bool_to_status "$AUTO_SUBAGENTS")"
+      "CONCISE_MODE" "Terse responses by default" "$(bool_to_status "$CONCISE_MODE")"
+      "BLOCK_ESSAYS" "Prevent 500-line documentation" "$(bool_to_status "$BLOCK_ESSAYS")"
+      "BACKUP_CONFIGS" "Auto-backup before changes" "$(bool_to_status "$BACKUP_CONFIGS")"
+    )
+
+    selected=$(whiptail --title "Claudisms Settings" \
+      --checklist "Configure Claudisms behavior (Space=toggle, Enter=save):" \
+      20 78 8 \
+      "${options[@]}" \
+      3>&1 1>&2 2>&3)
+  else
+    # Dialog format: tag description status
+    options=(
+      "INTELLIGENT_WRITES" "Smart doc length limits (CLAUDE.md <50 lines)" "$(bool_to_status "$INTELLIGENT_WRITES")"
+      "SELF_CONFIG" "Edit own settings.json" "$(bool_to_status "$SELF_CONFIG")"
+      "DIRECTORY_JAIL" "Restrict filesystem access" "$(bool_to_status "$DIRECTORY_JAIL")"
+      "VERBOSE_HOOKS" "Show hook execution details" "$(bool_to_status "$VERBOSE_HOOKS")"
+      "AUTO_SUBAGENTS" "Use subagents for search tasks" "$(bool_to_status "$AUTO_SUBAGENTS")"
+      "CONCISE_MODE" "Terse responses by default" "$(bool_to_status "$CONCISE_MODE")"
+      "BLOCK_ESSAYS" "Prevent 500-line documentation" "$(bool_to_status "$BLOCK_ESSAYS")"
+      "BACKUP_CONFIGS" "Auto-backup before changes" "$(bool_to_status "$BACKUP_CONFIGS")"
+    )
+
+    selected=$(dialog --stdout --title "Claudisms Settings" \
+      --checklist "Configure Claudisms behavior (Space=toggle, Enter=save):" \
+      20 78 8 \
+      "${options[@]}")
+  fi
+
+  # Check if user cancelled
+  exit_code=$?
+  if [[ $exit_code -ne 0 ]]; then
+    echo "Settings not changed."
+    exit 0
+  fi
+
+  # Update settings
+  update_settings "$selected"
+}
+
+# Show current settings if --show flag
+if [[ "${1:-}" == "--show" ]] || [[ "${1:-}" == "-s" ]]; then
+  if [[ -f "$SETTINGS_FILE" ]]; then
+    echo "Current Claudisms Settings:"
+    echo "==========================="
+    cat "$SETTINGS_FILE"
+    echo ""
+    echo "File: $SETTINGS_FILE"
+  else
+    echo "No settings file found. Run 'set-claudisms' to create one."
+  fi
+  exit 0
+fi
+
+# Run interactive menu
+main
