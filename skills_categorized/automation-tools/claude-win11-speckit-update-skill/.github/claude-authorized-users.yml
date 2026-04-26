@@ -1,0 +1,53 @@
+# Claude Code Access Control Configuration
+#
+# This file defines who can trigger @claude mentions in issues, PRs, and comments.
+# Unauthorized users will be silently ignored (workflow exits early).
+#
+# Security: This prevents unauthorized API usage and protects your Claude Code credits.
+
+# Authorized GitHub usernames (in addition to auto-allowed users)
+# Format: Array of GitHub usernames
+authorized_users:
+  - NotMyself  # Repository owner (redundant but explicit)
+  # Add trusted collaborators here:
+  # - trusted-contributor-1
+  # - trusted-contributor-2
+
+# Auto-allow settings
+settings:
+  # Automatically allow repository collaborators with write+ access
+  allow_collaborators: true
+
+  # Automatically allow organization members (if repo is in an org)
+  allow_org_members: true
+
+  # Allow repository owner (recommended: true)
+  allow_owner: true
+
+  # Block first-time contributors (recommended: true for public repos)
+  block_first_time_contributors: true
+
+  # Block external contributors not on allowlist (recommended: true)
+  block_external_contributors: true
+
+# Audit logging
+audit:
+  # Log all @claude trigger attempts (allowed and denied)
+  enabled: true
+
+  # Log location (GitHub Actions logs only, no external logging)
+  log_to_actions: true
+
+# Emergency controls
+emergency:
+  # Circuit breaker: disable ALL @claude triggers (even for authorized users)
+  # Set to true to temporarily disable Claude Code integration
+  disable_all: false
+
+  # Reason for disabling (shown in logs if disable_all = true)
+  disable_reason: ""
+
+# Rate limiting (future feature - not yet implemented)
+rate_limiting:
+  enabled: false
+  max_invocations_per_user_per_day: 20

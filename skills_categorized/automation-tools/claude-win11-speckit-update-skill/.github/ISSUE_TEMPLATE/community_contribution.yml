@@ -1,0 +1,91 @@
+name: Community Contribution
+description: Propose a community-driven feature or enhancement
+title: "[Community]: "
+labels: ["community", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a community contribution! This template is for features that the project owner welcomes but won't personally maintain.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What feature would you like to contribute?
+      placeholder: |
+        Example: Add support for macOS and Linux platforms
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this feature valuable to the community?
+      placeholder: |
+        Example: SpecKit works on all platforms, but the updater skill is currently Windows-only. Supporting macOS/Linux would benefit cross-platform teams.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Work
+      description: What work is required to implement this feature?
+      placeholder: |
+        - Port PowerShell scripts to be cross-platform compatible
+        - Update shell detection (Bash/Zsh support)
+        - Update documentation for multi-platform setup
+        - Test on macOS and Linux
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-approach
+    attributes:
+      label: Technical Approach (Optional)
+      description: How would you approach implementing this?
+      placeholder: |
+        - Use PowerShell 7+ cross-platform features
+        - Detect platform with $IsWindows, $IsMacOS, $IsLinux
+        - Abstract platform-specific paths
+        - Create platform-specific tests
+
+  - type: textarea
+    id: maintainer-expectations
+    attributes:
+      label: Community Maintenance Expectations
+      description: Acknowledge that you (or the community) will maintain this feature
+      value: |
+        I understand that:
+        - [ ] The project owner is **not responsible** for maintaining this feature
+        - [ ] Community contributors will be listed as code owners for this feature
+        - [ ] Bug reports and PRs for this feature should be handled by community maintainers
+        - [ ] The project owner may remove unmaintained features in future releases
+    validations:
+      required: true
+
+  - type: input
+    id: initial-contributor
+    attributes:
+      label: Initial Contributor (Optional)
+      description: Are you willing to be the initial maintainer?
+      placeholder: "@username or leave blank if seeking maintainers"
+
+  - type: textarea
+    id: help-needed
+    attributes:
+      label: Help Needed
+      description: What help or guidance do you need from the community?
+      placeholder: |
+        - Looking for macOS/Linux users to test
+        - Need guidance on PowerShell cross-platform best practices
+        - Seeking co-maintainers
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, examples, or references
+      placeholder: Links to similar projects, documentation, etc.

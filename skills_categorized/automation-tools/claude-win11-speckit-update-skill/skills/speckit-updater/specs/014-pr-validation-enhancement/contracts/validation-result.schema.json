@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "validation-result.schema.json",
+  "title": "ValidationResult",
+  "description": "Top-level output from any validation script",
+  "type": "object",
+  "required": ["step", "status", "timestamp", "findings", "summary"],
+  "properties": {
+    "step": {
+      "type": "string",
+      "description": "Step identifier (e.g., 'step-5', 'security-scan')",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pass", "warning", "failed"],
+      "description": "Overall validation status"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp in UTC"
+    },
+    "findings": {
+      "type": "array",
+      "description": "List of validation findings",
+      "items": {
+        "$ref": "validation-finding.schema.json"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "description": "Summary statistics",
+      "required": ["total", "errors", "warnings", "info"],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of findings"
+        },
+        "errors": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of error-severity findings"
+        },
+        "warnings": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of warning-severity findings"
+        },
+        "info": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of info-severity findings"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional context about the validation run",
+      "properties": {
+        "branch": {
+          "type": "string",
+          "description": "Branch name being validated"
+        },
+        "pr_number": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Pull request number"
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$",
+          "description": "Git commit SHA (40 hex characters)"
+        }
+      }
+    }
+  }
+}

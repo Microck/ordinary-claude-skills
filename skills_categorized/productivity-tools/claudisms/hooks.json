@@ -1,0 +1,116 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "filePathMatcher": "**/*README*.md",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-md-write.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "filePathMatcher": "**/*SETUP*.md",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-md-write.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "filePathMatcher": "**/claude.md",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-md-write.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "filePathMatcher": "**/CLAUDE.md",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-md-write.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": ".*rm\\s+-[^\\s]*r[^\\s]*f.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": ".*rm\\s+-[^\\s]*f[^\\s]*r.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": ".*git\\s+push.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": "(?i).*DROP\\s+(TABLE|DATABASE).*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": "(?i).*DELETE\\s+FROM.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "commandMatcher": "(?i).*TRUNCATE\\s+TABLE.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/before-destructive.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

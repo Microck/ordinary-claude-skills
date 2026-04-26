@@ -1,0 +1,198 @@
+name: Update SpecKit Fingerprints
+
+on:
+  # Run daily at 2 AM UTC to check for new SpecKit releases
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update even if no new releases'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-fingerprints:
+    name: Update Fingerprint Database
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Need full history for git operations
+
+      - name: Setup PowerShell
+        shell: pwsh
+        run: |
+          Write-Host "PowerShell version: $($PSVersionTable.PSVersion)"
+          Write-Host "OS: $($PSVersionTable.OS)"
+
+      - name: Check for new SpecKit releases
+        id: check_releases
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Load current database
+          $dbPath = "skills/speckit-updater/data/speckit-fingerprints.json"
+          $database = Get-Content -Path $dbPath -Raw | ConvertFrom-Json
+          $currentLatest = $database.latest_version
+
+          Write-Host "Current latest version in database: $currentLatest"
+
+          # Fetch latest SpecKit release from GitHub API
+          $headers = @{
+              'Accept' = 'application/vnd.github+json'
+              'Authorization' = "Bearer $env:GITHUB_TOKEN"
+              'User-Agent' = 'SpecKit-Safe-Update-Skill'
+          }
+
+          $apiUrl = 'https://api.github.com/repos/github/spec-kit/releases/latest'
+          $response = Invoke-RestMethod -Uri $apiUrl -Headers $headers -Method Get
+          $latestVersion = $response.tag_name
+
+          Write-Host "Latest SpecKit release on GitHub: $latestVersion"
+
+          # Compare versions
+          $currentVer = [version]($currentLatest -replace '^v', '')
+          $latestVer = [version]($latestVersion -replace '^v', '')
+
+          $hasNewRelease = $latestVer -gt $currentVer
+          $forceUpdate = '${{ inputs.force_update }}' -eq 'true'
+
+          if ($hasNewRelease) {
+              Write-Host "✓ New release detected: $latestVersion (current: $currentLatest)"
+              "has_updates=true" >> $env:GITHUB_OUTPUT
+              "new_version=$latestVersion" >> $env:GITHUB_OUTPUT
+          }
+          elseif ($forceUpdate) {
+              Write-Host "⚠ No new release, but force update requested"
+              "has_updates=true" >> $env:GITHUB_OUTPUT
+              "new_version=$latestVersion" >> $env:GITHUB_OUTPUT
+          }
+          else {
+              Write-Host "✓ Database is up to date (latest: $latestVersion)"
+              "has_updates=false" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Generate updated fingerprints
+        if: steps.check_releases.outputs.has_updates == 'true'
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          Write-Host "Regenerating fingerprint database..."
+
+          # Run the fingerprint generation script
+          & ./skills/speckit-updater/scripts/generate-fingerprints.ps1 -Verbose
+
+          if ($LASTEXITCODE -ne 0) {
+              Write-Error "Fingerprint generation failed with exit code $LASTEXITCODE"
+              exit 1
+          }
+
+          Write-Host "✓ Fingerprint database updated successfully"
+
+      - name: Verify database changes
+        if: steps.check_releases.outputs.has_updates == 'true'
+        id: verify_changes
+        shell: pwsh
+        run: |
+          # Check if database file changed
+          $status = git status --porcelain skills/speckit-updater/data/speckit-fingerprints.json
+
+          if ($status) {
+              Write-Host "✓ Database file has changes"
+              "has_changes=true" >> $env:GITHUB_OUTPUT
+
+              # Get stats
+              $db = Get-Content -Path skills/speckit-updater/data/speckit-fingerprints.json -Raw | ConvertFrom-Json
+              "total_versions=$($db.total_versions)" >> $env:GITHUB_OUTPUT
+              "latest_version=$($db.latest_version)" >> $env:GITHUB_OUTPUT
+              "file_size=$([math]::Round((Get-Item skills/speckit-updater/data/speckit-fingerprints.json).Length / 1KB, 1))" >> $env:GITHUB_OUTPUT
+          }
+          else {
+              Write-Host "⚠ No changes detected in database"
+              "has_changes=false" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Create Pull Request
+        if: steps.verify_changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            chore: Update fingerprint database to ${{ steps.verify_changes.outputs.latest_version }}
+
+            - Total versions: ${{ steps.verify_changes.outputs.total_versions }}
+            - Latest version: ${{ steps.verify_changes.outputs.latest_version }}
+            - Database size: ${{ steps.verify_changes.outputs.file_size }} KB
+            - Auto-updated by GitHub Actions
+
+            Relates to #25
+          branch: update-fingerprints-${{ steps.verify_changes.outputs.latest_version }}
+          delete-branch: true
+          title: 'chore: Update fingerprint database to ${{ steps.verify_changes.outputs.latest_version }}'
+          body: |
+            ## Automated Fingerprint Database Update
+
+            This PR updates the SpecKit fingerprint database to include the latest releases.
+
+            ### Changes
+            - **Latest Version**: ${{ steps.verify_changes.outputs.latest_version }}
+            - **Total Versions**: ${{ steps.verify_changes.outputs.total_versions }}
+            - **Database Size**: ${{ steps.verify_changes.outputs.file_size }} KB
+
+            ### Details
+            The fingerprint database is automatically maintained by GitHub Actions.
+            It runs daily to check for new SpecKit releases and updates the database
+            with normalized SHA-256 hashes for version detection.
+
+            ### Testing
+            - ✅ Database regenerated successfully
+            - ✅ File size within 500 KB limit
+            - ✅ Schema version validated
+
+            ### Related
+            - Feature: #25 (Smart Merge with Frictionless Onboarding)
+            - Workflow: `.github/workflows/update-fingerprints.yml`
+            - Generator: `scripts/generate-fingerprints.ps1`
+
+            ---
+            🤖 Auto-generated by GitHub Actions
+          labels: |
+            automated
+            database-update
+            relates-to-#25
+          assignees: NotMyself
+          draft: false
+
+      - name: Summary
+        if: always()
+        shell: pwsh
+        run: |
+          Write-Host "`n📊 Workflow Summary"
+          Write-Host "===================="
+          Write-Host "Has Updates: ${{ steps.check_releases.outputs.has_updates }}"
+          Write-Host "Has Changes: ${{ steps.verify_changes.outputs.has_changes }}"
+
+          if ('${{ steps.verify_changes.outputs.has_changes }}' -eq 'true') {
+              Write-Host "✓ Pull request created successfully"
+              Write-Host "  - Version: ${{ steps.verify_changes.outputs.latest_version }}"
+              Write-Host "  - Total versions: ${{ steps.verify_changes.outputs.total_versions }}"
+              Write-Host "  - Size: ${{ steps.verify_changes.outputs.file_size }} KB"
+          }
+          elseif ('${{ steps.check_releases.outputs.has_updates }}' -eq 'true') {
+              Write-Host "⚠ Update attempted but no changes detected"
+          }
+          else {
+              Write-Host "✓ Database is up to date, no action needed"
+          }

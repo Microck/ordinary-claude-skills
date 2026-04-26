@@ -1,0 +1,51 @@
+{
+  "step": "security-scan",
+  "status": "failed",
+  "timestamp": "2025-10-25T14:32:00Z",
+  "findings": [
+    {
+      "severity": "error",
+      "category": "secret",
+      "file": ".env.example",
+      "line": 3,
+      "column": 1,
+      "rule": "github-pat",
+      "message": "GitHub Personal Access Token detected",
+      "remediation": "Remove token from repository. Revoke token at https://github.com/settings/tokens. Use environment variables instead.",
+      "snippet": "GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "severity": "error",
+      "category": "path-traversal",
+      "file": "scripts/modules/FileManager.psm1",
+      "line": 67,
+      "column": 15,
+      "rule": "unsafe-path-concatenation",
+      "message": "Potential path traversal vulnerability detected",
+      "remediation": "Use Join-Path or [System.IO.Path]::Combine() instead of string concatenation",
+      "snippet": "$fullPath = $basePath + \"\\\" + $userInput"
+    },
+    {
+      "severity": "warning",
+      "category": "dependency-vuln",
+      "file": "scripts/modules/",
+      "line": null,
+      "column": null,
+      "rule": "vulnerable-pester-version",
+      "message": "Vulnerable Pester version detected (4.10.1)",
+      "remediation": "Update to Pester 5.0.0 or later: Update-Module Pester -RequiredVersion 5.0.0",
+      "snippet": null
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "errors": 2,
+    "warnings": 1,
+    "info": 0
+  },
+  "metadata": {
+    "branch": "014-pr-validation-enhancement",
+    "pr_number": 42,
+    "commit_sha": "abc123def456"
+  }
+}

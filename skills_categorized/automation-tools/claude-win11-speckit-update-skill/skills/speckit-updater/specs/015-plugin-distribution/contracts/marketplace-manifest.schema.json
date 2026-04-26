@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/NotMyself/claude-plugins/contracts/marketplace-manifest.schema.json",
+  "title": "Claude Code Marketplace Manifest",
+  "description": "Schema for .claude-plugin/marketplace.json manifest file used by Claude Code plugin system",
+  "type": "object",
+  "required": [
+    "name",
+    "description",
+    "author",
+    "version",
+    "plugins"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Marketplace identifier (must be unique across user's added marketplaces)",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["notmyself-plugins", "my-marketplace"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief marketplace description explaining its purpose and scope",
+      "minLength": 10,
+      "maxLength": 200,
+      "examples": ["Claude Code plugins by NotMyself for SpecKit workflow automation"]
+    },
+    "author": {
+      "type": "object",
+      "description": "Marketplace maintainer information",
+      "required": ["name", "email"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Maintainer full name",
+          "minLength": 1,
+          "examples": ["Bobby Johnson"]
+        },
+        "email": {
+          "type": "string",
+          "description": "Maintainer contact email",
+          "format": "email",
+          "examples": ["bobby@notmyself.io"]
+        },
+        "url": {
+          "type": "string",
+          "description": "Maintainer website or GitHub profile URL",
+          "format": "uri",
+          "pattern": "^https://",
+          "examples": ["https://github.com/NotMyself"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "version": {
+      "type": "string",
+      "description": "Marketplace catalog version (semantic versioning; increment when plugins added/updated)",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "examples": ["1.0.0", "1.2.3"]
+    },
+    "plugins": {
+      "type": "array",
+      "description": "Array of plugin entries available in this marketplace",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "version",
+          "source",
+          "author",
+          "homepage",
+          "tags",
+          "requirements"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Plugin identifier (must match plugin.json name in source repository)",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "examples": ["speckit-updater"]
+          },
+          "description": {
+            "type": "string",
+            "description": "Brief plugin description (1-2 sentences)",
+            "minLength": 10,
+            "maxLength": 200,
+            "examples": ["Safe updates for GitHub SpecKit installations, preserving your customizations"]
+          },
+          "version": {
+            "type": "string",
+            "description": "Current plugin version (should match plugin.json version in source)",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$",
+            "examples": ["0.8.0"]
+          },
+          "source": {
+            "type": "string",
+            "description": "Git repository reference (supports multiple formats)",
+            "examples": [
+              "github:NotMyself/claude-win11-speckit-safe-update-skill",
+              "gitlab:user/repo",
+              "https://github.com/user/repo.git",
+              "git@github.com:user/repo.git",
+              "file:///path/to/local/repo"
+            ]
+          },
+          "author": {
+            "type": "object",
+            "description": "Plugin author information",
+            "required": ["name", "email"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Author full name",
+                "minLength": 1,
+                "examples": ["Bobby Johnson"]
+              },
+              "email": {
+                "type": "string",
+                "description": "Author contact email",
+                "format": "email",
+                "examples": ["bobby@notmyself.io"]
+              }
+            },
+            "additionalProperties": false
+          },
+          "homepage": {
+            "type": "string",
+            "description": "Plugin homepage URL (typically GitHub repository)",
+            "format": "uri",
+            "pattern": "^https://",
+            "examples": ["https://github.com/NotMyself/claude-win11-speckit-safe-update-skill"]
+          },
+          "tags": {
+            "type": "array",
+            "description": "Searchable tags/keywords for plugin discoverability",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "examples": [
+              ["speckit", "automation", "templates", "powershell"]
+            ]
+          },
+          "requirements": {
+            "type": "object",
+            "description": "Prerequisites for plugin (tool: version constraint)",
+            "patternProperties": {
+              "^[a-z]+$": {
+                "type": "string",
+                "description": "Version constraint in npm semver format",
+                "examples": [">=7.0", "^2.0.0"]
+              }
+            },
+            "additionalProperties": false,
+            "examples": [
+              {
+                "powershell": ">=7.0",
+                "git": ">=2.0"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
