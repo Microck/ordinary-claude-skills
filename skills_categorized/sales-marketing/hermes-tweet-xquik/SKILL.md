@@ -19,7 +19,7 @@ Use this skill when an agent needs X/Twitter workflows through Hermes Tweet or X
 
 1. Install Hermes Tweet from `https://github.com/Xquik-dev/hermes-tweet` when the runtime is Hermes Agent.
 2. Store `XQUIK_API_KEY` in the agent or MCP client secret store for authenticated read and action workflows.
-3. Keep `HERMES_TWEET_ENABLE_ACTIONS=true` disabled unless the user explicitly approved tweet actions.
+3. Keep `HERMES_TWEET_ENABLE_ACTIONS=false` (disabled) unless the user explicitly approved tweet actions.
 4. Prefer read and research workflows first. Only plan write workflows when the user asks for them.
 
 ## Workflow Choice
